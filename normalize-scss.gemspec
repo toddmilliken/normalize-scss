@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.authors     = ['John Albin Wilkins']
   s.email       = 'virtually.johnalbin@gmail.com'
 
-  s.add_runtime_dependency('sass', ">= 3.2")
-  s.add_runtime_dependency('compass', ">= 0.12")
+  s.add_runtime_dependency('sass', "~> 3.2.0")
+  s.add_runtime_dependency('compass', "~> 0.12.0")
 
   s.files       = %w[
     _normalize.scss
