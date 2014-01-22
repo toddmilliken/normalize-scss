@@ -1,6 +1,6 @@
 === HEAD
 
-=== Unreleased development version
+=== 2.2.0+normalize.2.1.3 (January 22, 2014)
 
 * Font size of "code, kbd, pre, samp" should always be 1em relative to parent.
 
