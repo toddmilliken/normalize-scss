@@ -9,15 +9,15 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/JohnAlbin/normalize-scss'
   s.rubyforge_project =
 
-  s.version     = '3.0.0.alpha.2'
-  s.date        = '2014-02-11'
+  s.version     = '3.0.0'
+  s.date        = '2014-08-26'
   s.licenses    = ['GPL-2']
 
   s.authors     = ['John Albin Wilkins']
   s.email       = 'virtually.johnalbin@gmail.com'
 
-  s.add_runtime_dependency('sass',          ">= 3.3.0-rc.1")
-  s.add_runtime_dependency('compass-core',  ">= 1.0.0.alpha.13")
+  s.add_runtime_dependency('sass',          ">= 3.3.0")
+  s.add_runtime_dependency('compass-core',  ">= 1.0.0")
 
   s.files       = %w[
     _normalize.scss

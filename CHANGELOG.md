@@ -1,3 +1,9 @@
+=== normalize-scss 3.0.0+normalize.3.0.1 (August 26, 2014)
+
+* Upgrade to Normalize.css 3.0.1.
+* Remove forked additional support-legacy-browser() to match Compass 1.0.0.
+* Update legend ruleset IE check to be IE 11 and lower.
+
 === normalize-scss 3.0.0-alpha.2+normalize.3.0.0 (February 11, 2014)
 
 * Upgrade to Normalize.css 3.0.0.
