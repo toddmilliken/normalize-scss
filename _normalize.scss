@@ -57,30 +57,6 @@ $indent-amount: 40px !default;
 @import "compass/typography/vertical_rhythm";
 
 
-// To work around a bug in compass-core 1.0.0.rc.0, we override Compass'
-// support-legacy-browser() function with a version of our own.
-// @TODO Remove this monkey patch after it's fixed in Compass.
-// @see https://github.com/chriseppstein/compass/pull/1524
-// @see also https://github.com/chriseppstein/compass/pull/1520
-@function support-legacy-browser($browser, $min-version, $max-version: null, $threshold: $critical-usage-threshold) {
-  @if not index($supported-browsers, $browser) {
-    @return false;
-  }
-  // Check agaist usage stats and declared minimums
-  $min-required-version: map-get($browser-minimum-versions, $browser);
-  $supported-browser: ($min-required-version and
-                       compare-browser-versions($browser, $max-version or $min-version, $min-required-version) >= 0);
-  // If a minimum required version is specified and the default threshold is
-  // used, we only check the declared browser minimums.
-  @if ($threshold == $critical-usage-threshold) and $min-required-version {
-    @return $supported-browser;
-  }
-  $usage: if($max-version,
-             omitted-usage($browser, $min-version, $max-version),
-             omitted-usage($browser, $min-version));
-  @return $usage > $threshold or $supported-browser;
-}
-
 /* Base
    ========================================================================== */
 
