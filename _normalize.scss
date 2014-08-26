@@ -240,21 +240,6 @@ strong {
 }
 
 /**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  @if support-legacy-browser(ie, "6") {
-    _font-family: 'courier new', monospace;
-  }
-  font-size: 1em;
-}
-
-/**
  * Address styling not present in Safari and Chrome.
  */
 
@@ -333,14 +318,6 @@ h1 {
   pre {
     margin: rhythm(1) 0;
   }
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
 }
 
 /**
@@ -468,6 +445,29 @@ svg:not(:root) {
 hr {
   @include box-sizing(content-box);
   height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  @if support-legacy-browser(ie, "6") {
+    _font-family: 'courier new', monospace;
+  }
+  font-size: 1em;
 }
 
 /* Forms
