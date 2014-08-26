@@ -1,3 +1,7 @@
+=== HEAD
+
+* Update figure ruleset to output for Safari 6.
+
 === normalize-scss 3.0.0+normalize.3.0.1 (August 26, 2014)
 
 * Upgrade to Normalize.css 3.0.1.

@@ -404,7 +404,7 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 
-@if support-legacy-browser(ie, "9") or support-legacy-browser(safari, "5") {
+@if support-legacy-browser(ie, "9") or support-legacy-browser(safari, "6") {
   /**
    * Address margin not present in IE 8/9 and Safari.
    */
