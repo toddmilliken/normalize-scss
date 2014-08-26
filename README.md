@@ -20,7 +20,7 @@ This Sass/Compass port currently utilizes:
 * CSS3 Box Sizing mixin
 * Vertical Rhythm mixins
 
-In addition, Normalize.css has 2 major versions: version 2 (without legacy
+In addition, Normalize.css has 2 major versions: version 3 (without legacy
 browser support) and version 1 (with support for IE 6/7, etc.) This Compass port
 combines the two versions into one file so that you can easily toggle between
 the two versions using Compass' `$legacy-support-for-ie7` variable.
