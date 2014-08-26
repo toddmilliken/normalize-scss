@@ -1,6 +1,6 @@
 ## Latest downloadable version
 
-The latest release of _normalize.scss for Sass 3.3 and Compass 1.0 is: [3.0.0+normalize.3.0.1](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.0%2Bnormalize.3.0.1).
+The latest release of _normalize.scss for Sass 3.3 and Compass 1.0 is: [3.0.1+normalize.3.0.1](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.1%2Bnormalize.3.0.1).
 It combines normalize.css v3.0.1 and normalize v1.1.3.
 
 The latest release of _normalize.scss for Sass 3.2 and Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
@@ -45,11 +45,11 @@ Install using one of the following methods:
 
 Download from the [project page](https://github.com/JohnAlbin/normalize-scss/releases).
 
-Install with [Bower](http://bower.io/): `bower install --save normalize.scss` (or to install the latest pre-release version: `bower install --save normalize.scss#3.0.0+normalize.3.0.1`)
+Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
 
 Install with [Component(1)](http://component.io/): `component install JohnAlbin/normalize-scss`
 
-Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `sudo gem install normalize-scss` (or to install the latest pre-release version: `sudo gem install --pre normalize-scss`)
+Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `sudo gem install normalize-scss`
 
 ## What does it do?
 
