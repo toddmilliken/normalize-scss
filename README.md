@@ -68,10 +68,10 @@ For more information about how to use it, see the [About normalize.css article](
 To use the Compass port of Normalize, simply copy the _normalize.scss file to
 your sass directory and follow the article's suggestions:
 
-* __Approach 1:__ use _normalize.scss as a starting point for your own project's
+* __Approach 1:__ use `_normalize.scss` as a starting point for your own project's
 base Sass, customising the values to match the design's requirements. (The best
 approach, _IMO_.)
-* __Approach 2:__ include _normalize.scss untouched and build upon it, overriding
+* __Approach 2:__ include `_normalize.scss` untouched and build upon it, overriding
 the defaults later in your Sass if necessary.
 
 ## Browser support
