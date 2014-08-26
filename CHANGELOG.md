@@ -15,7 +15,13 @@
 
 == normalize.css change log
 
+=== normalize.css 3.0.1 (March 27, 2014)
+
+* Add package.json for npm support.
+
 === normalize.css 3.0.0 (January 28, 2014)
+
+=== normalize.css 3.0.0-rc.1 (January 26, 2014)
 
 * Explicit tests for each normalization.
 * Fix i18n for `q` element.

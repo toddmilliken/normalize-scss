@@ -89,8 +89,44 @@ the defaults later in your Sass if necessary.
 support](https://github.com/necolas/normalize.css/tree/v1) (IE 6+, Safari 4+),
 but is no longer actively developed.
 
-## Contributing
+## Extended details
 
+Additional detail and explanation of the esoteric parts of normalize.css.
+
+#### `pre, code, kbd, samp`
+
+The `font-family: monospace, monospace` hack fixes the inheritance and scaling
+of font-size for preformated text. The duplication of `monospace` is
+intentional.  [Source](http://en.wikipedia.org/wiki/User:Davidgothberg/Test59).
+
+#### `sub, sup`
+
+Normally, using `sub` or `sup` affects the line-box height of text in all
+browsers. [Source](http://gist.github.com/413930).
+
+#### `svg:not(:root)`
+
+Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
+don't support SVG, so we can safely use the `:not()` and `:root` selectors that
+modern browsers use in the default UA stylesheets to apply this style. [SVG
+Mailing List discussion](http://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html)
+
+#### `input[type="search"]`
+
+The search input is not fully stylable by default. In Chrome and Safari on
+OSX/iOS you can't control `font`, `padding`, `border`, or `background`. In
+Chrome and Safari on Windows you can't control `border` properly. It will apply
+`border-width` but will only show a border color (which cannot be controlled)
+for the outer 1px of that border. Applying `-webkit-appearance: textfield`
+addresses these issues without removing the benefits of search inputs (e.g.
+showing past searches).
+
+#### `legend`
+
+Adding `border: 0` corrects an IE 8–11 bug where `color` (yes, `color`) is not
+inherited by `legend`.
+
+## Contributing
 Please read Necolas' [contributing
 guidelines](CONTRIBUTING.md).
 

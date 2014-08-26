@@ -21,8 +21,9 @@
   ],
   "ignore": [
     "CHANGELOG.md",
-    "component.json",
     "CONTRIBUTING.md",
+    "component.json",
+    "package.json",
     "normalize-scss.gemspec",
     "sache.json",
     "test.html",
