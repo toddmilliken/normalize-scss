@@ -243,6 +243,9 @@ ul {
   margin: 1.5em 0;
 }
 
+/**
+ * Turn off margins on nested lists.
+ */
 ol ol,
 ol ul,
 ul ol,
