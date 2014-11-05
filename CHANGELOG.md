@@ -25,6 +25,13 @@
 
 == normalize.css change log
 
+=== HEAD
+
+=== normalize.css 3.0.2 (October 4, 2014)
+
+* Only alter `background-color` of links in IE 10.
+* Add `menu` element to HTML5 display definitions.
+
 === normalize.css 3.0.1 (March 27, 2014)
 
 * Add package.json for npm support.

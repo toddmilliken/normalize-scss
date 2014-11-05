@@ -1,4 +1,4 @@
-/* normalize-scss 3.0.1+normalize.3.0.1 | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* normalize-scss 3.0.1+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 
 
 // Variables and Imports
@@ -57,9 +57,6 @@ $indent-amount: 40px !default;
 @import "compass/typography/vertical_rhythm";
 
 
-/* Base
-   ========================================================================== */
-
 @if not $strict-normalize or support-legacy-browser(ie, "7") {
   /**
    * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
@@ -97,7 +94,8 @@ body {
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 
@@ -110,6 +108,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -172,7 +171,7 @@ template {
    */
 
   a {
-    background: transparent;
+    background-color: transparent;
   }
 }
 

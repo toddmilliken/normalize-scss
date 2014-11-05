@@ -5,7 +5,6 @@
   "style": "_normalize.scss",
   "files": [
     "_normalize.scss",
-    "component.json"
   ],
   "homepage": "https://github.com/JohnAlbin/normalize-scss",
   "repository": {
