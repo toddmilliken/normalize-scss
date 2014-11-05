@@ -1,6 +1,4 @@
-/* normalize-scss 3.0.1+normalize.3.0.1 | MIT/GPLv2 License | bit.ly/normalize-scss */
-/* Base
-   ========================================================================== */
+/* normalize-scss 3.0.1+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
  * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
@@ -36,7 +34,8 @@ body {
    ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 article,
@@ -48,6 +47,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -99,7 +99,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
