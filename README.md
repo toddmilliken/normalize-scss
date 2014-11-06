@@ -52,16 +52,14 @@ normalizing.
 
 Install using one of the following methods:
 
-Download from the [project page](https://github.com/JohnAlbin/normalize-scss/releases).
-
-Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
-
-Install with [Component(1)](http://component.io/): `component install JohnAlbin/normalize-scss`
-
-Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `gem install normalize-scss`
-Note: if you want to alter the _normalize.scss file after installation (see "how
-to use it" below), you can use the `gem list --details normalize-scss` command
-to show you where the normalize-scss files were installed.
+* Download directly from the [project page](https://github.com/JohnAlbin/normalize-scss/releases).
+* Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
+* Install with [Component(1)](http://component.io/): `component install JohnAlbin/normalize-scss`
+* Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss):
+  `gem install normalize-scss` Note: if you want to alter the _normalize.scss
+  file after installation (see "how to use it" below), you can use the
+  `gem list --details normalize-scss` command to show you where the
+  normalize-scss files were installed.
 
 ## How to use it
 
