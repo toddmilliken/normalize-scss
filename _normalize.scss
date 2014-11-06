@@ -210,7 +210,7 @@ strong {
    */
 
   blockquote {
-    margin: rhythm(1) $indent-amount;
+    @include output-rhythm(margin, rhythm(1) $indent-amount);
   }
 }
 
@@ -291,7 +291,7 @@ h1 {
 
   p,
   pre {
-    margin: rhythm(1) 0;
+    @include output-rhythm(margin, rhythm(1) 0);
   }
 }
 
@@ -335,7 +335,7 @@ sub {
   menu,
   ol,
   ul {
-    margin: rhythm(1) 0;
+    @include output-rhythm(margin, rhythm(1) 0);
   }
 
   @if not $strict-normalize {
@@ -413,7 +413,7 @@ svg:not(:root) {
    */
 
   figure {
-    margin: rhythm(1) $indent-amount;
+    @include output-rhythm(margin, rhythm(1) $indent-amount);
   }
 }
 
