@@ -1,3 +1,8 @@
+=== normalize-scss 3.0.2+normalize.3.0.2 (November 6, 2014)
+
+* Upgrade to Normalize.css 3.0.2.
+* Added Compass' output-rhythm() mixin.
+
 === normalize-scss 3.0.1+normalize.3.0.1 (August 26, 2014)
 
 * Update figure ruleset to output for Safari 6.
