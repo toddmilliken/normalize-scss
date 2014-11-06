@@ -1,32 +1,33 @@
 ## Latest downloadable version
 
-The latest release of _normalize.scss for Sass 3.3 and Compass 1.0 is: [3.0.2+normalize.3.0.2](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.2%2Bnormalize.3.0.2).
+The latest release of _normalize.scss for Sass 3.3/Compass 1.0 (and later) is: [3.0.2+normalize.3.0.2](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.2%2Bnormalize.3.0.2).
 It combines normalize.css v3.0.2 and normalize v1.1.3.
 
-The latest release of _normalize.scss for Sass 3.2 and Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
+The latest release of _normalize.scss for Sass 3.2/Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
 It combines normalize.css v2.1.3 and normalize v1.1.3.
 
 ## The Compass port of normalize.css
 
-__This project is the Sass/Compass version of Normalize.css__, a collection of HTML
-element and attribute rulesets to normalize styles across all browsers. This
-port aims to use the best partials from Compass to make Normalize even easier to
-integrate with your website. To learn about why Normalize.css is so amazing,
-skip to the "normalize.css" section below.
+__This project is the Sass/Compass version of Normalize.css__, a collection of
+HTML element and attribute rulesets to normalize styles across all browsers.
+This port aims to use the best partials from Compass to make Normalize even
+easier to integrate with your website. To learn about why Normalize.css is so
+amazing, skip to the "normalize.css" section below.
 
 This Sass/Compass port currently utilizes:
 
-* Legacy IE support variables
+* Browser Support variables
 * CSS3 Box Sizing mixin
 * Vertical Rhythm mixins
 
 In addition, Normalize.css has 2 major versions: version 3 (without legacy
 browser support) and version 1 (with support for IE 6/7, etc.) This Compass port
 combines the two versions into one file so that you can easily toggle between
-the two versions using Compass' `$legacy-support-for-ie7` variable.
+the two versions using Compass' Browser Support variables.
 
-Did a client wait until the last minute to mention their CEO uses IE 7? Simply
-set `$legacy-support-for-ie7` to `true` and recompile your Sass files.
+Did a client wait until the last minute to mention their CEO uses IE 6? Simply
+update your `$browser-minimum-versions` variable and recompile your Sass files.
+Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
 
 # normalize.css v3
 
@@ -39,6 +40,14 @@ normalizing.
 
 [View the test file](http://necolas.github.io/normalize.css/latest/test.html)
 
+## What does it do?
+
+* Preserves useful defaults, unlike many CSS resets.
+* Normalizes styles for a wide range of elements.
+* Corrects bugs and common browser inconsistencies.
+* Improves usability with subtle improvements.
+* Explains what code does using detailed comments.
+
 ## Install
 
 Install using one of the following methods:
@@ -49,30 +58,27 @@ Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
 
 Install with [Component(1)](http://component.io/): `component install JohnAlbin/normalize-scss`
 
-Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `sudo gem install normalize-scss`
-
-## What does it do?
-
-* Preserves useful defaults, unlike many CSS resets.
-* Normalizes styles for a wide range of elements.
-* Corrects bugs and common browser inconsistencies.
-* Improves usability with subtle improvements.
-* Explains what code does using detailed comments.
+Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `gem install normalize-scss`
+Note: if you want to alter the _normalize.scss file after installation (see "how
+to use it" below), you can use the `gem list --details normalize-scss` command
+to show you where the normalize-scss files were installed.
 
 ## How to use it
 
-No other styles should come before Normalize.css.
+There is a fantastic introduction to the project and brief instructions how to
+use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
 
-For more information about how to use it, see the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
+To use the Compass port of Normalize, simply:
+* copy the _normalize.scss file to your sass directory (or if installed with
+  Ruby Gem, add `require "normalize-scss"` to your config.rb file.)
+* import the partial into your main Sass file with `@import "normalize";`
+* and follow the "About normalize.css" article's suggestions:
 
-To use the Compass port of Normalize, simply copy the _normalize.scss file to
-your sass directory and follow the article's suggestions:
-
-* __Approach 1:__ use `_normalize.scss` as a starting point for your own project's
-base Sass, customising the values to match the design's requirements. (The best
-approach, _IMO_.)
-* __Approach 2:__ include `_normalize.scss` untouched and build upon it, overriding
-the defaults later in your Sass if necessary.
+** __Approach 1:__ use `_normalize.scss` as a starting point for your own
+project's base Sass, customising the values to match the design's requirements.
+(The best approach, _IMO_.)
+** __Approach 2:__ include `_normalize.scss` untouched and build upon it,
+overriding the defaults later in your Sass when necessary.
 
 ## Browser support
 
@@ -81,13 +87,10 @@ the defaults later in your Sass if necessary.
 * Mozilla Firefox 4
 * Opera (latest)
 * Apple Safari 6+
-* Internet Explorer 8+
-* Internet Explorer 6-7 (when `$legacy-support-for-ie7` or
-`$legacy-support-for-ie6` is set to `true`)
+* Internet Explorer 6+
 
-[Normalize.css v1 provides legacy browser
-support](https://github.com/necolas/normalize.css/tree/v1) (IE 6+, Safari 4+),
-but is no longer actively developed.
+The exact browsers supported in your project is controlled by Compass' Support
+variables. See https://github.com/JohnAlbin/normalize-scss/wiki
 
 ## Extended details
 
@@ -152,7 +155,7 @@ Including:
 * https://github.com/kristerkari/normalize.scss
 
 Some of the above projects convert normalize into Sass mixins. That makes it
-impossible to add Normalize using __Approach 1__ (by copying the file into your website
-and customizing/overriding for your needs.)
+impossible to add Normalize using __Approach 1__ (by copying the file into your
+website and customizing/overriding for your needs.)
 
 [![Build Status](https://travis-ci.org/JohnAlbin/normalize-scss.png?branch=master)](https://travis-ci.org/JohnAlbin/normalize-scss)
