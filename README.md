@@ -69,15 +69,14 @@ There is a fantastic introduction to the project and brief instructions how to
 use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
 
 To use the Compass port of Normalize, simply:
-* copy the _normalize.scss file to your sass directory (or if installed with
-  Ruby Gem, add `require "normalize-scss"` to your config.rb file.)
-* import the partial into your main Sass file with `@import "normalize";`
-* and follow the "About normalize.css" article's suggestions:
-
-** __Approach 1:__ use `_normalize.scss` as a starting point for your own
+1. copy the _normalize.scss file to your sass directory (or if installed with
+   Ruby Gem, add `require "normalize-scss"` to your config.rb file.)
+2. import the partial into your main Sass file with `@import "normalize";`
+3. and follow the "About normalize.css" article's suggestions:
+  * __Approach 1:__ use `_normalize.scss` as a starting point for your own
 project's base Sass, customising the values to match the design's requirements.
 (The best approach, _IMO_.)
-** __Approach 2:__ include `_normalize.scss` untouched and build upon it,
+  * __Approach 2:__ include `_normalize.scss` untouched and build upon it,
 overriding the defaults later in your Sass when necessary.
 
 ## Browser support
