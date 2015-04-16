@@ -4,7 +4,7 @@
   "description": "Normalize-scss as a node packaged module",
   "style": "_normalize.scss",
   "files": [
-    "_normalize.scss",
+    "_normalize.scss"
   ],
   "homepage": "https://github.com/JohnAlbin/normalize-scss",
   "repository": {
