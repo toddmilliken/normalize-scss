@@ -1,3 +1,7 @@
+=== normalize-scss 3.0.3+normalize.3.0.3 (October 17, 2015)
+
+* Upgrade to Normalize.css 3.0.3.
+
 === normalize-scss 3.0.2+normalize.3.0.2 (November 6, 2014)
 
 * Upgrade to Normalize.css 3.0.2.
