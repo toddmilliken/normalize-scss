@@ -1,6 +1,6 @@
 ## Latest downloadable version
 
-The latest release of _normalize.scss for Sass 3.3/Compass 1.0 (and later) is: [3.0.3+normalize.3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3%2Bnormalize.3.0.3).
+The latest release of _normalize.scss for Sass 3.3/Compass 1.0 (and later) is: [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3).
 It combines normalize.css v3.0.3 and normalize v1.1.3.
 
 The latest release of _normalize.scss for Sass 3.2/Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
