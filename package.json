@@ -17,6 +17,9 @@
     "Nicolas Gallagher",
     "John Albin Wilkins"
   ],
+  "scripts": {
+    "test": "cd test; bundle exec rake"
+  },
   "license": [
     "MIT",
     "GPLv2"
