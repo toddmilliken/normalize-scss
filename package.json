@@ -4,6 +4,7 @@
   "description": "Normalize-scss as a node packaged module",
   "style": "_normalize.scss",
   "files": [
+    "LICENSE.md",
     "_normalize.scss"
   ],
   "homepage": "https://github.com/JohnAlbin/normalize-scss",
@@ -11,6 +12,7 @@
     "type": "git",
     "url": "git://github.com/JohnAlbin/normalize-scss.git"
   },
+  "main": "_normalize.scss",
   "author": [
     "Nicolas Gallagher",
     "John Albin Wilkins"

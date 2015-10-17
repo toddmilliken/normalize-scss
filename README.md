@@ -53,6 +53,7 @@ normalizing.
 Install using one of the following methods:
 
 * Download directly from the [project page](https://github.com/JohnAlbin/normalize-scss/releases).
+* Install with [npm](http://npmjs.org/): `npm install --save normalize-scss`
 * Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
 * Install with [Component(1)](http://component.io/): `component install JohnAlbin/normalize-scss`
 * Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss):
@@ -82,7 +83,7 @@ To use the Compass port of Normalize, simply:
 
 * Google Chrome (latest)
 * Mozilla Firefox (latest)
-* Mozilla Firefox 4
+* Mozilla Firefox ESR
 * Opera (latest)
 * Apple Safari 6+
 * Internet Explorer 6+
