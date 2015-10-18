@@ -20,12 +20,12 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('compass-core',  '~> 1.0', '>= 1.0.0')
 
   s.files       = %w[
-    _normalize.scss
     CHANGELOG.md
     CONTRIBUTING.md
     lib/normalize-scss.rb
     LICENSE.md
     normalize-scss.gemspec
     README.md
+    sass/_normalize.scss
   ]
 end

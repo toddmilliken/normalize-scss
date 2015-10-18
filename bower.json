@@ -7,7 +7,7 @@
     "John Albin Wilkins"
   ],
   "description": "This is the Sass/Compass version of Normalize.css, a collection of HTML element and attribute rulesets to normalize styles across all browsers.",
-  "main": "_normalize.scss",
+  "main": "sass/_normalize.scss",
   "keywords": [
     "normalize",
     "reset",

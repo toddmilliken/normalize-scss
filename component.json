@@ -20,5 +20,5 @@
     "MIT",
     "GPL-2.0"
   ],
-  "styles": ["_normalize.scss"]
+  "styles": ["sass/_normalize.scss"]
 }
