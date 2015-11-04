@@ -566,13 +566,9 @@ input[type="search"] {
  */
 
 fieldset {
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
-  /* Apply borders and padding that keep the vertical rhythm. */
-  border-color: #c0c0c0;
-  @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35 );
-  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65 );
-  @include apply-side-rhythm-border(left,   $width: 1px, $lines: 0.625);
-  @include apply-side-rhythm-border(right,  $width: 1px, $lines: 0.625);
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /**
