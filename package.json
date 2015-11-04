@@ -16,6 +16,7 @@
     "normalize"
   ],
   "main": "sass/_normalize.scss",
+  "style": "sass/_normalize.scss",
   "files": [
     "LICENSE.md",
     "sass/_normalize.scss"
