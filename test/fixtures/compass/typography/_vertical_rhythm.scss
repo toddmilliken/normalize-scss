@@ -1,5 +1,11 @@
 @function rhythm($multiplier, $relative-to: $base-font-size) {
-  @return $multiplier * ($base-line-height / $relative-to) * 1em;
+  @if $rhythm-unit == "px" {
+    @return $multiplier * $base-line-height;
+  }
+  @else if $rhythm-unit == "em" {
+    @return $multiplier * ($base-line-height / $relative-to) * 1em;
+  }
+  @return $multiplier * ($base-line-height / $base-font-size) * 1rem;
 }
 
 @function em($font-size) {

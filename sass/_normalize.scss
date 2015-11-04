@@ -170,12 +170,10 @@ dfn {
  */
 
 h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: if($rhythm-unit == "px", $h1-font-size, #{unquote(inspect($h1-font-size / $base-font-size) + $rhythm-unit)});
+
   @if not $strict-normalize or normalize-support-for(ie, 7) {
-    @include adjust-font-size-to( $h1-font-size );
-  }
-  @else {
-    font-size: if($rhythm-unit == "px", $h1-font-size, #{unquote(inspect($h1-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h1-font-size / $base-line-height) + .1), $h1-font-size);
   }
 
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
@@ -185,31 +183,36 @@ h1 {
 
 @if not $strict-normalize or normalize-support-for(ie, 7) {
   h2 {
-    @include adjust-font-size-to( $h2-font-size );
+    font-size: if($rhythm-unit == "px", $h2-font-size, #{unquote(inspect($h2-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h2-font-size / $base-line-height) + .1), $h2-font-size);
     @include leader(1, $h2-font-size);
     @include trailer(1, $h2-font-size);
   }
 
   h3 {
-    @include adjust-font-size-to( $h3-font-size );
+    font-size: if($rhythm-unit == "px", $h3-font-size, #{unquote(inspect($h3-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h3-font-size / $base-line-height) + .1), $h3-font-size);
     @include leader(1, $h3-font-size);
     @include trailer(1, $h3-font-size);
   }
 
   h4 {
-    @include adjust-font-size-to( $h4-font-size );
+    font-size: if($rhythm-unit == "px", $h4-font-size, #{unquote(inspect($h4-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h4-font-size / $base-line-height) + .1), $h4-font-size);
     @include leader(1, $h4-font-size);
     @include trailer(1, $h4-font-size);
   }
 
   h5 {
-    @include adjust-font-size-to( $h5-font-size );
+    font-size: if($rhythm-unit == "px", $h5-font-size, #{unquote(inspect($h5-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h5-font-size / $base-line-height) + .1), $h5-font-size);
     @include leader(1, $h5-font-size);
     @include trailer(1, $h5-font-size);
   }
 
   h6 {
-    @include adjust-font-size-to( $h6-font-size );
+    font-size: if($rhythm-unit == "px", $h6-font-size, #{unquote(inspect($h6-font-size / $base-font-size) + $rhythm-unit)});
+    line-height: rhythm(ceil(($h6-font-size / $base-line-height) + .1), $h6-font-size);
     @include leader(1, $h6-font-size);
     @include trailer(1, $h6-font-size);
   }
