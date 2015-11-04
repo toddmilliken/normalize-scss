@@ -1,18 +1,11 @@
 /**
-   * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
-   * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
-   * body `font-size` is set using `em` units.
-   */
-html {
-  font-size: 150%;
-  line-height: 1.5em; }
-
-/**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
 html {
+  font-size: 150%;
+  line-height: 1.5em;
   font-family: Arial, sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;

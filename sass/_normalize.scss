@@ -4,16 +4,6 @@
 @import "compass/typography/vertical_rhythm";
 
 
-@if not $strict-normalize or normalize-support-for(ie, 7) {
-  /**
-   * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
-   * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
-   * body `font-size` is set using `em` units.
-   */
-
-  @include establish-baseline();
-}
-
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -21,6 +11,12 @@
  */
 
 html {
+  @if not $strict-normalize or normalize-support-for(ie, 7) {
+    // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+    // `em` units.
+    font-size: ($base-font-size / 16px) * 100%;
+    line-height: ($base-line-height / $base-font-size) * 1em
+  }
   font-family: $base-font-family; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
