@@ -296,8 +296,6 @@ fieldset {
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
 legend {
-  border: 0;
-  /* 1 */
   padding: 0;
   /* 2 */ }
 

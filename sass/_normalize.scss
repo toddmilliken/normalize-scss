@@ -1,10 +1,10 @@
-@import './normalize/variables';
+@import 'normalize/variables';
+@import 'normalize/support-for';
 // After the default variables are set, import the required Compass partials.
-@import "compass/support";
 @import "compass/typography/vertical_rhythm";
 
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
+@if not $strict-normalize or normalize-support-for(ie, 7) {
   /**
    * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
    * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
@@ -71,9 +71,9 @@ audio,
 canvas,
 progress,
 video {
-  @if support-legacy-browser(ie, "9") {
+  @if normalize-support-for(ie, 9) {
     display: inline-block; /* 1 */
-    @if support-legacy-browser(ie, "7") {
+    @if normalize-support-for(ie, 7) {
       *display: inline;
       *zoom: 1;
     }
@@ -91,7 +91,7 @@ audio:not([controls]) {
   height: 0;
 }
 
-@if support-legacy-browser(ie, "10") {
+@if normalize-support-for(ie, 10) {
   /**
    * Address `[hidden]` styling not present in IE 8/9/10.
    */
@@ -112,7 +112,7 @@ template {
 /* Links
    ========================================================================== */
 
-@if support-legacy-browser(ie, "10") {
+@if normalize-support-for(ie, 10) {
   /**
    * Remove the gray background color from active links in IE 10.
    */
@@ -152,7 +152,7 @@ strong {
   font-weight: bold;
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
+@if not $strict-normalize or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -177,7 +177,7 @@ dfn {
 
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  @if not $strict-normalize or support-legacy-browser(ie, "7") {
+  @if not $strict-normalize or normalize-support-for(ie, 7) {
     @include adjust-font-size-to( $h1-font-size );
   }
   @else {
@@ -189,7 +189,7 @@ h1 {
   @include trailer(1, $h1-font-size);
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
+@if not $strict-normalize or normalize-support-for(ie, 7) {
   h2 {
     @include adjust-font-size-to( $h2-font-size );
     @include leader(1, $h2-font-size);
@@ -221,7 +221,7 @@ h1 {
   }
 }
 
-@if support-legacy-browser(ie, "9") {
+@if normalize-support-for(ie, 9) {
   /**
    * Address styling not present in IE 8/9.
    */
@@ -232,7 +232,7 @@ h1 {
   }
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
+@if not $strict-normalize or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -271,7 +271,7 @@ sub {
   bottom: -0.25em;
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
+@if not $strict-normalize or normalize-support-for(ie, 7) {
   /* Lists
      ========================================================================== */
 
@@ -315,7 +315,7 @@ sub {
   }
 }
 
-@if support-legacy-browser(ie, "7") {
+@if normalize-support-for(ie, 7) {
   /**
    * Correct list images handled incorrectly in IE 7.
    */
@@ -330,14 +330,14 @@ sub {
 /* Embedded content
    ========================================================================== */
 
-@if support-legacy-browser(ie, "10") {
+@if normalize-support-for(ie, 10) {
   /**
    * Remove border when inside `a` element in IE 8/9/10.
    */
 
   img {
     border: 0;
-    @if support-legacy-browser(ie, "7") {
+    @if normalize-support-for(ie, 7) {
       /* Improve image quality when scaled in IE 7. */
       -ms-interpolation-mode: bicubic;
     }
@@ -355,7 +355,7 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 
-@if support-legacy-browser(ie, "9") or support-legacy-browser(safari, "6") {
+@if normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
   /**
    * Address margin not present in IE 8/9 and Safari.
    */
@@ -370,7 +370,7 @@ svg:not(:root) {
  */
 
 hr {
-  @if support-legacy-browser(firefox, "28") {
+  @if normalize-support-for(firefox, 28) {
     -moz-box-sizing: content-box;
   }
   box-sizing: content-box;
@@ -394,7 +394,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  @if support-legacy-browser(ie, "6") {
+  @if normalize-support-for(ie, 6) {
     _font-family: 'courier new', monospace;
   }
   font-size: 1em;
@@ -408,7 +408,7 @@ samp {
  * styling of `select`, unless a `border` property is set.
  */
 
-@if support-legacy-browser(ie, "7") {
+@if normalize-support-for(ie, 7) {
   /**
    * Correct margin displayed oddly in IE 6/7.
    */
@@ -435,7 +435,7 @@ textarea {
   color: inherit; /* 1 */
   font: inherit; /* 2 */
   margin: 0; /* 3 */
-  @if support-legacy-browser(ie, "7") {
+  @if normalize-support-for(ie, 7) {
     *font-family: $base-font-family; /* 4 */
     *vertical-align: middle; /* 5 */
   }
@@ -477,7 +477,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if support-legacy-browser(ie, "7") {
+  @if normalize-support-for(ie, 7) {
     *overflow: visible; /* 4 */
   }
 }
@@ -510,7 +510,7 @@ input {
   line-height: normal;
 }
 
-@if support-legacy-browser(ie, "10") {
+@if normalize-support-for(ie, 10) {
   /**
    * It's recommended that you don't attempt to style these elements.
    * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -525,7 +525,7 @@ input {
   input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
-    @if support-legacy-browser(ie, "7") {
+    @if normalize-support-for(ie, 7) {
       *height: 13px; /* 3 */
       *width: 13px; /* 3 */
     }
@@ -550,7 +550,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  @if support-legacy-browser(safari, "5") or support-legacy-browser(chrome, "9") {
+  @if normalize-support-for(safari, 5) or normalize-support-for(chrome, 9) {
     -webkit-box-sizing: content-box;
   }
   box-sizing: content-box; /* 2 */
@@ -588,11 +588,11 @@ fieldset {
  */
 
 legend {
-  @if support-legacy-browser(ie, "11") {
+  @if normalize-support-for(ie, 11) {
     border: 0; /* 1 */
   }
   padding: 0; /* 2 */
-  @if support-legacy-browser(ie, "7") {
+  @if normalize-support-for(ie, 7) {
     *margin-left: -7px; /* 3 */
   }
 }

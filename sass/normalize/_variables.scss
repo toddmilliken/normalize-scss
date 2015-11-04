@@ -28,3 +28,23 @@ $h6-font-size: 0.67 * $base-font-size !default;
 
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px !default;
+
+// Support all browsers with .01% usage or higher.
+$normalize-support-for: (
+  chrome:  9,
+  edge:    20,
+  firefox: 28,
+  ie:      7,
+  opera:   null,
+  safari:  5,
+) !default;
+
+// Ensure there is an entry for every browser.
+$normalize-support-for: map-merge((
+  chrome:  null,
+  edge:    null,
+  firefox: null,
+  ie:      null,
+  opera:   null,
+  safari:  null,
+), $normalize-support-for);

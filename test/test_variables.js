@@ -38,6 +38,13 @@ describe('Configuration variables', function() {
   });
 
   describe('Browser support', function() {
+    it('should support Chrome 9', function(done) {
+      sassyTest.renderFixture('variables/support-for/chrome9', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+
     it('should support Firefox 28', function(done) {
       sassyTest.renderFixture('variables/support-for/firefox28', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
@@ -82,6 +89,13 @@ describe('Configuration variables', function() {
 
     it('should support IE 11', function(done) {
       sassyTest.renderFixture('variables/support-for/ie11', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+
+    it('should support Safari 5', function(done) {
+      sassyTest.renderFixture('variables/support-for/safari5', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
         done();
       });

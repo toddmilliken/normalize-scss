@@ -140,12 +140,6 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 /**
-   * Address margin not present in IE 8/9 and Safari.
-   */
-figure {
-  margin: 1.5em 40px; }
-
-/**
  * Address differences between Firefox and other browsers.
  */
 hr {
@@ -266,6 +260,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
   /**
