@@ -2,9 +2,6 @@
 // Variables
 //
 
-// Set this to true to force CSS output to exactly match normalize.css.
-$strict-normalize: true !default;
-
 // The font size set on the root html element.
 $base-font-size: 16px !default;
 
@@ -29,14 +26,14 @@ $h6-font-size: 0.67 * $base-font-size !default;
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px !default;
 
-// Support all browsers with .01% usage or higher.
+// Support the same browsers as normalize.css v3.
 $normalize-support-for: (
-  chrome:  9,
+  chrome:  43,
   edge:    20,
-  firefox: 28,
-  ie:      7,
+  firefox: 39,
+  ie:      9,
   opera:   null,
-  safari:  5,
+  safari:  6,
 ) !default;
 
 // Ensure there is an entry for every browser.

@@ -4,8 +4,6 @@
  *    without disabling user zoom.
  */
 html {
-  font-size: 100%;
-  line-height: 1.5em;
   font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -52,8 +50,6 @@ progress,
 video {
   display: inline-block;
   /* 1 */
-  *display: inline;
-  *zoom: 1;
   vertical-align: baseline;
   /* 2 */ }
 
@@ -109,12 +105,6 @@ strong {
   font-weight: bold; }
 
 /**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
-blockquote {
-  margin: 1.5em 40px; }
-
-/**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
@@ -126,40 +116,9 @@ dfn {
  */
 h1 {
   font-size: 2em;
-  line-height: 1.5em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin-top: 0.75em;
   margin-bottom: 0.75em; }
-
-h2 {
-  font-size: 1.5em;
-  line-height: 2em;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-h3 {
-  font-size: 1.17em;
-  line-height: 1.28205em;
-  margin-top: 1.28205em;
-  margin-bottom: 1.28205em; }
-
-h4 {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em; }
-
-h5 {
-  font-size: 0.83em;
-  line-height: 1.80723em;
-  margin-top: 1.80723em;
-  margin-bottom: 1.80723em; }
-
-h6 {
-  font-size: 0.67em;
-  line-height: 2.23881em;
-  margin-top: 2.23881em;
-  margin-bottom: 2.23881em; }
 
 /**
    * Address styling not present in IE 8/9.
@@ -167,13 +126,6 @@ h6 {
 mark {
   background: #ff0;
   color: #000; }
-
-/**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
-p,
-pre {
-  margin: 1.5em 0; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -197,45 +149,13 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* Lists
-     ========================================================================== */
-/**
-   * Address margins set differently in IE 6/7.
-   */
-dl,
-menu,
-ol,
-ul {
-  margin: 1.5em 0; }
-
-dd {
-  margin: 0 0 0 40px; }
-
-/**
-   * Address paddings set differently in IE 6/7.
-   */
-menu,
-ol,
-ul {
-  padding: 0 0 0 40px; }
-
-/**
-   * Correct list images handled incorrectly in IE 7.
-   */
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none; }
-
 /* Embedded content
    ========================================================================== */
 /**
    * Remove border when inside `a` element in IE 8/9/10.
    */
 img {
-  border: 0;
-  /* Improve image quality when scaled in IE 7. */
-  -ms-interpolation-mode: bicubic; }
+  border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
@@ -255,7 +175,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -282,12 +201,6 @@ samp {
  * styling of `select`, unless a `border` property is set.
  */
 /**
-   * Correct margin displayed oddly in IE 6/7.
-   */
-form {
-  margin: 0; }
-
-/**
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
@@ -305,11 +218,7 @@ textarea {
   font: inherit;
   /* 2 */
   margin: 0;
-  /* 3 */
-  *font-family: sans-serif;
-  /* 4 */
-  *vertical-align: middle;
-  /* 5 */ }
+  /* 3 */ }
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
@@ -343,9 +252,7 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
-  /* 3 */
-  *overflow: visible;
-  /* 4 */ }
+  /* 3 */ }
 
 /**
  * Re-set default cursor for disabled elements.
@@ -383,11 +290,7 @@ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -405,7 +308,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
   /**
@@ -433,9 +335,7 @@ legend {
   border: 0;
   /* 1 */
   padding: 0;
-  /* 2 */
-  *margin-left: -7px;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.

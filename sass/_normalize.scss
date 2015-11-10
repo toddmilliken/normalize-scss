@@ -4,6 +4,21 @@
 @import "compass/typography/vertical_rhythm";
 
 
+// If we've customized any font sizes, we'll need extra properties.
+$_normalize-font-sizes: false;
+@if $base-font-size != 16px
+  or $base-line-height != 24px
+  or $rhythm-unit != 'em'
+  or $h1-font-size != 2    * $base-font-size
+  or $h2-font-size != 1.5  * $base-font-size
+  or $h3-font-size != 1.17 * $base-font-size
+  or $h4-font-size != 1    * $base-font-size
+  or $h5-font-size != 0.83 * $base-font-size
+  or $h6-font-size != 0.67 * $base-font-size
+  or $indent-amount != 40px {
+  $_normalize-font-sizes: true;
+}
+
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -11,11 +26,13 @@
  */
 
 html {
-  @if not $strict-normalize or normalize-support-for(ie, 7) {
+  @if $_normalize-font-sizes or normalize-support-for(ie, 7) {
     // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
     // `em` units.
     font-size: ($base-font-size / 16px) * 100%;
-    line-height: ($base-line-height / $base-font-size) * 1em
+  }
+  @if $_normalize-font-sizes {
+    line-height: ($base-line-height / $base-font-size) * 1em;
   }
   font-family: $base-font-family; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -146,7 +163,7 @@ strong {
   font-weight: bold;
 }
 
-@if not $strict-normalize or normalize-support-for(ie, 7) {
+@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -172,7 +189,7 @@ dfn {
 h1 {
   font-size: if($rhythm-unit == "px", $h1-font-size, #{unquote(inspect($h1-font-size / $base-font-size) + $rhythm-unit)});
 
-  @if not $strict-normalize or normalize-support-for(ie, 7) {
+  @if $_normalize-font-sizes {
     line-height: rhythm(ceil(($h1-font-size / $base-line-height) + .1), $h1-font-size);
   }
 
@@ -181,38 +198,48 @@ h1 {
   margin-bottom: rhythm(1, $h1-font-size);
 }
 
-@if not $strict-normalize or normalize-support-for(ie, 7) {
+@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
   h2 {
     font-size: if($rhythm-unit == "px", $h2-font-size, #{unquote(inspect($h2-font-size / $base-font-size) + $rhythm-unit)});
-    line-height: rhythm(ceil(($h2-font-size / $base-line-height) + .1), $h2-font-size);
+    @if $_normalize-font-sizes {
+      line-height: rhythm(ceil(($h2-font-size / $base-line-height) + .1), $h2-font-size);
+    }
     margin-top: rhythm(1, $h2-font-size);
     margin-bottom: rhythm(1, $h2-font-size);
   }
 
   h3 {
     font-size: if($rhythm-unit == "px", $h3-font-size, #{unquote(inspect($h3-font-size / $base-font-size) + $rhythm-unit)});
-    line-height: rhythm(ceil(($h3-font-size / $base-line-height) + .1), $h3-font-size);
+    @if $_normalize-font-sizes {
+      line-height: rhythm(ceil(($h3-font-size / $base-line-height) + .1), $h3-font-size);
+    }
     margin-top: rhythm(1, $h3-font-size);
     margin-bottom: rhythm(1, $h3-font-size);
   }
 
   h4 {
     font-size: if($rhythm-unit == "px", $h4-font-size, #{unquote(inspect($h4-font-size / $base-font-size) + $rhythm-unit)});
-    line-height: rhythm(ceil(($h4-font-size / $base-line-height) + .1), $h4-font-size);
+    @if $_normalize-font-sizes {
+      line-height: rhythm(ceil(($h4-font-size / $base-line-height) + .1), $h4-font-size);
+    }
     margin-top: rhythm(1, $h4-font-size);
     margin-bottom: rhythm(1, $h4-font-size);
   }
 
   h5 {
     font-size: if($rhythm-unit == "px", $h5-font-size, #{unquote(inspect($h5-font-size / $base-font-size) + $rhythm-unit)});
-    line-height: rhythm(ceil(($h5-font-size / $base-line-height) + .1), $h5-font-size);
+    @if $_normalize-font-sizes {
+      line-height: rhythm(ceil(($h5-font-size / $base-line-height) + .1), $h5-font-size);
+    }
     margin-top: rhythm(1, $h5-font-size);
     margin-bottom: rhythm(1, $h5-font-size);
   }
 
   h6 {
     font-size: if($rhythm-unit == "px", $h6-font-size, #{unquote(inspect($h6-font-size / $base-font-size) + $rhythm-unit)});
-    line-height: rhythm(ceil(($h6-font-size / $base-line-height) + .1), $h6-font-size);
+    @if $_normalize-font-sizes {
+      line-height: rhythm(ceil(($h6-font-size / $base-line-height) + .1), $h6-font-size);
+    }
     margin-top: rhythm(1, $h6-font-size);
     margin-bottom: rhythm(1, $h6-font-size);
   }
@@ -229,7 +256,7 @@ h1 {
   }
 }
 
-@if not $strict-normalize or normalize-support-for(ie, 7) {
+@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -268,7 +295,7 @@ sub {
   bottom: -0.25em;
 }
 
-@if not $strict-normalize or normalize-support-for(ie, 7) {
+@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
   /* Lists
      ========================================================================== */
 
@@ -282,21 +309,23 @@ sub {
   ul {
     margin: rhythm(1) 0;
   }
+}
 
-  @if not $strict-normalize {
-    /**
-     * Turn off margins on nested lists.
-     */
+@if $_normalize-font-sizes {
+  /**
+   * Turn off margins on nested lists.
+   */
 
+  ol,
+  ul {
     ol,
     ul {
-      ol,
-      ul {
-        margin: 0;
-      }
+      margin: 0;
     }
   }
+}
 
+@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
   dd {
     margin: 0 0 0 $indent-amount;
   }
@@ -352,7 +381,7 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 
-@if normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
+@if $_normalize-font-sizes or normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
   /**
    * Address margin not present in IE 8/9 and Safari.
    */

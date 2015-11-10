@@ -1,6 +1,15 @@
 'use strict';
 
 describe('Configuration variables', function() {
+  describe('default values', function() {
+    it('should limit output to the same output as normalize.css', function(done) {
+      sassyTest.renderFixture('variables/default', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+  });
+
   describe('$base-* and $h*-font-size', function() {
     it('should alter the font, font size, and line-height', function(done) {
       sassyTest.renderFixture('variables/font', {}, function(error, result, expectedOutput) {
@@ -13,24 +22,6 @@ describe('Configuration variables', function() {
   describe('$indent-amount', function() {
     it('should alter the indent amount of elements', function(done) {
       sassyTest.renderFixture('variables/indent-amount', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
-    });
-  });
-
-  describe('$strict-normalize: false;', function() {
-    it('should allow normalize.scss to add sensible defaults to output', function(done) {
-      sassyTest.renderFixture('variables/strict-normalize-false', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
-    });
-  });
-
-  describe('$strict-normalize: true;', function() {
-    it('should limit output to the same output as normalize.css', function(done) {
-      sassyTest.renderFixture('variables/strict-normalize-true', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
         done();
       });

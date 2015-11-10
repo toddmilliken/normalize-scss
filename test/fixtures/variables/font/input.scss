@@ -11,7 +11,4 @@ $h4-font-size: 0.9  * $base-font-size;
 $h5-font-size: 0.75 * $base-font-size;
 $h6-font-size: 0.5  * $base-font-size;
 
-// Some font sizes are shown in the non-strict version of Normalize.scss.
-$strict-normalize: false;
-
 @import 'normalize';
