@@ -1,0 +1,58 @@
+@mixin normalize-font-size($value, $relative-to: $base-font-size) {
+  @if unit($value) != 'px' {
+    @error "font-size-normalize() only supports px inputs. The typey library is better.";
+  }
+  @if $base-unit == rem {
+    // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
+    // in font shorthand, but font-size longhand is fine.
+    @if normalize-support-for(ie, 8) {
+      font-size: $value;
+    }
+    font-size: ($value / $base-font-size) * 1rem;
+  }
+  @else if $base-unit == em {
+    font-size: ($value / $relative-to) * 1em;
+  }
+  @else { // $base-unit == px
+    font-size: $value;
+  }
+}
+
+@mixin normalize-rhythm($property, $values, $relative-to: $base-font-size) {
+  @if type-of($values) == 'list' {
+    $px-fallback: $values;
+  }
+  @else {
+    $px-fallback: append((), $values);
+  }
+  $sep: list-separator($px-fallback);
+  $normalized-values: ();
+
+  @each $value in $px-fallback {
+    @if unitless($value) and $value != 0 {
+      @if $base-unit == rem {
+        $value: $value * ($base-line-height / $base-font-size) * 1rem;
+      }
+      @else if $base-unit == em {
+        $value: $value * ($base-line-height / $relative-to) * 1em;
+      }
+      @else { // $base-unit == px
+        $value: $value * $base-line-height;
+      }
+    }
+    $normalized-values: append($normalized-values, $value);
+  }
+  @if $base-unit == rem and normalize-support-for(ie, 8) {
+    #{$property}: $px-fallback;
+  }
+  #{$property}: $normalized-values;
+}
+
+@mixin normalize-line-height($font-size, $min-line-padding: 2px) {
+  $lines: ceil($font-size / $base-line-height);
+  // If lines are cramped include some extra lead.
+  @if ($lines * $base-line-height - $font-size) < ($min-line-padding * 2) {
+    $lines: $lines + 1;
+  }
+  @include normalize-rhythm(line-height, $lines, $font-size);
+}
