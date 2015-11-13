@@ -6,27 +6,28 @@ It combines normalize.css v3.0.3 and normalize v1.1.3.
 The latest release of _normalize.scss for Sass 3.2/Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
 It combines normalize.css v2.1.3 and normalize v1.1.3.
 
-## The Compass port of normalize.css
+## The Sass port of normalize.css
 
-__This project is the Sass/Compass version of Normalize.css__, a collection of
+__This project is the Sass version of Normalize.css__, a collection of
 HTML element and attribute rulesets to normalize styles across all browsers.
-This port aims to use the best partials from Compass to make Normalize even
+This port aims to use a light dusting of Sass to make Normalize even
 easier to integrate with your website. To learn about why Normalize.css is so
 amazing, skip to the "normalize.css" section below.
 
-This Sass/Compass port currently utilizes:
+This Sass port currently utilizes:
 
-* Browser Support variables
-* CSS3 Box Sizing mixin
-* Vertical Rhythm mixins
+* Browser support variables: Allowing you to easily add/drop support for any
+  browser by modifying a single Sass variable.
+* Vertical rhythm mixins: Allowing you to alter the font-size, line-height and
+  margins in Normalize’s output without hacking the library.
 
-In addition, Normalize.css has 2 major versions: version 3 (without legacy
-browser support) and version 1 (with support for IE 6/7, etc.) This Compass port
+In addition, Normalize.css has 2 major versions: version 3 (without “legacy
+browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port
 combines the two versions into one file so that you can easily toggle between
-the two versions using Compass' Browser Support variables.
+the two versions using its browser support variables.
 
 Did a client wait until the last minute to mention their CEO uses IE 6? Simply
-update your `$browser-minimum-versions` variable and recompile your Sass files.
+update your `$normalize-support-for` variable and recompile your Sass files.
 Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
 
 # normalize.css v3
@@ -67,7 +68,7 @@ Install using one of the following methods:
 There is a fantastic introduction to the project and brief instructions how to
 use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
 
-To use the Compass port of Normalize, simply:
+To use the Sass port of Normalize, simply:
 
 1. copy the _normalize.scss file to your sass directory (or if installed with
    Ruby Gem, add `require "normalize-scss"` to your config.rb file.)
@@ -88,8 +89,8 @@ To use the Compass port of Normalize, simply:
 * Apple Safari 6+
 * Internet Explorer 6+
 
-The exact browsers supported in your project is controlled by Compass' Support
-variables. See https://github.com/JohnAlbin/normalize-scss/wiki
+The exact browsers supported in your project is controlled by the browser
+support variables. See https://github.com/JohnAlbin/normalize-scss/wiki
 
 ## Extended details
 
@@ -141,12 +142,11 @@ be reported in the [Normalize-scss project](https://github.com/JohnAlbin/normali
 Normalize.css is a project by [Nicolas Gallagher](https://github.com/necolas),
 co-created with [Jonathan Neal](https://github.com/jonathantneal).
 
-This Sass/Compass port is a project by [John Albin Wilkins](http://john.albin.net).
+This Sass port is a project by [John Albin Wilkins](http://john.albin.net).
 
 ## Other ports of Normalize.css
 
-For the record, there are several other Sass or Compass ports as well.
-Including:
+For the record, there are several other Sass ports as well. Including:
 
 * https://github.com/waynegraham/compass-normalize-plugin
 * https://github.com/ksmandersen/compass-normalize
