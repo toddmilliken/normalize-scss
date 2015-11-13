@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
   s.name        = 'normalize-scss'
 
-  s.summary     = %q{The Sass/Compass version of Normalize.css}
-  s.description = %q{This is the Sass/Compass version of Normalize.css, a collection of HTML element and attribute rulesets to normalize styles across all browsers. This port aims to use the best partials from Compass to make Normalize even easier to integrate with your website.}
+  s.summary     = %q{The Sass version of Normalize.css}
+  s.description = %q{This is the Sass version of Normalize.css, a collection of HTML element and attribute rulesets to normalize styles across all browsers. This port aims to use a light dusting of Sass to make Normalize even easier to integrate with your website.}
 
   s.homepage    = 'https://github.com/JohnAlbin/normalize-scss'
   s.rubyforge_project =
@@ -16,8 +16,7 @@ Gem::Specification.new do |s|
   s.authors     = ['John Albin Wilkins']
   s.email       = 'virtually.johnalbin@gmail.com'
 
-  s.add_runtime_dependency('sass',          '~> 3.3', '>= 3.3.0')
-  s.add_runtime_dependency('compass-core',  '~> 1.0', '>= 1.0.0')
+  s.add_runtime_dependency('sass', '~> 3.3', '>= 3.3.0')
 
   s.files       = %w[
     CHANGELOG.md
@@ -27,5 +26,8 @@ Gem::Specification.new do |s|
     normalize-scss.gemspec
     README.md
     sass/_normalize.scss
+    sass/normalize/_font-values.scss
+    sass/normalize/_support-for.scss
+    sass/normalize/_variables.scss
   ]
 end
