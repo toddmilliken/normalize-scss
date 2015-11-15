@@ -5,24 +5,31 @@
 // CSS. If you are looking for a robust solution, look at the excellent Typey
 // library. @see https://github.com/jptaranto/typey
 
-@mixin normalize-font-size($value, $relative-to: $base-font-size) {
+@function normalize-rhythm($value, $relative-to: $base-font-size) {
   @if unit($value) != 'px' {
-    @error "font-size-normalize() only supports px inputs. The typey library is better.";
+    @error "The normalize vertical-rhythm module only supports px inputs. The typey library is better.";
   }
   @if $base-unit == rem {
-    // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
-    // in font shorthand, but font-size longhand is fine.
-    @if normalize-support-for(ie, 8) {
-      font-size: $value;
-    }
-    font-size: ($value / $base-font-size) * 1rem;
+    @return ($value / $base-font-size) * 1rem;
   }
   @else if $base-unit == em {
-    font-size: ($value / $relative-to) * 1em;
+    @return ($value / $relative-to) * 1em;
   }
   @else { // $base-unit == px
+    @return $value;
+  }
+}
+
+@mixin normalize-font-size($value, $relative-to: $base-font-size) {
+  @if unit($value) != 'px' {
+    @error "normalize-font-size() only supports px inputs. The typey library is better.";
+  }
+  // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
+  // in font shorthand, but font-size longhand is fine.
+  @if $base-unit == rem and normalize-support-for(ie, 8) {
     font-size: $value;
   }
+  font-size: normalize-rhythm($value, $relative-to);
 }
 
 @mixin normalize-rhythm($property, $values, $relative-to: $base-font-size) {
@@ -37,15 +44,7 @@
 
   @each $value in $px-fallback {
     @if unitless($value) and $value != 0 {
-      @if $base-unit == rem {
-        $value: $value * ($base-line-height / $base-font-size) * 1rem;
-      }
-      @else if $base-unit == em {
-        $value: $value * ($base-line-height / $relative-to) * 1em;
-      }
-      @else { // $base-unit == px
-        $value: $value * $base-line-height;
-      }
+      $value: $value * normalize-rhythm($base-line-height, $relative-to);
     }
     $normalized-values: append($normalized-values, $value);
   }
@@ -53,6 +52,10 @@
     #{$property}: $px-fallback;
   }
   #{$property}: $normalized-values;
+}
+
+@mixin normalize-margin($values, $relative-to: $base-font-size) {
+  @include normalize-rhythm(margin, $values, $relative-to);
 }
 
 @mixin normalize-line-height($font-size, $min-line-padding: 2px) {
