@@ -1,3 +1,10 @@
+//
+// Vertical Rhythm
+//
+// This is the minimal amount of code needed to create vertical rhythm in our
+// CSS. If you are looking for a robust solution, look at the excellent Typey
+// library. @see https://github.com/jptaranto/typey
+
 @mixin normalize-font-size($value, $relative-to: $base-font-size) {
   @if unit($value) != 'px' {
     @error "font-size-normalize() only supports px inputs. The typey library is better.";
@@ -50,7 +57,7 @@
 
 @mixin normalize-line-height($font-size, $min-line-padding: 2px) {
   $lines: ceil($font-size / $base-line-height);
-  // If lines are cramped include some extra lead.
+  // If lines are cramped include some extra leading.
   @if ($lines * $base-line-height - $font-size) < ($min-line-padding * 2) {
     $lines: $lines + 1;
   }
