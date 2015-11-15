@@ -1,6 +1,14 @@
 'use strict';
 
 describe('Configuration variables', function() {
+  before(function(done) {
+    sassyTest.configurePaths({
+      // Path to Sass library.
+      fixtures: path.join(__dirname, 'fixtures')
+    });
+    done();
+  });
+
   describe('default values', function() {
     it('should limit output to the same output as normalize.css', function(done) {
       sassyTest.renderFixture('variables/default', {}, function(error, result, expectedOutput) {

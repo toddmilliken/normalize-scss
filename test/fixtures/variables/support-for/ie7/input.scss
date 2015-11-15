@@ -3,3 +3,4 @@ $normalize-support-for: (
 );
 
 @import 'normalize';
+@include normalize();
