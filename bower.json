@@ -6,7 +6,7 @@
     "Nicolas Gallagher",
     "John Albin Wilkins"
   ],
-  "description": "This is the Sass/Compass version of Normalize.css, a collection of HTML element and attribute rulesets to normalize styles across all browsers.",
+  "description": "This is the Sass version of Normalize.css, a collection of HTML element and attribute rulesets to normalize styles across all browsers. This port aims to use a light dusting of Sass to make Normalize even easier to integrate with your website.",
   "main": [
     "sass/normalize/_import-now.scss"
   ],
