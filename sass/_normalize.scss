@@ -3,8 +3,7 @@
 @import 'normalize/font-values';
 
 
-// If we've customized any font sizes, we'll need extra properties.
-$_normalize-font-sizes: false;
+// If we've customized any font variables, we'll need extra properties.
 @if $base-font-size != 16px
   or $base-line-height != 24px
   or $base-unit != 'em'
@@ -15,7 +14,7 @@ $_normalize-font-sizes: false;
   or $h5-font-size != 0.83 * $base-font-size
   or $h6-font-size != 0.67 * $base-font-size
   or $indent-amount != 40px {
-  $_normalize-font-sizes: true;
+  $normalize-vertical-rhythm: true;
 }
 
 /**
@@ -25,12 +24,12 @@ $_normalize-font-sizes: false;
  */
 
 html {
-  @if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+  @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
     // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
     // `em` units.
     font-size: ($base-font-size / 16px) * 100%;
   }
-  @if $_normalize-font-sizes {
+  @if $normalize-vertical-rhythm {
     line-height: ($base-line-height / $base-font-size) * 1em;
   }
   font-family: $base-font-family; /* 1 */
@@ -162,7 +161,7 @@ strong {
   font-weight: bold;
 }
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -187,7 +186,7 @@ dfn {
 
 h1 {
   @include normalize-font-size($h1-font-size);
-  @if $_normalize-font-sizes {
+  @if $normalize-vertical-rhythm {
     @include normalize-line-height($h1-font-size);
   }
 
@@ -196,10 +195,10 @@ h1 {
   @include normalize-rhythm(margin-bottom, 1, $h1-font-size);
 }
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
   h2 {
     @include normalize-font-size($h2-font-size);
-    @if $_normalize-font-sizes {
+    @if $normalize-vertical-rhythm {
       @include normalize-line-height($h2-font-size);
     }
     @include normalize-rhythm(margin-top, 1, $h2-font-size);
@@ -208,7 +207,7 @@ h1 {
 
   h3 {
     @include normalize-font-size($h3-font-size);
-    @if $_normalize-font-sizes {
+    @if $normalize-vertical-rhythm {
       @include normalize-line-height($h3-font-size);
     }
     @include normalize-rhythm(margin-top, 1, $h3-font-size);
@@ -217,7 +216,7 @@ h1 {
 
   h4 {
     @include normalize-font-size($h4-font-size);
-    @if $_normalize-font-sizes {
+    @if $normalize-vertical-rhythm {
       @include normalize-line-height($h4-font-size);
     }
     @include normalize-rhythm(margin-top, 1, $h4-font-size);
@@ -226,7 +225,7 @@ h1 {
 
   h5 {
     @include normalize-font-size($h5-font-size);
-    @if $_normalize-font-sizes {
+    @if $normalize-vertical-rhythm {
       @include normalize-line-height($h5-font-size);
     }
     @include normalize-rhythm(margin-top, 1, $h5-font-size);
@@ -235,7 +234,7 @@ h1 {
 
   h6 {
     @include normalize-font-size($h6-font-size);
-    @if $_normalize-font-sizes {
+    @if $normalize-vertical-rhythm {
       @include normalize-line-height($h6-font-size);
     }
     @include normalize-rhythm(margin-top, 1, $h6-font-size);
@@ -254,7 +253,7 @@ h1 {
   }
 }
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
   /**
    * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
@@ -293,7 +292,7 @@ sub {
   bottom: -0.25em;
 }
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
   /* Lists
      ========================================================================== */
 
@@ -309,7 +308,7 @@ sub {
   }
 }
 
-@if $_normalize-font-sizes {
+@if $normalize-vertical-rhythm {
   /**
    * Turn off margins on nested lists.
    */
@@ -323,7 +322,7 @@ sub {
   }
 }
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 7) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
   dd {
     margin: 0 0 0 $indent-amount;
   }
@@ -379,7 +378,7 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 
-@if $_normalize-font-sizes or normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
+@if $normalize-vertical-rhythm or normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
   /**
    * Address margin not present in IE 8/9 and Safari.
    */
