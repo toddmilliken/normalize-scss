@@ -1,0 +1,6 @@
+$normalize-support-for: (
+  ie: -2,
+);
+
+@import 'normalize';
+@include normalize();

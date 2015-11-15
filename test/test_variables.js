@@ -36,7 +36,7 @@ describe('Configuration variables', function() {
     });
   });
 
-  describe('Browser support', function() {
+  describe('$normalize-support-for', function() {
     it('should support Chrome 9', function(done) {
       sassyTest.renderFixture('variables/support-for/chrome9', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
@@ -109,6 +109,13 @@ describe('Configuration variables', function() {
 
     it('should support Safari 7', function(done) {
       sassyTest.renderFixture('variables/support-for/safari7', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+
+    it('should support "last X versions" with -X value', function(done) {
+      sassyTest.renderFixture('variables/support-for/negative-value', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
         done();
       });

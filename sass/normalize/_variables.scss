@@ -1,6 +1,8 @@
 //
 // Variables
 //
+// You can override the default values by setting the variables in your Sass
+// before importing the normalize-scss library.
 
 // The font size set on the root html element.
 $base-font-size: 16px !default;
@@ -52,3 +54,12 @@ $normalize-support-for: map-merge((
   opera:   null,
   safari:  null,
 ), $normalize-support-for);
+
+$normalize-current-browser-version: (
+  chrome:  46,
+  edge:    25,
+  firefox: 42,
+  ie:      11,
+  opera:   33,
+  safari:  9,
+) !default;

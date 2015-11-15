@@ -29,7 +29,13 @@
     @error "$normalize-support-for: (#{$browser}: #{$min-version}) must be set to an integer (or null); #{$min-version} is not an integer.";
   }
 
-  // @TODO Negative $version means "X most recent versions".
+  // Negative $min-version means "X most recent versions".
+  @if type-of($min-version) == "number" and $min-version < 0 {
+    @if not map-has-key($normalize-current-browser-version, $browser) {
+      @error "$normalize-current-browser-version: (#{$browser}: null) must be set to an integer.";
+    }
+    $min-version: map-get($normalize-current-browser-version, $browser) + $min-version + 1;
+  }
 
   @return ($min-version and ($version >= $min-version));
 }
