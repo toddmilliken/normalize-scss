@@ -117,8 +117,7 @@ dfn {
 h1 {
   font-size: 2em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.75em;
-  margin-bottom: 0.75em; }
+  margin: 0.75em 0; }
 
 /**
    * Address styling not present in IE 8/9.

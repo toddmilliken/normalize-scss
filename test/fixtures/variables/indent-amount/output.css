@@ -126,38 +126,32 @@ h1 {
   font-size: 2em;
   line-height: 1.5em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.75em;
-  margin-bottom: 0.75em; }
+  margin: 0.75em 0; }
 
 h2 {
   font-size: 1.5em;
   line-height: 2em;
-  margin-top: 1em;
-  margin-bottom: 1em; }
+  margin: 1em 0; }
 
 h3 {
   font-size: 1.17em;
   line-height: 1.28205em;
-  margin-top: 1.28205em;
-  margin-bottom: 1.28205em; }
+  margin: 1.28205em 0; }
 
 h4 {
   font-size: 1em;
   line-height: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em; }
+  margin: 1.5em 0; }
 
 h5 {
   font-size: 0.83em;
   line-height: 1.80723em;
-  margin-top: 1.80723em;
-  margin-bottom: 1.80723em; }
+  margin: 1.80723em 0; }
 
 h6 {
   font-size: 0.67em;
   line-height: 2.23881em;
-  margin-top: 2.23881em;
-  margin-bottom: 2.23881em; }
+  margin: 2.23881em 0; }
 
 /**
    * Address styling not present in IE 8/9.

@@ -167,7 +167,7 @@ strong {
    */
 
   blockquote {
-    @include normalize-rhythm(margin, 1 $indent-amount);
+    @include normalize-margin(1 $indent-amount);
   }
 }
 
@@ -191,8 +191,7 @@ h1 {
   }
 
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  @include normalize-rhythm(margin-top, 1, $h1-font-size);
-  @include normalize-rhythm(margin-bottom, 1, $h1-font-size);
+  @include normalize-margin(1 0, $h1-font-size);
 }
 
 @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
@@ -201,8 +200,7 @@ h1 {
     @if $normalize-vertical-rhythm {
       @include normalize-line-height($h2-font-size);
     }
-    @include normalize-rhythm(margin-top, 1, $h2-font-size);
-    @include normalize-rhythm(margin-bottom, 1, $h2-font-size);
+    @include normalize-margin(1 0, $h2-font-size);
   }
 
   h3 {
@@ -210,8 +208,7 @@ h1 {
     @if $normalize-vertical-rhythm {
       @include normalize-line-height($h3-font-size);
     }
-    @include normalize-rhythm(margin-top, 1, $h3-font-size);
-    @include normalize-rhythm(margin-bottom, 1, $h3-font-size);
+    @include normalize-margin(1 0, $h3-font-size);
   }
 
   h4 {
@@ -219,8 +216,7 @@ h1 {
     @if $normalize-vertical-rhythm {
       @include normalize-line-height($h4-font-size);
     }
-    @include normalize-rhythm(margin-top, 1, $h4-font-size);
-    @include normalize-rhythm(margin-bottom, 1, $h4-font-size);
+    @include normalize-margin(1 0, $h4-font-size);
   }
 
   h5 {
@@ -228,8 +224,7 @@ h1 {
     @if $normalize-vertical-rhythm {
       @include normalize-line-height($h5-font-size);
     }
-    @include normalize-rhythm(margin-top, 1, $h5-font-size);
-    @include normalize-rhythm(margin-bottom, 1, $h5-font-size);
+    @include normalize-margin(1 0, $h5-font-size);
   }
 
   h6 {
@@ -237,8 +232,7 @@ h1 {
     @if $normalize-vertical-rhythm {
       @include normalize-line-height($h6-font-size);
     }
-    @include normalize-rhythm(margin-top, 1, $h6-font-size);
-    @include normalize-rhythm(margin-bottom, 1, $h6-font-size);
+    @include normalize-margin(1 0, $h6-font-size);
   }
 }
 
@@ -260,7 +254,7 @@ h1 {
 
   p,
   pre {
-    @include normalize-rhythm(margin, 1 0);
+    @include normalize-margin(1 0);
   }
 }
 
@@ -304,7 +298,7 @@ sub {
   menu,
   ol,
   ul {
-    @include normalize-rhythm(margin, 1 0);
+    @include normalize-margin(1 0);
   }
 }
 
@@ -384,7 +378,7 @@ svg:not(:root) {
    */
 
   figure {
-    @include normalize-rhythm(margin, 1 $indent-amount);
+    @include normalize-margin(1 $indent-amount);
   }
 }
 

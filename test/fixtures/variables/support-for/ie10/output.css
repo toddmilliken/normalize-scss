@@ -115,8 +115,7 @@ dfn {
 h1 {
   font-size: 2em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.75em;
-  margin-bottom: 0.75em; }
+  margin: 0.75em 0; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
