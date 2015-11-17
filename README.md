@@ -57,9 +57,10 @@ Install using one of the following methods:
 * Install with [npm](http://npmjs.org/): `npm install --save normalize-scss`
 * Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
 * Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss):
-  `gem install normalize-scss` Note: if you want to alter the _normalize.scss
-  file after installation (see "how to use it" below), you can use the
-  `gem list --details normalize-scss` command to show you where the
+  `gem install normalize-scss` and, if using Compass, add
+  `require "normalize-scss"` to your config.rb file. Note: if you want to alter
+  the _normalize.scss file after installation (see "how to use it" below), you
+  can use the `gem list --details normalize-scss` command to show you where the
   normalize-scss files were installed.
 
 ## How to use it
@@ -67,17 +68,31 @@ Install using one of the following methods:
 There is a fantastic introduction to the project and brief instructions how to
 use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
 
-To use the Sass port of Normalize, simply:
+You can use the Sass port of Normalize in one of several methods, following the "About normalize.css" article's suggestions:
 
-1. copy the _normalize.scss file to your sass directory (or if installed with
-   Ruby Gem, add `require "normalize-scss"` to your config.rb file.)
-2. import the partial into your main Sass file with `@import "normalize";`
-3. and follow the "About normalize.css" article's suggestions:
-  * __Approach 1:__ use `_normalize.scss` as a starting point for your own
-    project's base Sass, customising the values to match the design's
-    requirements. (The best approach, _IMO_.)
-  * __Approach 2:__ include `_normalize.scss` untouched and build upon it,
-    overriding the defaults later in your Sass when necessary.
+__Approach 1:__ use `_normalize.scss` as a starting point for your own
+project's base Sass, customising the values to match the design's
+requirements. (The best approach, _IMO_.)
+  1. Copy the normalize-scss files to your sass directory so that you can alter it
+    as you include it in your project. To aid with this method, normalize-scss
+    includes several ready-made "fork" versions:
+    * fork-versions/compass - Fork for Ruby Sass with Compass
+    * fork-versions/node-sass - Fork for node-sass
+    * fork-versions/typey - Fork for node-sass with Typey
+    * fork-versions/typey-kss - Fork for node-sass with Typey and KSS comments
+  2. The normalize-scss code uses the `support-for` module, so add it
+
+__Approach 2:__ include normalize-scss untouched and build upon it, overriding
+the defaults later in your Sass when necessary. Just import normalize-scss like
+any normal Sass module by:
+  1. Setting variables to override the default normalize-scss variables
+  2. Import with `@import "normalize";`
+  3. Output the CSS rules with `@include normalize();`
+  Alternatively, you can import normalize-scss immediately into your main Sass
+  file without needing to use the `normalize()` mixin by:
+  1. Setting variables to override the default normalize-scss variables
+    (optional)
+  2. Import with `@import "normalize/import-now";`
 
 ## Browser support
 
@@ -151,9 +166,5 @@ For the record, there are several other Sass ports as well. Including:
 * https://github.com/ksmandersen/compass-normalize
 * https://github.com/hail2u/normalize.scss
 * https://github.com/kristerkari/normalize.scss
-
-Some of the above projects convert normalize into Sass mixins. That makes it
-impossible to add Normalize using __Approach 1__ (by copying the file into your
-website and customizing/overriding for your needs.)
 
 [![Build Status](https://travis-ci.org/JohnAlbin/normalize-scss.png?branch=master)](https://travis-ci.org/JohnAlbin/normalize-scss)
