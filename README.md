@@ -27,7 +27,7 @@ combines the two versions into one file so that you can easily toggle between
 the two versions using its browser support variables.
 
 Did a client wait until the last minute to mention their CEO uses IE 6? Simply
-update your `$normalize-support-for` variable and recompile your Sass files.
+update your `$support-for` variable and recompile your Sass files.
 Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
 
 # normalize.css v3

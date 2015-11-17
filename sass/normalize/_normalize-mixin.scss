@@ -42,7 +42,7 @@ $_normalize-exclude: ();
      */
 
     html {
-      @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+      @if $normalize-vertical-rhythm or support-for(ie, 7) {
         // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
         // `em` units.
         font-size: ($base-font-size / 16px) * 100%;
@@ -100,9 +100,9 @@ $_normalize-exclude: ();
     canvas,
     progress,
     video {
-      @if normalize-support-for(ie, 9) {
+      @if support-for(ie, 9) {
         display: inline-block; /* 1 */
-        @if normalize-support-for(ie, 7) {
+        @if support-for(ie, 7) {
           *display: inline;
           *zoom: 1;
         }
@@ -120,7 +120,7 @@ $_normalize-exclude: ();
       height: 0;
     }
 
-    @if normalize-support-for(ie, 10) {
+    @if support-for(ie, 10) {
       /**
        * Address `[hidden]` styling not present in IE 8/9/10.
        */
@@ -143,7 +143,7 @@ $_normalize-exclude: ();
     /* Links
        ========================================================================== */
 
-    @if normalize-support-for(ie, 10) {
+    @if support-for(ie, 10) {
       /**
        * Remove the gray background color from active links in IE 10.
        */
@@ -185,7 +185,7 @@ $_normalize-exclude: ();
       font-weight: bold;
     }
 
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
       /**
        * Set 1 unit of vertical rhythm on the top and bottom margin.
        */
@@ -218,7 +218,7 @@ $_normalize-exclude: ();
       @include normalize-margin(1 0, $h1-font-size);
     }
 
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
       h2 {
         @include normalize-font-size($h2-font-size);
         @if $normalize-vertical-rhythm {
@@ -260,7 +260,7 @@ $_normalize-exclude: ();
       }
     }
 
-    @if normalize-support-for(ie, 9) {
+    @if support-for(ie, 9) {
       /**
        * Address styling not present in IE 8/9.
        */
@@ -271,7 +271,7 @@ $_normalize-exclude: ();
       }
     }
 
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
       /**
        * Set 1 unit of vertical rhythm on the top and bottom margin.
        */
@@ -312,7 +312,7 @@ $_normalize-exclude: ();
   }
 
   @if _normalize-include(lists) {
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
       /* Lists
          ========================================================================== */
 
@@ -342,7 +342,7 @@ $_normalize-exclude: ();
       }
     }
 
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 7) {
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
       dd {
         margin: 0 0 0 $indent-amount;
       }
@@ -358,7 +358,7 @@ $_normalize-exclude: ();
       }
     }
 
-    @if normalize-support-for(ie, 7) {
+    @if support-for(ie, 7) {
       /**
        * Correct list images handled incorrectly in IE 7.
        */
@@ -375,14 +375,14 @@ $_normalize-exclude: ();
     /* Embedded content
        ========================================================================== */
 
-    @if normalize-support-for(ie, 10) {
+    @if support-for(ie, 10) {
       /**
        * Remove border when inside `a` element in IE 8/9/10.
        */
 
       img {
         border: 0;
-        @if normalize-support-for(ie, 7) {
+        @if support-for(ie, 7) {
           /* Improve image quality when scaled in IE 7. */
           -ms-interpolation-mode: bicubic;
         }
@@ -402,7 +402,7 @@ $_normalize-exclude: ();
     /* Grouping content
        ========================================================================== */
 
-    @if $normalize-vertical-rhythm or normalize-support-for(ie, 9) or normalize-support-for(safari, 6) {
+    @if $normalize-vertical-rhythm or support-for(ie, 9) or support-for(safari, 6) {
       /**
        * Address margin not present in IE 8/9 and Safari.
        */
@@ -417,7 +417,7 @@ $_normalize-exclude: ();
      */
 
     hr {
-      @if normalize-support-for(firefox, 28) {
+      @if support-for(firefox, 28) {
         -moz-box-sizing: content-box;
       }
       box-sizing: content-box;
@@ -441,7 +441,7 @@ $_normalize-exclude: ();
     pre,
     samp {
       font-family: monospace, monospace;
-      @if normalize-support-for(ie, 6) {
+      @if support-for(ie, 6) {
         _font-family: 'courier new', monospace;
       }
       font-size: 1em;
@@ -457,7 +457,7 @@ $_normalize-exclude: ();
      * styling of `select`, unless a `border` property is set.
      */
 
-    @if normalize-support-for(ie, 7) {
+    @if support-for(ie, 7) {
       /**
        * Correct margin displayed oddly in IE 6/7.
        */
@@ -484,7 +484,7 @@ $_normalize-exclude: ();
       color: inherit; /* 1 */
       font: inherit; /* 2 */
       margin: 0; /* 3 */
-      @if normalize-support-for(ie, 7) {
+      @if support-for(ie, 7) {
         *font-family: $base-font-family; /* 4 */
         *vertical-align: middle; /* 5 */
       }
@@ -526,7 +526,7 @@ $_normalize-exclude: ();
     input[type="submit"] {
       -webkit-appearance: button; /* 2 */
       cursor: pointer; /* 3 */
-      @if normalize-support-for(ie, 7) {
+      @if support-for(ie, 7) {
         *overflow: visible; /* 4 */
       }
     }
@@ -559,7 +559,7 @@ $_normalize-exclude: ();
       line-height: normal;
     }
 
-    @if normalize-support-for(ie, 10) {
+    @if support-for(ie, 10) {
       /**
        * It's recommended that you don't attempt to style these elements.
        * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -574,7 +574,7 @@ $_normalize-exclude: ();
       input[type="radio"] {
         box-sizing: border-box; /* 1 */
         padding: 0; /* 2 */
-        @if normalize-support-for(ie, 7) {
+        @if support-for(ie, 7) {
           *height: 13px; /* 3 */
           *width: 13px; /* 3 */
         }
@@ -599,7 +599,7 @@ $_normalize-exclude: ();
 
     input[type="search"] {
       -webkit-appearance: textfield; /* 1 */
-      @if normalize-support-for(safari, 5) or normalize-support-for(chrome, 9) {
+      @if support-for(safari, 5) or support-for(chrome, 9) {
         -webkit-box-sizing: content-box;
       }
       box-sizing: content-box; /* 2 */
@@ -633,11 +633,11 @@ $_normalize-exclude: ();
      */
 
     legend {
-      @if normalize-support-for(ie, 11) {
+      @if support-for(ie, 11) {
         border: 0; /* 1 */
       }
       padding: 0; /* 2 */
-      @if normalize-support-for(ie, 7) {
+      @if support-for(ie, 7) {
         *margin-left: -7px; /* 3 */
       }
     }

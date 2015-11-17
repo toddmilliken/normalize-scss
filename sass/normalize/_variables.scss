@@ -34,32 +34,3 @@ $indent-amount: 40px !default;
 // However, changing any of the variables above will cause
 // $normalize-vertical-rhythm to be automatically set to true.
 $normalize-vertical-rhythm: false !default;
-
-// Support the same browsers as normalize.css v3.
-$normalize-support-for: (
-  chrome:  43,
-  edge:    20,
-  firefox: 39,
-  ie:      9,
-  opera:   null,
-  safari:  6,
-) !default;
-
-// Ensure there is an entry for every browser.
-$normalize-support-for: map-merge((
-  chrome:  null,
-  edge:    null,
-  firefox: null,
-  ie:      null,
-  opera:   null,
-  safari:  null,
-), $normalize-support-for);
-
-$normalize-current-browser-version: (
-  chrome:  46,
-  edge:    25,
-  firefox: 42,
-  ie:      11,
-  opera:   33,
-  safari:  9,
-) !default;

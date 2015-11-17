@@ -8,8 +8,12 @@ global.sassyTest = require('sassy-test');
 // This before() is run before any test_*.js file.
 before(function(done) {
   sassyTest.configurePaths({
-    // Path to Sass library.
-    library: path.join(__dirname, '../sass')
+    includePaths: [
+      // Path to Sass library.
+      path.join(__dirname, '../sass'),
+      // Path to normalize-scss' dependencies.
+      path.join(__dirname, '../node_modules/support-for/sass')
+    ]
   });
   done();
 });

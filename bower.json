@@ -31,5 +31,8 @@
     "sache.json",
     "test.html",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "support-for": "~1.0.2"
+  }
 }

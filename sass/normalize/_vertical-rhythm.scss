@@ -26,7 +26,7 @@
   }
   // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
   // in font shorthand, but font-size longhand is fine.
-  @if $base-unit == rem and normalize-support-for(ie, 8) {
+  @if $base-unit == rem and support-for(ie, 8) {
     font-size: $value;
   }
   font-size: normalize-rhythm($value, $relative-to);
@@ -48,7 +48,7 @@
     }
     $normalized-values: append($normalized-values, $value);
   }
-  @if $base-unit == rem and normalize-support-for(ie, 8) {
+  @if $base-unit == rem and support-for(ie, 8) {
     #{$property}: $px-fallback;
   }
   #{$property}: $normalized-values;

@@ -36,7 +36,7 @@ describe('Configuration variables', function() {
     });
   });
 
-  describe('$normalize-support-for', function() {
+  describe('$support-for', function() {
     it('should support Chrome 9', function(done) {
       sassyTest.renderFixture('variables/support-for/chrome9', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
