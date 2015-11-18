@@ -3,7 +3,6 @@
 describe('@import "normalize/import-now";', function() {
   before(function(done) {
     sassyTest.configurePaths({
-      // Path to Sass library.
       fixtures: path.join(__dirname, 'fixtures')
     });
     done();

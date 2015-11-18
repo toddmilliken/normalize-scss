@@ -5,8 +5,8 @@ global.path = require('path');
 global.should = require('chai').should();
 global.sassyTest = require('sassy-test');
 
-// This before() is run before any test_*.js file.
-before(function(done) {
+// This beforeEach() is run before each test in all test_*.js files.
+beforeEach(function(done) {
   sassyTest.configurePaths({
     includePaths: [
       // Path to Sass library.
