@@ -185,8 +185,24 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* Lists
-         ========================================================================== */
+/* Embedded content
+       ========================================================================== */
+/**
+       * Remove border when inside `a` element in IE 8/9/10.
+       */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic; }
+
+/**
+     * Correct overflow not hidden in IE 9/10/11.
+     */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+       ========================================================================== */
 /**
        * Address margins set differently in IE 6/7.
        */
@@ -215,24 +231,6 @@ nav ol {
   list-style: none;
   list-style-image: none; }
 
-/* Embedded content
-       ========================================================================== */
-/**
-       * Remove border when inside `a` element in IE 8/9/10.
-       */
-img {
-  border: 0;
-  /* Improve image quality when scaled in IE 7. */
-  -ms-interpolation-mode: bicubic; }
-
-/**
-     * Correct overflow not hidden in IE 9/10/11.
-     */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-       ========================================================================== */
 /**
        * Address margin not present in IE 8/9 and Safari.
        */
