@@ -2,9 +2,9 @@
 
 For use with…                | normalize-scss version
 -----------------------------|-----------------------
-Sass 3.4 or libSass          | [4.0.0-beta.1](https://github.com/JohnAlbin/normalize-scss/releases/tag/4.0.0-beta.1) It combines normalize.css v3.0.3 and normalize v1.1.3.
-Ruby Sass 3.3 + Compass 1.0  | [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3) It combines normalize.css v3.0.3 and normalize v1.1.3.
-Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3) It combines normalize.css v2.1.3 and normalize v1.1.3.
+Sass 3.4 or libSass          | [4.0.0-beta.1](https://github.com/JohnAlbin/normalize-scss/releases/tag/4.0.0-beta.1)<br> combining normalize.css v3.0.3 with v1.1.3
+Ruby Sass 3.3 + Compass 1.0  | [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3)<br> combining normalize.css v3.0.3 with v1.1.3
+Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3)<br> combining normalize.css v2.1.3 with v1.1.3
 
 ## The Sass port of normalize.css
 
