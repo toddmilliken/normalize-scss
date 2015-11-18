@@ -20,11 +20,8 @@
   "eyeglass": {
     "exports": "eyeglass-exports.js"
   },
-  "files": [
-    "LICENSE.md",
-    "sass/_normalize.scss"
-  ],
   "directories": {
+    "lib": "sass",
     "test": "test"
   },
   "scripts": {
