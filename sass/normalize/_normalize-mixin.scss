@@ -34,6 +34,8 @@ $_normalize-exclude: ();
     $normalize-vertical-rhythm: true !global;
   }
 
+  /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+
   @if _normalize-include(root) {
     /**
      * 1. Set default font family to sans-serif.
