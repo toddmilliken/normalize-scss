@@ -57,8 +57,8 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
   1. Copy the normalize-scss files to your sass directory so that you can alter it
     as you include it in your project. To aid with this method, normalize-scss
     includes several ready-made "fork" versions:
-    * fork-versions/compass - Fork for Ruby Sass with Compass
-    * fork-versions/standard - Fork for libSass / Ruby Sass
+    * fork-versions/default - Fork for libSass / Ruby Sass
+    * [fork-versions/ruby-sass-compass](fork-versions/ruby-sass-compass) - Fork for Ruby Sass with Compass
     * fork-versions/typey - Fork for node-sass with Typey
     * fork-versions/typey-kss - Fork for node-sass with Typey and KSS comments
   2. The normalize-scss code uses the `support-for` module, so add it
