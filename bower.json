@@ -21,7 +21,6 @@
     "**/.*",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
-    "component.json",
     "lib",
     "node_modules",
     "normalize-scss.gemspec",
