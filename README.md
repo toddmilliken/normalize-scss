@@ -1,10 +1,10 @@
 ## Latest downloadable version
 
-The latest release of _normalize.scss for Sass 3.3/Compass 1.0 (and later) is: [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3).
-It combines normalize.css v3.0.3 and normalize v1.1.3.
-
-The latest release of _normalize.scss for Sass 3.2/Compass 0.12 is: [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3).
-It combines normalize.css v2.1.3 and normalize v1.1.3.
+For use with…                | normalize-scss version
+-----------------------------|-----------------------
+Sass 3.4 or libSass          | [4.0.0-beta.1](https://github.com/JohnAlbin/normalize-scss/releases/tag/4.0.0-beta.1) It combines normalize.css v3.0.3 and normalize v1.1.3.
+Ruby Sass 3.3 + Compass 1.0  | [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3) It combines normalize.css v3.0.3 and normalize v1.1.3.
+Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3) It combines normalize.css v2.1.3 and normalize v1.1.3.
 
 ## The Sass port of normalize.css
 
@@ -70,9 +70,7 @@ use it in the [About normalize.css article](http://nicolasgallagher.com/about-no
 
 You can use the Sass port of Normalize in one of several methods, following the "About normalize.css" article's suggestions:
 
-__Approach 1:__ use `_normalize.scss` as a starting point for your own
-project's base Sass, customising the values to match the design's
-requirements. (The best approach, _IMO_.)
+__Approach 1:__ use normalize-scss as a starting point for your own project's base Sass, customising the values to match the design's requirements. (The best approach, _IMO_.)
   1. Copy the normalize-scss files to your sass directory so that you can alter it
     as you include it in your project. To aid with this method, normalize-scss
     includes several ready-made "fork" versions:
@@ -88,8 +86,10 @@ any normal Sass module by:
   1. Setting variables to override the default normalize-scss variables
   2. Import with `@import "normalize";`
   3. Output the CSS rules with `@include normalize();`
-  Alternatively, you can import normalize-scss immediately into your main Sass
-  file without needing to use the `normalize()` mixin by:
+
+Alternatively, you can import normalize-scss immediately into your main Sass
+file without needing to use the `normalize()` mixin by:
+
   1. Setting variables to override the default normalize-scss variables
     (optional)
   2. Import with `@import "normalize/import-now";`
