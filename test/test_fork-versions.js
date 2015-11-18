@@ -67,4 +67,28 @@ describe('Fork versions', function() {
       });
     });
   });
+
+  describe('Typey, Chroma and KSS fork', function() {
+    beforeEach(function(done) {
+      sassyTest.configurePaths({
+        fixtures: path.join(__dirname, 'fixtures'),
+        includePaths: [
+          // Path to Fork version.
+          path.join(__dirname, '../fork-versions/typey-chroma-kss'),
+          // Path to normalize-scss' dependencies.
+          path.join(__dirname, '../node_modules/chroma-sass/sass'),
+          path.join(__dirname, '../node_modules/support-for/sass'),
+          path.join(__dirname, 'fixtures/typey-1.0.0-beta.7')
+        ]
+      });
+      done();
+    });
+
+    it('should render properly', function(done) {
+      sassyTest.renderFixture('fork-versions/typey-chroma-kss', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+  });
 });

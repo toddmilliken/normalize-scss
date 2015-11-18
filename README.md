@@ -60,7 +60,7 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
     * [fork-versions/default](fork-versions/default) - Fork for libSass or Ruby Sass
     * [fork-versions/ruby-sass-compass](fork-versions/ruby-sass-compass) - Fork for Ruby Sass with Compass
     * [fork-versions/typey](fork-versions/typey) - Fork with Typey
-    * fork-versions/typey-kss - Fork with Typey and KSS comments
+    * [fork-versions/typey-chroma-kss](fork-versions/typey-chroma-kss) - Fork with Typey, Chroma and KSS
   2. The normalize-scss code uses the `support-for` module, so add it
 
 __Approach 2:__ Install and include normalize-scss untouched and then build upon it, overriding the defaults later in your Sass when necessary. Just import normalize-scss like any normal Sass module by:
