@@ -166,5 +166,6 @@ For the record, there are several other Sass ports as well. Including:
 * https://github.com/ksmandersen/compass-normalize
 * https://github.com/hail2u/normalize.scss
 * https://github.com/kristerkari/normalize.scss
+* https://github.com/krisbulman/normalize-libsass
 
 [![Build Status](https://travis-ci.org/JohnAlbin/normalize-scss.png?branch=master)](https://travis-ci.org/JohnAlbin/normalize-scss)
