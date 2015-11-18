@@ -127,38 +127,32 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-  line-height: 48px;
   font-size: 2rem;
   line-height: 3rem;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin: 1.5rem 0rem; }
 
 h2 {
-  line-height: 36px;
   font-size: 1.5rem;
   line-height: 2.25rem;
   margin: 1.5rem 0rem; }
 
 h3 {
-  line-height: 24px;
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin: 1.5rem 0rem; }
 
 h4 {
-  line-height: 24px;
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 1.5rem 0rem; }
 
 h5 {
-  line-height: 24px;
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin: 1.5rem 0rem; }
 
 h6 {
-  line-height: 24px;
   font-size: 0.625rem;
   line-height: 1.5rem;
   margin: 1.5rem 0rem; }
