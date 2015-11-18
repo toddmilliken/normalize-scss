@@ -1,4 +1,6 @@
-## Latest downloadable version
+# normalize-scss
+
+## Latest versions
 
 For use with…                | normalize-scss version
 -----------------------------|-----------------------
@@ -8,36 +10,22 @@ Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAl
 
 ## The Sass port of normalize.css
 
-__This project is the Sass version of Normalize.css__, a collection of
-HTML element and attribute rulesets to normalize styles across all browsers.
-This port aims to use a light dusting of Sass to make Normalize even
-easier to integrate with your website. To learn about why Normalize.css is so
-amazing, skip to the "normalize.css" section below.
+__This project is the Sass version of Normalize.css__, a collection of HTML element and attribute rulesets to normalize styles across all browsers. This port aims to use a light dusting of Sass to make Normalize even easier to integrate with your website. To learn about why Normalize.css is so amazing, skip to the "normalize.css" section below.
 
 This Sass port currently utilizes:
 
-* Browser support variables: Allowing you to easily add/drop support for any
-  browser by modifying a single Sass variable.
-* Vertical rhythm mixins: Allowing you to alter the font-size, line-height and
-  margins in Normalize’s output without hacking the library.
+* Browser support variables: Allowing you to easily add/drop support for any browser by modifying a single Sass variable.
+* Vertical rhythm mixins: Allowing you to alter the font-size, line-height and margins in Normalize’s output without hacking the library.
 
-In addition, Normalize.css has 2 major versions: version 3 (without “legacy
-browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port
-combines the two versions into one file so that you can easily toggle between
-the two versions using its browser support variables.
+In addition, Normalize.css has 2 major versions: version 3 (without “legacy browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port combines the two versions into one file so that you can easily toggle between the two versions using its browser support variables.
 
-Did a client wait until the last minute to mention their CEO uses IE 6? Simply
-update your `$support-for` variable and recompile your Sass files.
-Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
+Did a client wait until the last minute to mention their CEO uses IE 6? Simply update your `$support-for` variable and recompile your Sass files. Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
 
 # normalize.css v3
 
-Normalize.css is a customisable CSS file that makes browsers render all
-elements more consistently and in line with modern standards.
+Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.
 
-The project relies on researching the differences between default browser
-styles in order to precisely target only the styles that need or benefit from
-normalizing.
+The project relies on researching the differences between default browser styles in order to precisely target only the styles that need or benefit from normalizing.
 
 [View the test file](http://necolas.github.io/normalize.css/latest/test.html)
 
@@ -56,43 +44,36 @@ Install using one of the following methods:
 * Download directly from the [project page](https://github.com/JohnAlbin/normalize-scss/releases).
 * Install with [npm](http://npmjs.org/): `npm install --save normalize-scss`
 * Install with [Bower](http://bower.io/): `bower install --save normalize.scss`
-* Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss):
-  `gem install normalize-scss` and, if using Compass, add
-  `require "normalize-scss"` to your config.rb file. Note: if you want to alter
-  the _normalize.scss file after installation (see "how to use it" below), you
-  can use the `gem list --details normalize-scss` command to show you where the
-  normalize-scss files were installed.
+* Install with [Ruby Gem](https://rubygems.org/gems/normalize-scss): `gem install normalize-scss`<br>
+  and, if using Compass, add `require "normalize-scss"` to your config.rb file. Note: if you want to alter the _normalize.scss file after installation (see "how to use it" below), you can use the `gem list --details normalize-scss` command to show you where the normalize-scss files were installed.
 
 ## How to use it
 
-There is a fantastic introduction to the project and brief instructions how to
-use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
+There is a fantastic introduction to the project and brief instructions how to use it in the [About normalize.css article](http://nicolasgallagher.com/about-normalize-css/).
 
 You can use the Sass port of Normalize in one of several methods, following the "About normalize.css" article's suggestions:
 
-__Approach 1:__ use normalize-scss as a starting point for your own project's base Sass, customising the values to match the design's requirements. (The best approach, _IMO_.)
+__Approach 1:__ Download and use normalize-scss as a starting point for your own project's base Sass, customising the values to match the design's requirements. (The best approach, _IMO_.)
   1. Copy the normalize-scss files to your sass directory so that you can alter it
     as you include it in your project. To aid with this method, normalize-scss
     includes several ready-made "fork" versions:
     * fork-versions/compass - Fork for Ruby Sass with Compass
-    * fork-versions/node-sass - Fork for node-sass
+    * fork-versions/standard - Fork for libSass / Ruby Sass
     * fork-versions/typey - Fork for node-sass with Typey
     * fork-versions/typey-kss - Fork for node-sass with Typey and KSS comments
   2. The normalize-scss code uses the `support-for` module, so add it
 
-__Approach 2:__ include normalize-scss untouched and build upon it, overriding
-the defaults later in your Sass when necessary. Just import normalize-scss like
-any normal Sass module by:
-  1. Setting variables to override the default normalize-scss variables
+__Approach 2:__ Install and include normalize-scss untouched and then build upon it, overriding the defaults later in your Sass when necessary. Just import normalize-scss like any normal Sass module by:
+  1. Set variables to override the default normalize-scss variables.
   2. Import with `@import "normalize";`
   3. Output the CSS rules with `@include normalize();`
 
-Alternatively, you can import normalize-scss immediately into your main Sass
-file without needing to use the `normalize()` mixin by:
+Alternatively, you can import normalize-scss immediately into your main Sass file without needing to use the `normalize()` mixin by:
 
-  1. Setting variables to override the default normalize-scss variables
-    (optional)
+  1. (Optionally) set variables to override the default normalize-scss variables.
   2. Import with `@import "normalize/import-now";`
+
+Note: if you use [wiredep](https://github.com/taptapship/wiredep), normalize-scss's bower.json points at the normalize/import-now Sass partial. If you don't wish to immediately output the CSS, you will need to override the Sass partial that wiredep grabs from normalize-scss.
 
 ## Browser support
 
@@ -144,12 +125,9 @@ Adding `border: 0` corrects an IE 8–11 bug where `color` (yes, `color`) is not
 inherited by `legend`.
 
 ## Contributing
-Please read Necolas' [contributing
-guidelines](CONTRIBUTING.md).
+Please read Necolas' [contributing guidelines](https://github.com/necolas/normalize.css/blob/master/CONTRIBUTING.md).
 
-Updates to most CSS rules should be reported to Necolas' upstream [Normalize.css
-project](http://necolas.github.com/normalize.css/). Updates to the Sass should
-be reported in the [Normalize-scss project](https://github.com/JohnAlbin/normalize-scss/).
+Updates to most CSS rules should be reported to Necolas' upstream [Normalize.css project](http://necolas.github.com/normalize.css/). Updates to the Sass should be reported in the [Normalize-scss project](https://github.com/JohnAlbin/normalize-scss/).
 
 ## Acknowledgements
 
