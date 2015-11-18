@@ -28,7 +28,7 @@ sass.render({
 If you are not using node-sass with libSass, you probably already know how to include 3rd party libraries into your Sass project.
 
 1. Copy these files to your Sass project.
-2. This fork-able version requires the [support-for]() Sass module. Add support-for's `sass` directory to your libSass include paths in the "usual way".
+2. This fork-able version requires the [support-for](https://github.com/JohnAlbin/support-for) Sass module. Add support-for's `sass` directory to your libSass include paths in the "usual way".
 
 ## Using with Ruby Sass
 
