@@ -4,6 +4,12 @@
 // If you have an initialization partial (or equivalent), you should move these
 // lines to that file.
 
+// Support the same browsers as normalize.css v3.
+$support-for: (
+  ie:      9,
+  '*':     -4,
+);
+
 // The font size set on the root html element.
 $base-font-size: 16px;
 
