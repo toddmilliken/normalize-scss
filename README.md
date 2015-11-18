@@ -59,7 +59,7 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
     includes several ready-made "fork" versions:
     * [fork-versions/default](fork-versions/default) - Fork for libSass or Ruby Sass
     * [fork-versions/ruby-sass-compass](fork-versions/ruby-sass-compass) - Fork for Ruby Sass with Compass
-    * fork-versions/typey - Fork with Typey
+    * [fork-versions/typey](fork-versions/typey) - Fork with Typey
     * fork-versions/typey-kss - Fork with Typey and KSS comments
   2. The normalize-scss code uses the `support-for` module, so add it
 
