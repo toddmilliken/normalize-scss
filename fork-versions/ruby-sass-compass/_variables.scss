@@ -19,7 +19,17 @@
 
   // Note: This project also makes use of variables from Compass' support
   // module. Documentation for this can be found on the wiki at:
-  // https://github.com/JohnAlbin/normalize-scss/wiki
+  // http://compass-style.org/reference/compass/support/
+  $critical-usage-threshold: 0.01 !default;
+
+  $browser-minimum-versions: (
+    'chrome':  null,
+    'firefox': null,
+    'ie':      null,
+    'safari':  null,
+    'opera':   null
+  ) !default;
+
 
 // The default font family.
 $base-font-family: sans-serif !default;
