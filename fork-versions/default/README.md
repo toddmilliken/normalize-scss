@@ -3,7 +3,12 @@
 ## Using with node-sass
 
 1. Copy these files to your Sass project.
-2. This fork-able version requires the [support-for](https://github.com/JohnAlbin/support-for) Sass module. Add it to your package.json with: `npm install --save-dev support-for`
+2. This fork-able version requires the [support-for](https://github.com/JohnAlbin/support-for) Sass module. Add it to your package.json with:
+
+ ```bash
+npm install --save-dev support-for
+```
+
 3. Add support-for's `sass` directory to your nodeSass' [`includePaths` option](https://github.com/sass/node-sass#includepaths).
 
  ```js
@@ -41,4 +46,8 @@ gem 'support-for', '~> 1.0'
 require 'support-for'
 ```
 
-3. Update your local Gems with: `bundle install`
+3. Update your local Gems with:
+
+ ```
+bundle install
+```
