@@ -12,7 +12,8 @@ $include-rtl: true !default;
       [dir="rtl"] & {
         @content;
       }
-    } @else {
+    }
+    @else {
       [dir="rtl"] {
         @content;
       }
