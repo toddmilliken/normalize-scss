@@ -394,9 +394,9 @@ input[type="search"] {
  * Define consistent border, margin, and padding.
  */
 fieldset {
+  padding: 0.525rem 0.9375rem 0.975rem;
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  margin: 0 2px; }
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
