@@ -18,7 +18,7 @@ img {
     border: 0;
   }
   @if support-for(ie, 7) {
-    /* Improve image quality when scaled in IE 7. */
+    // Improve image quality when scaled in IE 7.
     -ms-interpolation-mode: bicubic;
   }
 }
