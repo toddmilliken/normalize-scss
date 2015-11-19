@@ -187,16 +187,6 @@ $_normalize-exclude: ();
       font-weight: bold;
     }
 
-    @if $normalize-vertical-rhythm or support-for(ie, 7) {
-      /**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-
-      blockquote {
-        @include normalize-margin(1 $indent-amount);
-      }
-    }
-
     /**
      * Address styling not present in Safari and Chrome.
      */
@@ -270,17 +260,6 @@ $_normalize-exclude: ();
       mark {
         background: #ff0;
         color: #000;
-      }
-    }
-
-    @if $normalize-vertical-rhythm or support-for(ie, 7) {
-      /**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-
-      p,
-      pre {
-        @include normalize-margin(1 0);
       }
     }
 
@@ -399,6 +378,16 @@ $_normalize-exclude: ();
       }
     }
 
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
+      /**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+
+      blockquote {
+        @include normalize-margin(1 $indent-amount);
+      }
+    }
+
     @if $normalize-vertical-rhythm or support-for(ie, 9) or support-for(safari, 6) {
       /**
        * Address margin not present in IE 8/9 and Safari.
@@ -419,6 +408,17 @@ $_normalize-exclude: ();
       }
       box-sizing: content-box;
       height: 0;
+    }
+
+    @if $normalize-vertical-rhythm or support-for(ie, 7) {
+      /**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+
+      p,
+      pre {
+        @include normalize-margin(1 0);
+      }
     }
 
     /**

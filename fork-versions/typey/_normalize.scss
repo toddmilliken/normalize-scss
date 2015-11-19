@@ -141,12 +141,10 @@ strong {
   font-weight: bold;
 }
 
-/**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-
-blockquote {
-  @include margin(1 $indent-amount);
+code,
+kbd,
+samp {
+  @extend %monospace;
 }
 
 /**
@@ -206,15 +204,6 @@ h6 {
 }
 
 /**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-
-p,
-pre {
-  @include margin(1 0);
-}
-
-/**
  * Address inconsistent and variable font size in all browsers.
  */
 
@@ -242,7 +231,32 @@ sub {
   bottom: -0.25em;
 }
 
-/* Lists
+/* Embedded content
+   ========================================================================== */
+
+@if support-for(ie, 10) {
+  /**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+
+  img {
+    border: 0;
+    @if support-for(ie, 7) {
+      /* Improve image quality when scaled in IE 7. */
+      -ms-interpolation-mode: bicubic;
+    }
+  }
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
    ========================================================================== */
 
 /**
@@ -294,33 +308,13 @@ ul {
   }
 }
 
-/* Embedded content
-   ========================================================================== */
-
-@if support-for(ie, 10) {
-  /**
-   * Remove border when inside `a` element in IE 8/9/10.
-   */
-
-  img {
-    border: 0;
-    @if support-for(ie, 7) {
-      /* Improve image quality when scaled in IE 7. */
-      -ms-interpolation-mode: bicubic;
-    }
-  }
-}
-
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
  */
 
-svg:not(:root) {
-  overflow: hidden;
+blockquote {
+  @include margin(1 $indent-amount);
 }
-
-/* Grouping content
-   ========================================================================== */
 
 /**
  * Address margin not present in IE 8/9 and Safari.
@@ -343,10 +337,20 @@ hr {
 }
 
 /**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+
+p,
+pre {
+  @include margin(1 0);
+}
+
+/**
  * Contain overflow in all browsers.
  */
 
 pre {
+  @extend %monospace;
   overflow: auto;
 }
 
@@ -354,10 +358,7 @@ pre {
  * Address odd `em`-unit font size rendering in all browsers.
  */
 
-code,
-kbd,
-pre,
-samp {
+%monospace {
   font-family: monospace, monospace;
   @if support-for(ie, 6) {
     _font-family: 'courier new', monospace;

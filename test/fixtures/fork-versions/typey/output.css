@@ -111,12 +111,6 @@ strong {
   font-weight: bold; }
 
 /**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-blockquote {
-  margin: 1.5rem 2.5rem; }
-
-/**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
@@ -165,13 +159,6 @@ mark {
   color: #000; }
 
 /**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-p,
-pre {
-  margin: 1.5rem 0rem; }
-
-/**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
@@ -193,7 +180,21 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* Lists
+/* Embedded content
+   ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
    ========================================================================== */
 /**
  * Address margins set differently in IE 6/7.
@@ -224,22 +225,12 @@ ol,
 ul {
   padding: 0 0 0 40px; }
 
-/* Embedded content
-   ========================================================================== */
 /**
-   * Remove border when inside `a` element in IE 8/9/10.
-   */
-img {
-  border: 0; }
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
  */
-svg:not(:root) {
-  overflow: hidden; }
+blockquote {
+  margin: 1.5rem 2.5rem; }
 
-/* Grouping content
-   ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
@@ -254,6 +245,13 @@ hr {
   height: 0; }
 
 /**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.5rem 0rem; }
+
+/**
  * Contain overflow in all browsers.
  */
 pre {
@@ -264,8 +262,7 @@ pre {
  */
 code,
 kbd,
-pre,
-samp {
+samp, pre {
   font-family: monospace, monospace;
   font-size: 1em; }
 

@@ -109,12 +109,6 @@ strong {
   font-weight: bold; }
 
 /**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-blockquote {
-  margin: 1.5em 40px; }
-
-/**
      * Address styling not present in Safari and Chrome.
      */
 dfn {
@@ -155,13 +149,6 @@ h6 {
 mark {
   background: #ff0;
   color: #000; }
-
-/**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-p,
-pre {
-  margin: 1.5em 0; }
 
 /**
      * Address inconsistent and variable font size in all browsers.
@@ -232,6 +219,12 @@ nav ol {
   list-style-image: none; }
 
 /**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+blockquote {
+  margin: 1.5em 40px; }
+
+/**
        * Address margin not present in IE 8/9 and Safari.
        */
 figure {
@@ -243,6 +236,13 @@ figure {
 hr {
   box-sizing: content-box;
   height: 0; }
+
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+p,
+pre {
+  margin: 1.5em 0; }
 
 /**
      * Contain overflow in all browsers.

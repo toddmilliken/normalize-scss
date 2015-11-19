@@ -162,16 +162,6 @@ strong {
   font-weight: bold;
 }
 
-@if $normalize-vertical-rhythm or support-for(ie, 7) {
-  /**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
-
-  blockquote {
-    @include normalize-margin(1 $indent-amount);
-  }
-}
-
 /**
  * Address styling not present in Safari and Chrome.
  */
@@ -248,17 +238,6 @@ h1 {
   }
 }
 
-@if $normalize-vertical-rhythm or support-for(ie, 7) {
-  /**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
-
-  p,
-  pre {
-    @include normalize-margin(1 0);
-  }
-}
-
 /**
  * Address inconsistent and variable font size in all browsers.
  */
@@ -287,10 +266,35 @@ sub {
   bottom: -0.25em;
 }
 
-@if $normalize-vertical-rhythm or support-for(ie, 7) {
-  /* Lists
-     ========================================================================== */
+/* Embedded content
+   ========================================================================== */
 
+@if support-for(ie, 10) {
+  /**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+
+  img {
+    border: 0;
+    @if support-for(ie, 7) {
+      /* Improve image quality when scaled in IE 7. */
+      -ms-interpolation-mode: bicubic;
+    }
+  }
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+@if $normalize-vertical-rhythm or support-for(ie, 7) {
   /**
    * Address margins set differently in IE 6/7.
    */
@@ -345,33 +349,15 @@ sub {
   }
 }
 
-/* Embedded content
-   ========================================================================== */
-
-@if support-for(ie, 10) {
+@if $normalize-vertical-rhythm or support-for(ie, 7) {
   /**
-   * Remove border when inside `a` element in IE 8/9/10.
+   * Set 1 unit of vertical rhythm on the top and bottom margin.
    */
 
-  img {
-    border: 0;
-    @if support-for(ie, 7) {
-      /* Improve image quality when scaled in IE 7. */
-      -ms-interpolation-mode: bicubic;
-    }
+  blockquote {
+    @include normalize-margin(1 $indent-amount);
   }
 }
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
 
 @if $normalize-vertical-rhythm or support-for(ie, 9) or support-for(safari, 6) {
   /**
@@ -393,6 +379,17 @@ hr {
   }
   box-sizing: content-box;
   height: 0;
+}
+
+@if $normalize-vertical-rhythm or support-for(ie, 7) {
+  /**
+   * Set 1 unit of vertical rhythm on the top and bottom margin.
+   */
+
+  p,
+  pre {
+    @include normalize-margin(1 0);
+  }
 }
 
 /**
