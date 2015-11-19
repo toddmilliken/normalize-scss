@@ -153,30 +153,6 @@ hr {
   .divider > :first-child, hr > :first-child {
     margin-top: 1.5rem; }
 
-blockquote {
-  margin: 0rem 2rem 1.5rem; }
-
-figure {
-  margin: 0rem 0rem 1.5rem; }
-
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-p,
-pre {
-  margin: 1.5rem 0rem; }
-
-code,
-kbd,
-samp,
-var, pre {
-  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
-  font-size: 1em; }
-
-pre {
-  overflow: auto; }
-
 dl,
 menu,
 ol,
@@ -196,6 +172,30 @@ menu,
 ol,
 ul {
   padding: 0 0 0 32px; }
+
+blockquote {
+  margin: 1.5rem 2rem; }
+
+figure {
+  margin: 1.5rem 2rem; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+p,
+pre {
+  margin: 1.5rem 0rem; }
+
+code,
+kbd,
+samp,
+var, pre {
+  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
+  font-size: 1em; }
+
+pre {
+  overflow: auto; }
 
 img {
   border: 0; }
@@ -315,10 +315,6 @@ legend {
   border: 0;
   margin-left: -5px;
   padding: 0 5px; }
-
-label {
-  display: block;
-  font-weight: bold; }
 
 optgroup {
   font-weight: bold; }

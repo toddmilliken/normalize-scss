@@ -38,7 +38,8 @@ a:active {
   }
 }
 
-// Improve readability by removing focus styles when also mouse hovered in all browsers.
+// Improve readability of focused elements when they are also in an
+// active/hover state.
 a:active,
 a:hover {
   outline: 0;
