@@ -12,13 +12,16 @@
   },
   "author": "John Albin Wilkins <virtually.johnalbin@gmail.com> (http://john.albin.net/)",
   "keywords": [
+    "eyeglass-module",
     "sass",
     "normalize"
   ],
   "main": "sass/_normalize.scss",
   "style": "sass/_normalize.scss",
   "eyeglass": {
-    "exports": "eyeglass-exports.js"
+    "name": "normalize",
+    "exports": "eyeglass-exports.js",
+    "needs": "^0.7.1"
   },
   "directories": {
     "lib": "sass",
