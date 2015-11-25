@@ -24,10 +24,10 @@
 
 // Add Chroma to manage colors.
 @import 'chroma';
-// Add typey to manage font sizes and margins.
-@import 'typey';
 // Used by normalize-scss to conditionally add browser support.
 @import 'support-for';
+// Add typey to manage font sizes and margins.
+@import 'typey';
 
 //
 // Custom Sass functions.
