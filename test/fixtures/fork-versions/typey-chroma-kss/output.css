@@ -204,9 +204,6 @@ img,
 svg {
   max-width: 100%;
   height: auto; }
-  .lt-ie9 img, .lt-ie9
-  svg {
-    width: auto; }
 
 svg:not(:root) {
   overflow: hidden; }
