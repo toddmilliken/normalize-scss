@@ -1,7 +1,8 @@
-//
 // Variables
 //
 // Set variables for this site before a library sets its !default value.
+//
+// Style guide: sass.variables
 
 
 //
@@ -14,6 +15,7 @@ $support-for: (
   ie:  9,  // IE 9-11
   '*': -4, // The last 4 versions of all other browsers.
 );
+
 
 //
 // Font faces, stacks and sizes.
