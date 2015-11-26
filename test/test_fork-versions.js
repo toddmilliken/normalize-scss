@@ -54,7 +54,7 @@ describe('Fork versions', function() {
           path.join(__dirname, '../fork-versions/typey'),
           // Path to normalize-scss' dependencies.
           path.join(__dirname, '../node_modules/support-for/sass'),
-          path.join(__dirname, 'fixtures/typey-1.0.0-beta.7')
+          path.join(__dirname, '../node_modules/typey/stylesheets')
         ]
       });
       done();
@@ -78,7 +78,7 @@ describe('Fork versions', function() {
           // Path to normalize-scss' dependencies.
           path.join(__dirname, '../node_modules/chroma-sass/sass'),
           path.join(__dirname, '../node_modules/support-for/sass'),
-          path.join(__dirname, 'fixtures/typey-1.0.0-beta.7')
+          path.join(__dirname, '../node_modules/typey/stylesheets')
         ]
       });
       done();
