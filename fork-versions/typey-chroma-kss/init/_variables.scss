@@ -45,7 +45,7 @@ $typey-debug: false;
 $base-unit:         'rem';
 
 // px fallbacks for rem units are needed for IE 8 and earlier.
-$rem-fallback:      false;
+$rem-fallback:      if(support-for(ie, 8), true, false);
 
 // The default font family.
 $font-body:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
