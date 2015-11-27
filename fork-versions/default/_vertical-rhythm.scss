@@ -33,10 +33,8 @@
 }
 
 @mixin normalize-rhythm($property, $values, $relative-to: $base-font-size) {
-  @if type-of($values) == 'list' {
-    $px-fallback: $values;
-  }
-  @else {
+  $px-fallback: $values;
+  @if type-of($values) != 'list' {
     $px-fallback: append((), $values);
   }
   $sep: list-separator($px-fallback);
