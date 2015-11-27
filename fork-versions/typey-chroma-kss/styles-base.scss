@@ -32,3 +32,8 @@
 // Weight: 2
 //
 // Style guide: components
+
+// This file is @import'ed by base/forms, so we don't import it again.
+// @import 'components/button/button';
+// This file is @import'ed by base/grouping, so we don't import it again.
+// @import 'components/divider/divider';
