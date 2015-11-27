@@ -5,17 +5,17 @@
 // CSS. If you are looking for a robust solution, look at the excellent Typey
 // library. @see https://github.com/jptaranto/typey
 
-@function normalize-rhythm($value, $relative-to: $base-font-size) {
-  @if unit($value) != 'px' {
+@function normalize-rhythm($value, $relative-to: $base-font-size, $unit: $base-unit) {
+  @if unit($value) != px {
     @error "The normalize vertical-rhythm module only supports px inputs. The typey library is better.";
   }
-  @if $base-unit == rem {
+  @if $unit == rem {
     @return ($value / $base-font-size) * 1rem;
   }
-  @else if $base-unit == em {
+  @else if $unit == em {
     @return ($value / $relative-to) * 1em;
   }
-  @else { // $base-unit == px
+  @else { // $unit == px
     @return $value;
   }
 }
@@ -33,18 +33,26 @@
 }
 
 @mixin normalize-rhythm($property, $values, $relative-to: $base-font-size) {
-  $px-fallback: $values;
-  @if type-of($values) != 'list' {
-    $px-fallback: append((), $values);
+  $value-list: $values;
+  $sep: space;
+  @if type-of($values) == 'list' {
+    $sep: list-separator($values);
   }
-  $sep: list-separator($px-fallback);
-  $normalized-values: ();
+  @else {
+    $value-list: append((), $values);
+  }
 
-  @each $value in $px-fallback {
+  $normalized-values: ();
+  $px-fallback: ();
+
+  @each $value in $value-list {
+    $px-value: $value;
     @if unitless($value) and $value != 0 {
       $value: $value * normalize-rhythm($base-line-height, $relative-to);
+      $px-value: $px-value * normalize-rhythm($base-line-height, $relative-to, px);
     }
-    $normalized-values: append($normalized-values, $value);
+    $normalized-values: append($normalized-values, $value, $sep);
+    $px-fallback: append($px-fallback, $px-value, $sep);
   }
   @if $base-unit == rem and support-for(ie, 8) {
     #{$property}: $px-fallback;

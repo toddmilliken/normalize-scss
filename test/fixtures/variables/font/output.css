@@ -118,35 +118,53 @@ dfn {
      * contexts in Firefox 4+, Safari, and Chrome.
      */
 h1 {
-  font-size: 3em;
-  line-height: 1.5em;
+  font-size: 72px;
+  font-size: 3rem;
+  line-height: 108px;
+  line-height: 4.5rem;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin: 0.5em 0; }
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 h2 {
-  font-size: 2em;
-  line-height: 1.5em;
-  margin: 0.75em 0; }
+  font-size: 48px;
+  font-size: 2rem;
+  line-height: 72px;
+  line-height: 3rem;
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 h3 {
-  font-size: 1.5em;
-  line-height: 2em;
-  margin: 1em 0; }
+  font-size: 36px;
+  font-size: 1.5rem;
+  line-height: 72px;
+  line-height: 3rem;
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 h4 {
-  font-size: 0.9em;
-  line-height: 1.66667em;
-  margin: 1.66667em 0; }
+  font-size: 21.6px;
+  font-size: 0.9rem;
+  line-height: 36px;
+  line-height: 1.5rem;
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 h5 {
-  font-size: 0.75em;
-  line-height: 2em;
-  margin: 2em 0; }
+  font-size: 18px;
+  font-size: 0.75rem;
+  line-height: 36px;
+  line-height: 1.5rem;
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 h6 {
-  font-size: 0.5em;
-  line-height: 3em;
-  margin: 3em 0; }
+  font-size: 12px;
+  font-size: 0.5rem;
+  line-height: 36px;
+  line-height: 1.5rem;
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 /**
        * Address styling not present in IE 8/9.
@@ -200,7 +218,8 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1.5em 0; }
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 /**
        * Turn off margins on nested lists.
@@ -226,13 +245,15 @@ ul {
        * Set 1 unit of vertical rhythm on the top and bottom margin.
        */
 blockquote {
-  margin: 1.5em 40px; }
+  margin: 36px 40px;
+  margin: 1.5rem 40px; }
 
 /**
        * Address margin not present in IE 8/9 and Safari.
        */
 figure {
-  margin: 1.5em 40px; }
+  margin: 36px 40px;
+  margin: 1.5rem 40px; }
 
 /**
      * Address differences between Firefox and other browsers.
@@ -246,7 +267,8 @@ hr {
        */
 p,
 pre {
-  margin: 1.5em 0; }
+  margin: 36px 0;
+  margin: 1.5rem 0; }
 
 /**
      * Contain overflow in all browsers.
