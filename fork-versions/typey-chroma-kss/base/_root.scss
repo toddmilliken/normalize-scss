@@ -12,7 +12,6 @@ html {
   font-family: $font-body;
   // Prevent iOS text size adjust after orientation change, without disabling
   // user zoom.
-  // scss-lint:disable VendorPrefix
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   // On short pages, we want any background gradients to fill the entire height
