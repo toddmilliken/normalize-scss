@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/JohnAlbin/normalize-scss'
   spec.rubyforge_project =
 
-  spec.version     = '4.1.0'
-  spec.date        = '2016-04-23'
+  spec.version     = '4.2.0'
+  spec.date        = '2016-04-30'
   spec.licenses    = ['GPL-2.0']
 
   spec.authors     = ['John Albin Wilkins']
