@@ -10,9 +10,11 @@ beforeEach(function(done) {
   sassyTest.configurePaths({
     includePaths: [
       // Path to Sass library.
-      path.join(__dirname, '../sass'),
+      path.join(__dirname, '../sass')
       // Path to normalize-scss' dependencies.
-      path.join(__dirname, '../node_modules/support-for/sass')
+      // @TODO Follow-up #43. Figure out "best" way for node-sass to figure out
+      // normalize-scss' dependencies' includePaths.
+      // path.dirname(require.resolve('support-for'))
     ]
   });
   done();

@@ -17,7 +17,6 @@ Gem::Specification.new do |spec|
   spec.email       = 'virtually.johnalbin@gmail.com'
 
   spec.add_runtime_dependency('sass', '~> 3.3')
-  spec.add_runtime_dependency('support-for', '~> 1.0')
 
   spec.files       = `git ls-files`.split($/).select {|f| File.exist?(f) && f =~ %r{^(lib|sass)/} }
   spec.files       += %w(
