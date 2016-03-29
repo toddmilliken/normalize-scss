@@ -1,17 +1,11 @@
 'use strict';
 
 describe('@import "normalize/import-now";', function() {
-  before(function(done) {
-    sassyTest.configurePaths({
-      fixtures: path.join(__dirname, 'fixtures')
+  it('should import the CSS immediately on @import', function() {
+    var sassyTest = new SassyTest({
+      fixtures: path.join(__dirname, 'fixtures'),
+      includePaths: [path.join(__dirname, '../sass')]
     });
-    done();
-  });
-
-  it('should import the CSS immediately on @import', function(done) {
-    sassyTest.renderFixture('import-now', {}, function(error, result, expectedOutput) {
-      should.not.exist(error);
-      done();
-    });
+    return sassyTest.renderFixture('import-now');
   });
 });

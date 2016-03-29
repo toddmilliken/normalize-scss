@@ -2,93 +2,65 @@
 
 describe('Fork versions', function() {
   describe('Default fork', function() {
-    beforeEach(function(done) {
-      sassyTest.configurePaths({
+    it('should render properly', function() {
+      var sassyTest = new SassyTest({
         fixtures: path.join(__dirname, 'fixtures/fork-versions'),
         includePaths: [
           // Path to Fork version.
           path.join(__dirname, '../fork-versions/default'),
           // Path to normalize-scss' dependencies.
-          path.join(__dirname, '../node_modules/support-for/sass')
+          path.dirname(require.resolve('support-for'))
         ]
       });
-      done();
-    });
-
-    it('should render properly', function(done) {
-      sassyTest.renderFixture('default', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
+      return sassyTest.renderFixture('default');
     });
   });
 
   describe('Ruby Sass with Compass fork', function() {
-    beforeEach(function(done) {
-      sassyTest.configurePaths({
+    it('should render properly', function() {
+      var sassyTest = new SassyTest({
         fixtures: path.join(__dirname, 'fixtures'),
         includePaths: [
           // Path to Fork version.
           path.join(__dirname, '../fork-versions/ruby-sass-compass'),
           // Path to normalize-scss' dependencies.
-          path.join(__dirname, '../node_modules/support-for/sass')
+          path.dirname(require.resolve('support-for'))
         ]
       });
-      done();
-    });
-
-    it('should render properly', function(done) {
-      sassyTest.renderFixture('fork-versions/ruby-sass-compass', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
+      return sassyTest.renderFixture('fork-versions/ruby-sass-compass');
     });
   });
 
   describe('Typey fork', function() {
-    beforeEach(function(done) {
-      sassyTest.configurePaths({
+    it('should render properly', function() {
+      var sassyTest = new SassyTest({
         fixtures: path.join(__dirname, 'fixtures'),
         includePaths: [
           // Path to Fork version.
           path.join(__dirname, '../fork-versions/typey'),
           // Path to normalize-scss' dependencies.
-          path.join(__dirname, '../node_modules/support-for/sass'),
-          path.join(__dirname, '../node_modules/typey/stylesheets')
+          path.dirname(require.resolve('support-for')),
+          path.dirname(require.resolve('typey'))
         ]
       });
-      done();
-    });
-
-    it('should render properly', function(done) {
-      sassyTest.renderFixture('fork-versions/typey', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
+      return sassyTest.renderFixture('fork-versions/typey');
     });
   });
 
   describe('Typey, Chroma and KSS fork', function() {
-    beforeEach(function(done) {
-      sassyTest.configurePaths({
+    it('should render properly', function() {
+      var sassyTest = new SassyTest({
         fixtures: path.join(__dirname, 'fixtures'),
         includePaths: [
           // Path to Fork version.
           path.join(__dirname, '../fork-versions/typey-chroma-kss'),
           // Path to normalize-scss' dependencies.
-          path.join(__dirname, '../node_modules/chroma-sass/sass'),
-          path.join(__dirname, '../node_modules/support-for/sass'),
-          path.join(__dirname, '../node_modules/typey/stylesheets')
+          path.dirname(require.resolve('chroma-sass')),
+          path.dirname(require.resolve('support-for')),
+          path.dirname(require.resolve('typey'))
         ]
       });
-      done();
-    });
-
-    it('should render properly', function(done) {
-      sassyTest.renderFixture('fork-versions/typey-chroma-kss', {}, function(error, result, expectedOutput) {
-        should.not.exist(error);
-        done();
-      });
+      return sassyTest.renderFixture('fork-versions/typey-chroma-kss');
     });
   });
 });
