@@ -147,7 +147,7 @@ sub {
 
 .divider,
 hr {
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid #cccccc; }
   .divider > :first-child, hr > :first-child {
@@ -157,7 +157,7 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 ol ol,
 ol ul,
@@ -185,7 +185,7 @@ hr {
 
 p,
 pre {
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 code,
 kbd,
@@ -320,7 +320,7 @@ textarea {
   overflow: auto; }
 
 table {
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%; }

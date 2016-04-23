@@ -124,32 +124,32 @@ h1 {
   font-size: 2rem;
   line-height: 3rem;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 h2 {
   font-size: 1.5rem;
   line-height: 2.25rem;
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 h4 {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 h5 {
   font-size: 0.875rem;
   line-height: 1.5rem;
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 h6 {
   font-size: 0.625rem;
   line-height: 1.5rem;
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 /**
    * Address styling not present in IE 8/9.
@@ -203,7 +203,7 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 /**
  * Turn off margins on nested lists.
@@ -249,7 +249,7 @@ hr {
  */
 p,
 pre {
-  margin: 1.5rem 0rem; }
+  margin: 1.5rem 0; }
 
 /**
  * Contain overflow in all browsers.
