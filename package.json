@@ -19,8 +19,9 @@
   "main": "sass/_normalize.scss",
   "style": "sass/_normalize.scss",
   "eyeglass": {
+    "sassDir": "sass",
+    "exports": false,
     "name": "normalize",
-    "exports": "eyeglass-exports.js",
     "needs": "*"
   },
   "directories": {
@@ -36,6 +37,7 @@
     "chai": "^3.5.0",
     "chroma-sass": "^1.2.3",
     "eslint": "^2.4.0",
+    "eyeglass": "^0.8.3",
     "mocha": "^2.4.5",
     "sassy-test": "^3.0.0",
     "support-for": "^1.0.5",
