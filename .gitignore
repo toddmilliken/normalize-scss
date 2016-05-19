@@ -3,6 +3,7 @@ node_modules
 /v1
 /v2
 /v3
+/v4
 
 # Exclude IDE management files.
   # Eclipse

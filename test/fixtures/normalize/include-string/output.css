@@ -2,27 +2,50 @@
 /* Text-level semantics
        ========================================================================== */
 /**
-     * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+     * 1. Remove the bottom border in Firefox <40.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
      */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
-     * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
      */
 b,
 strong {
-  font-weight: bold; }
+  font-weight: inherit; }
 
 /**
-     * Address styling not present in Safari and Chrome.
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/**
+     * Add the correct font style in Android <4.4.
      */
 dfn {
   font-style: italic; }
 
 /**
-     * Address variable `h1` font-size and margin within `section` and `article`
-     * contexts in Firefox 4+, Safari, and Chrome.
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
      */
 h1 {
   font-size: 2em;
@@ -30,20 +53,21 @@ h1 {
   margin: 0.75em 0; }
 
 /**
-       * Address styling not present in IE 8/9.
-       */
+     * Add the correct background and color in IE <10.
+     */
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000; }
 
 /**
-     * Address inconsistent and variable font size in all browsers.
+     * Add the correct font size in all browsers.
      */
 small {
   font-size: 80%; }
 
 /**
-     * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
      */
 sub,
 sup {
@@ -52,8 +76,8 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-sup {
-  top: -0.5em; }
-
 sub {
   bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }

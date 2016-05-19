@@ -30,12 +30,8 @@ describe('Configuration variables', function() {
   });
 
   describe('$support-for', function() {
-    it('should support Chrome 9', function() {
-      return sassyTest.renderFixture('variables/support-for/chrome9');
-    });
-
-    it('should support Firefox 28', function() {
-      return sassyTest.renderFixture('variables/support-for/firefox28');
+    it('should support Firefox 29', function() {
+      return sassyTest.renderFixture('variables/support-for/firefox29');
     });
 
     it('should support IE 6', function() {
@@ -60,18 +56,6 @@ describe('Configuration variables', function() {
 
     it('should support IE 11', function() {
       return sassyTest.renderFixture('variables/support-for/ie11');
-    });
-
-    it('should support Safari 5', function() {
-      return sassyTest.renderFixture('variables/support-for/safari5');
-    });
-
-    it('should support Safari 6', function() {
-      return sassyTest.renderFixture('variables/support-for/safari6');
-    });
-
-    it('should support Safari 7', function() {
-      return sassyTest.renderFixture('variables/support-for/safari7');
     });
 
     it('should support "last X versions" with -X value', function() {

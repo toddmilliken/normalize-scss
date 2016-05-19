@@ -1,8 +1,7 @@
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
-     * 1. Set default font family to sans-serif.
-     * 2. Prevent iOS and IE text size adjust after device orientation change,
-     *    without disabling user zoom.
+     * 1. Change the default font family in all browsers (opinionated).
+     * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
      */
 html {
   font-family: sans-serif;
@@ -13,7 +12,7 @@ html {
   /* 2 */ }
 
 /**
-     * Remove default margin.
+     * Remove the margin in all browsers (opinionated).
      */
 body {
   margin: 0; }
@@ -21,10 +20,9 @@ body {
 /* HTML5 display definitions
        ========================================================================== */
 /**
-     * Correct `block` display not defined for any HTML5 element in IE 8/9.
-     * Correct `block` display not defined for `details` or `summary` in IE 10/11
-     * and Firefox.
-     * Correct `block` display not defined for `main` in IE 11.
+     * Add the correct display in IE <10.
+     * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
+     * Add the correct display in IE for `main`.
      */
 article,
 aside,
@@ -33,7 +31,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
@@ -42,34 +39,31 @@ summary {
   display: block; }
 
 /**
-     * 1. Correct `inline-block` display not defined in IE 8/9.
-     * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+     * Add the correct display in IE <10.
      */
 audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+  display: inline-block; }
 
 /**
-     * Prevent modern browsers from displaying `audio` without controls.
-     * Remove excess height in iOS 5 devices.
+     * Add the correct display and remove excess height in iOS 4-7.
      */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
 /**
-       * Address `[hidden]` styling not present in IE 8/9/10.
-       */
-[hidden] {
-  display: none; }
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+  vertical-align: baseline; }
 
 /**
-     * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+     * Add the correct display in IE <11, Safari <8, and Firefox <22.
+     * 1. Add the correct display in IE.
      */
-template {
+template,
+[hidden] {
   display: none; }

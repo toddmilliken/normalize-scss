@@ -1,8 +1,7 @@
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
-     * 1. Set default font family to sans-serif.
-     * 2. Prevent iOS and IE text size adjust after device orientation change,
-     *    without disabling user zoom.
+     * 1. Change the default font family in all browsers (opinionated).
+     * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
      */
 html {
   font-family: sans-serif;
@@ -13,7 +12,7 @@ html {
   /* 2 */ }
 
 /**
-     * Remove default margin.
+     * Remove the margin in all browsers (opinionated).
      */
 body {
   margin: 0; }
@@ -21,10 +20,9 @@ body {
 /* HTML5 display definitions
        ========================================================================== */
 /**
-     * Correct `block` display not defined for any HTML5 element in IE 8/9.
-     * Correct `block` display not defined for `details` or `summary` in IE 10/11
-     * and Firefox.
-     * Correct `block` display not defined for `main` in IE 11.
+     * Add the correct display in IE <10.
+     * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
+     * Add the correct display in IE for `main`.
      */
 article,
 aside,
@@ -33,7 +31,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
@@ -42,78 +39,102 @@ summary {
   display: block; }
 
 /**
-     * 1. Correct `inline-block` display not defined in IE 8/9.
-     * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+     * Add the correct display in IE <10.
      */
 audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+  display: inline-block; }
 
 /**
-     * Prevent modern browsers from displaying `audio` without controls.
-     * Remove excess height in iOS 5 devices.
+     * Add the correct display and remove excess height in iOS 4-7.
      */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
 /**
-       * Address `[hidden]` styling not present in IE 8/9/10.
-       */
-[hidden] {
-  display: none; }
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+  vertical-align: baseline; }
 
 /**
-     * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+     * Add the correct display in IE <11, Safari <8, and Firefox <22.
+     * 1. Add the correct display in IE.
      */
-template {
+template,
+[hidden] {
   display: none; }
 
 /* Links
        ========================================================================== */
 /**
-       * Remove the gray background color from active links in IE 10.
-       */
+     * 1. Remove the gray background on active links in IE 10.
+     * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+     */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
 
 /**
-     * Improve readability of focused elements when they are also in an
-     * active/hover state.
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
      */
 a:active,
 a:hover {
-  outline: 0; }
+  outline-width: 0; }
 
 /* Text-level semantics
        ========================================================================== */
 /**
-     * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+     * 1. Remove the bottom border in Firefox <40.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
      */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
-     * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
      */
 b,
 strong {
-  font-weight: bold; }
+  font-weight: inherit; }
 
 /**
-     * Address styling not present in Safari and Chrome.
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/**
+     * Add the correct font style in Android <4.4.
      */
 dfn {
   font-style: italic; }
 
 /**
-     * Address variable `h1` font-size and margin within `section` and `article`
-     * contexts in Firefox 4+, Safari, and Chrome.
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
      */
 h1 {
   font-size: 2em;
@@ -121,20 +142,21 @@ h1 {
   margin: 0.75em 0; }
 
 /**
-       * Address styling not present in IE 8/9.
-       */
+     * Add the correct background and color in IE <10.
+     */
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000; }
 
 /**
-     * Address inconsistent and variable font size in all browsers.
+     * Add the correct font size in all browsers.
      */
 small {
   font-size: 80%; }
 
 /**
-     * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
      */
 sub,
 sup {
@@ -143,22 +165,22 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-sup {
-  top: -0.5em; }
-
 sub {
   bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
 
 /* Embedded content
        ========================================================================== */
 /**
-       * Remove border when inside `a` element in IE 8/9/10.
-       */
+     * Remove the border on images inside links in IE <11.
+     */
 img {
-  border: 0; }
+  border-style: none; }
 
 /**
-     * Correct overflow not hidden in IE 9/10/11.
+     * Hide the overflow in IE.
      */
 svg:not(:root) {
   overflow: hidden; }
@@ -166,43 +188,23 @@ svg:not(:root) {
 /* Grouping content
        ========================================================================== */
 /**
-       * Address margin not present in IE 8/9 and Safari.
-       */
+     * Add the correct margin in IE 8.
+     */
 figure {
   margin: 1.5em 40px; }
 
 /**
-     * Address differences between Firefox and other browsers.
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
      */
 hr {
   box-sizing: content-box;
-  height: 0; }
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
-/**
-     * Contain overflow in all browsers.
-     */
 pre {
-  overflow: auto; }
-
-/**
-     * Address odd `em`-unit font size rendering in all browsers.
-     */
-code,
-kbd,
-pre,
-samp {
   font-family: monospace, monospace;
   font-size: 1em; }
-
-/* Tables
-       ========================================================================== */
-/**
-     * Remove most spacing between table cells.
-     */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
