@@ -1,3 +1,5 @@
+// sass-lint:disable no-vendor-prefixes
+
 // Use the saner border-box model for all elements.
 * {
   box-sizing: border-box;
@@ -5,10 +7,8 @@
 
 html {
   @include define-type-sizing();
-  // Show a background image that can be used to debug your alignments.
-  // @include debug-vertical-alignment();
   // Change the default font family in all browsers (opinionated).
-  font-family: $font-body;
+  @include typeface(body);
   // Prevent adjustments of font size after orientation changes in IE and iOS.
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

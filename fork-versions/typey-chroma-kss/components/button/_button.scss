@@ -8,12 +8,13 @@
 // :hover  - Hover styling.
 // :active - Depressed button styling.
 //
-// Markup: button.hbs
+// Markup: button.twig
 //
 // Style guide: forms.button
 
 .button,
 %button {
+  // sass-lint:disable no-vendor-prefixes
   -moz-appearance: button;
   -webkit-appearance: button;
   // Some styles don't apply to <a> links since they are inline elements by default.
@@ -36,6 +37,10 @@
     color: color(button);
   }
 
+  // Add button variations here.
+
+  // The disabled variation should always go last, so that it overrides any
+  // other variations.
   &[disabled] {
     // Re-set default cursor for disabled elements.
     cursor: default;
