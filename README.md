@@ -17,11 +17,13 @@ This Sass port currently utilizes:
 * Browser support variables: Allowing you to easily add/drop support for any browser by modifying a single Sass variable.
 * Vertical rhythm mixins: Allowing you to alter the font-size, line-height and margins in Normalize’s output without hacking the library.
 
-In addition, Normalize.css has 2 major versions: version 3 (without “legacy browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port combines the two versions into one file so that you can easily toggle between the two versions using its browser support variables.
+In addition, Normalize.css has 2 major versions: version 4 (without “legacy browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port combines the two versions into one file so that you can easily toggle between the two versions using its browser support variables.
 
 Did a client wait until the last minute to mention their CEO uses IE 6? Simply update your `$support-for` variable and recompile your Sass files. Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
 
-# normalize.css v3
+# normalize.css v4
+
+> A modern alternative to CSS resets
 
 Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.
 
@@ -34,7 +36,7 @@ The project relies on researching the differences between default browser styles
 * Preserves useful defaults, unlike many CSS resets.
 * Normalizes styles for a wide range of elements.
 * Corrects bugs and common browser inconsistencies.
-* Improves usability with subtle improvements.
+* Improves usability with subtle modifications.
 * Explains what code does using detailed comments.
 
 ## Install
@@ -77,39 +79,57 @@ Note: if you use [wiredep](https://github.com/taptapship/wiredep), normalize-scs
 
 ## Browser support
 
-* Google Chrome (latest)
-* Mozilla Firefox (latest)
-* Mozilla Firefox ESR
-* Opera (latest)
-* Apple Safari 6+
+* Chrome (last two)
+* Edge (last two)
+* Firefox (last two)
+* Firefox ESR
 * Internet Explorer 6+
+* Opera (last two)
+* Safari 6+
 
 The exact browsers supported in your project is controlled by the browser
 support variables. See https://github.com/JohnAlbin/normalize-scss/wiki
 
-## Extended details
+
+## Extended details and known issues
 
 Additional detail and explanation of the esoteric parts of normalize.css.
 
 #### `pre, code, kbd, samp`
 
 The `font-family: monospace, monospace` hack fixes the inheritance and scaling
-of font-size for preformated text. The duplication of `monospace` is
-intentional.  [Source](http://en.wikipedia.org/wiki/User:Davidgothberg/Test59).
+of font-size for preformatted text. The duplication of `monospace` is
+intentional. [Source](https://en.wikipedia.org/wiki/User:Davidgothberg/Test59).
 
 #### `sub, sup`
 
 Normally, using `sub` or `sup` affects the line-box height of text in all
-browsers. [Source](http://gist.github.com/413930).
+browsers. [Source](https://gist.github.com/413930).
 
 #### `svg:not(:root)`
 
 Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
 don't support SVG, so we can safely use the `:not()` and `:root` selectors that
-modern browsers use in the default UA stylesheets to apply this style. [SVG
-Mailing List discussion](http://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html)
+modern browsers use in the default UA stylesheets to apply this style. [Source]
+(https://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html).
 
-#### `input[type="search"]`
+#### `select`
+
+By default, Chrome on OS X and Safari on OS X allow very limited styling of
+`select`, unless a border property is set. The default font weight on `optgroup`
+elements cannot safely be changed in Chrome on OSX and Safari on OS X.
+
+#### `[type="checkbox"]`
+
+It is recommended that you do not style checkbox and radio inputs as Firefox's
+implementation does not respect box-sizing, padding, or width.
+
+#### `[type="number"]`
+
+Certain font size values applied to number inputs cause the cursor style of the
+decrement button to change from `default` to `text`.
+
+#### `[type="search"]`
 
 The search input is not fully stylable by default. In Chrome and Safari on
 OSX/iOS you can't control `font`, `padding`, `border`, or `background`. In
@@ -117,17 +137,15 @@ Chrome and Safari on Windows you can't control `border` properly. It will apply
 `border-width` but will only show a border color (which cannot be controlled)
 for the outer 1px of that border. Applying `-webkit-appearance: textfield`
 addresses these issues without removing the benefits of search inputs (e.g.
-showing past searches).
+showing past searches). Safari (but not Chrome) will clip the cancel button on
+when it has padding (and `textfield` appearance).
 
-#### `legend`
-
-Adding `border: 0` corrects an IE 8–11 bug where `color` (yes, `color`) is not
-inherited by `legend`.
 
 ## Contributing
-Please read Necolas' [contributing guidelines](https://github.com/necolas/normalize.css/blob/master/CONTRIBUTING.md).
 
-Updates to most CSS rules should be reported to Necolas' upstream [Normalize.css project](http://necolas.github.com/normalize.css/). Updates to the Sass should be reported in the [Normalize-scss project](https://github.com/JohnAlbin/normalize-scss/).
+Please read Normalize.css' [contributing guidelines](https://github.com/necolas/normalize.css/blob/master/CONTRIBUTING.md).
+
+Updates to most CSS rules should be reported to the upstream [Normalize.css project](http://necolas.github.com/normalize.css/). Updates to the Sass should be reported in the [Normalize-scss project](https://github.com/JohnAlbin/normalize-scss/).
 
 ## Acknowledgements
 
