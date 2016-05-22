@@ -1,8 +1,5 @@
 // sass-lint:disable no-vendor-prefixes, no-css-comments
 
-// Dependencies.
-@import 'components/button/button';
-
 // Form defaults
 //
 // These are the default base styles applied to HTML form elements.
@@ -17,7 +14,7 @@
 //
 // The following rules are from normalize.css and help to fix inconsistencies
 // across various browsers. You should probably leave these rules as is and jump
-// to the "Buttons" rule on line 105 before you start editing this file.
+// to the "Buttons" rule on line 92 before you start editing this file.
 //
 
 button,
@@ -49,16 +46,6 @@ button {
 button,
 select {
   text-transform: none;
-}
-
-// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
-//    controls in Android 4.
-// 2. Correct the inability to style clickable types in iOS and Safari.
-button,
-html [type='button'], // 1
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button; // 2
 }
 
 // Show the overflow in Edge.
@@ -118,12 +105,7 @@ input {
 //
 // Style guide: forms.base.button
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  @extend %button;
-}
+@import 'components/button/button';
 
 // The %text-form-element can be used to style `<input>` text types and
 // `<textarea>` elements at the same time.
