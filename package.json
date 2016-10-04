@@ -38,7 +38,7 @@
     "chai": "^3.5.0",
     "chroma-sass": "^1.2.3",
     "eslint": "^2.4.0",
-    "eyeglass": "^0.8.3",
+    "eyeglass": "^1.1.2",
     "mocha": "^2.4.5",
     "sassy-test": "^3.0.0",
     "support-for": "^1.0.5",
