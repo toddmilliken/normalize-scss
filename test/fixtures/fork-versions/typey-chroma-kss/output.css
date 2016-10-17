@@ -61,6 +61,61 @@ h6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
 
+.divider,
+hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #cccccc; }
+  .divider > :first-child, hr > :first-child {
+    margin-top: 1.5rem; }
+
+blockquote {
+  margin: 1.5rem 2rem; }
+
+dl,
+ol,
+ul {
+  margin: 1.5rem 0; }
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 32px; }
+
+ol,
+ul {
+  padding: 0 0 0 32px; }
+
+figure {
+  margin: 1.5rem 2rem;
+  display: block; }
+
+figcaption {
+  display: block; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+main {
+  display: block; }
+
+p,
+pre {
+  margin: 1.5rem 0; }
+
+pre, code,
+kbd,
+samp,
+var {
+  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
+  font-size: 1em; }
+
 a {
   color: #0072b9;
   -webkit-text-decoration-skip: objects; }
@@ -106,14 +161,6 @@ b,
 strong {
   font-weight: bolder; }
 
-pre,
-code,
-kbd,
-samp,
-var {
-  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
-  font-size: 1em; }
-
 dfn {
   font-style: italic; }
 
@@ -136,49 +183,6 @@ sub {
 
 sup {
   top: -.5em; }
-
-.divider,
-hr {
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid #cccccc; }
-  .divider > :first-child, hr > :first-child {
-    margin-top: 1.5rem; }
-
-blockquote {
-  margin: 1.5rem 2rem; }
-
-dl,
-menu,
-ol,
-ul {
-  margin: 1.5rem 0; }
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-  margin: 0; }
-
-dd {
-  margin: 0 0 0 32px; }
-
-menu,
-ol,
-ul {
-  padding: 0 0 0 32px; }
-
-figure {
-  margin: 1.5rem 2rem; }
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible; }
-
-p,
-pre {
-  margin: 1.5rem 0; }
 
 audio {
   display: inline-block; }
@@ -355,7 +359,13 @@ summary {
   display: list-item; }
 
 menu {
-  display: block; }
+  margin: 1.5rem 0;
+  display: block;
+  padding: 0 0 0 32px; }
+  menu menu,
+  ol menu,
+  ul menu {
+    margin: 0; }
 
 canvas {
   display: inline-block; }

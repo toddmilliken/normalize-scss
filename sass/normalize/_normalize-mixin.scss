@@ -146,6 +146,105 @@
     }
   }
 
+  @if _normalize-include(grouping) {
+    /* Grouping content
+       ========================================================================== */
+
+    @if $normalize-vertical-rhythm {
+      /**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+
+      blockquote {
+        @include normalize-margin(1 $indent-amount);
+      }
+
+      dl,
+      ol,
+      ul {
+        @include normalize-margin(1 0);
+      }
+
+      /**
+       * Turn off margins on nested lists.
+       */
+
+      ol,
+      ul {
+        ol,
+        ul {
+          margin: 0;
+        }
+      }
+
+      dd {
+        margin: 0 0 0 $indent-amount;
+      }
+
+      ol,
+      ul {
+        padding: 0 0 0 $indent-amount;
+      }
+    }
+
+    /**
+     * Add the correct display in IE 9-.
+     */
+
+    figcaption,
+    figure {
+      display: block;
+    }
+
+    /**
+     * Add the correct margin in IE 8.
+     */
+
+    figure {
+      @include normalize-margin(1 $indent-amount);
+    }
+
+    /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+
+    hr {
+      box-sizing: content-box; /* 1 */
+      height: 0; /* 1 */
+      overflow: visible; /* 2 */
+    }
+
+    /**
+     * Add the correct display in IE.
+     */
+
+    main {
+      display: block;
+    }
+
+    @if $normalize-vertical-rhythm {
+      /**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+
+      p,
+      pre {
+        @include normalize-margin(1 0);
+      }
+    }
+
+    /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+    pre {
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
+    }
+  }
+
   @if _normalize-include(links) {
     /* Links
        ========================================================================== */
@@ -212,8 +311,8 @@
     code,
     kbd,
     samp {
-      font-family: monospace, monospace;
-      font-size: 1em;
+      font-family: monospace, monospace; /* 1 */
+      font-size: 1em; /* 2 */
     }
 
     /**
@@ -299,85 +398,6 @@
 
     svg:not(:root) {
       overflow: hidden;
-    }
-  }
-
-  @if _normalize-include(grouping) {
-    /* Grouping content
-       ========================================================================== */
-
-    @if $normalize-vertical-rhythm {
-      /**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-
-      blockquote {
-        @include normalize-margin(1 $indent-amount);
-      }
-
-      dl,
-      menu,
-      ol,
-      ul {
-        @include normalize-margin(1 0);
-      }
-
-      /**
-       * Turn off margins on nested lists.
-       */
-
-      ol,
-      ul {
-        ol,
-        ul {
-          margin: 0;
-        }
-      }
-
-      dd {
-        margin: 0 0 0 $indent-amount;
-      }
-
-      menu,
-      ol,
-      ul {
-        padding: 0 0 0 $indent-amount;
-      }
-    }
-
-    /**
-     * Add the correct margin in IE 8.
-     */
-
-    figure {
-      @include normalize-margin(1 $indent-amount);
-    }
-
-    /**
-     * 1. Add the correct box sizing in Firefox.
-     * 2. Show the overflow in Edge and IE.
-     */
-
-    hr {
-      box-sizing: content-box; /* 1 */
-      height: 0; /* 1 */
-      overflow: visible; /* 2 */
-    }
-
-    @if $normalize-vertical-rhythm {
-      /**
-       * Set 1 unit of vertical rhythm on the top and bottom margin.
-       */
-
-      p,
-      pre {
-        @include normalize-margin(1 0);
-      }
-    }
-
-    pre {
-      font-family: monospace, monospace;
-      font-size: 1em;
     }
   }
 
@@ -597,12 +617,10 @@
        ========================================================================== */
 
     /*
-     * Add the correct display in IE 9-.
-     * 1. Add the correct display in Edge, IE, and Firefox.
+     * Add the correct display in Edge, IE, and Firefox.
      */
 
-    details, /* 1 */
-    menu {
+    details {
       display: block;
     }
 
@@ -612,6 +630,34 @@
 
     summary {
       display: list-item;
+    }
+
+    /*
+     * Add the correct display in IE 9-.
+     */
+
+    menu {
+      display: block;
+
+      @if $normalize-vertical-rhythm {
+        /*
+         * 1. Set 1 unit of vertical rhythm on the top and bottom margin.
+         * 2. Set consistent space for the list style image.
+         */
+
+        @include normalize-margin(1 0); /* 1 */
+        padding: 0 0 0 $indent-amount; /* 2 */
+
+        /**
+         * Turn off margins on nested lists.
+         */
+
+        menu &,
+        ol &,
+        ul & {
+          margin: 0;
+        }
+      }
     }
   }
 

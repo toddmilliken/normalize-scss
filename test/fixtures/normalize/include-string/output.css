@@ -35,7 +35,9 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /**
      * Add the correct font style in Android <4.4.

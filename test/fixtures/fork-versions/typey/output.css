@@ -75,6 +75,85 @@ h6 {
   line-height: 1.5rem;
   margin: 1.5rem 0; }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+blockquote {
+  margin: 1.5rem 2.5rem; }
+
+dl,
+ol,
+ul {
+  margin: 1.5rem 0; }
+
+/**
+ * Turn off margins on nested lists.
+ */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+figcaption,
+figure {
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1.5rem 2.5rem; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * Add the correct display in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.5rem 0; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre, code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
 /* Links
    ========================================================================== */
 /**
@@ -122,19 +201,6 @@ strong {
 b,
 strong {
   font-weight: bolder; }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
 
 /**
  * Add the correct font style in Android <4.4.
@@ -199,75 +265,6 @@ img {
  */
 svg:not(:root) {
   overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-blockquote {
-  margin: 1.5rem 2.5rem; }
-
-dl,
-menu,
-ol,
-ul {
-  margin: 1.5rem 0; }
-
-/**
- * Turn off margins on nested lists.
- */
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-  margin: 0; }
-
-dd {
-  margin: 0 0 0 40px; }
-
-menu,
-ol,
-ul {
-  padding: 0 0 0 40px; }
-
-/**
- * Add the correct display in IE 9-.
- */
-figcaption,
-figure {
-  display: block; }
-
-/**
- * Add the correct margin in IE 8.
- */
-figure {
-  margin: 1.5rem 2.5rem; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/**
- * Add the correct display in IE.
- */
-main {
-  display: block; }
-
-/**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-p,
-pre {
-  margin: 1.5rem 0; }
 
 /* Forms
    ========================================================================== */
@@ -462,11 +459,9 @@ textarea {
 /* Interactive
    ========================================================================== */
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE, and Firefox.
  */
-details,
-menu {
+details {
   display: block; }
 
 /*
@@ -474,6 +469,26 @@ menu {
  */
 summary {
   display: list-item; }
+
+/*
+ * 1. Set 1 unit of vertical rhythm on the top and bottom margin.
+ * 2. Add the correct display in IE 9-.
+ * 3. Set consistent space for the list style image.
+ */
+menu {
+  margin: 1.5rem 0;
+  /* 1 */
+  display: block;
+  /* 2 */
+  padding: 0 0 0 40px;
+  /* 3 */
+  /**
+   * Turn off margins on nested lists.
+   */ }
+  menu menu,
+  ol menu,
+  ul menu {
+    margin: 0; }
 
 /* Scripting
    ========================================================================== */

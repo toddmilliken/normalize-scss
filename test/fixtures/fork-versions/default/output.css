@@ -45,6 +45,51 @@ h1 {
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin: 0.75em 0; }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+figcaption,
+figure {
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1.5em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * Add the correct display in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre, code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
 /* Links
    ========================================================================== */
 /**
@@ -92,19 +137,6 @@ strong {
 b,
 strong {
   font-weight: bolder; }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
 
 /**
  * Add the correct font style in Android <4.4.
@@ -169,39 +201,6 @@ img {
  */
 svg:not(:root) {
   overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- */
-figcaption,
-figure {
-  display: block; }
-
-/**
- * Add the correct margin in IE 8.
- */
-figure {
-  margin: 1.5em 40px; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/**
- * Add the correct display in IE.
- */
-main {
-  display: block; }
 
 /* Forms
    ========================================================================== */
@@ -396,11 +395,9 @@ textarea {
 /* Interactive
    ========================================================================== */
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE, and Firefox.
  */
-details,
-menu {
+details {
   display: block; }
 
 /*
@@ -408,6 +405,12 @@ menu {
  */
 summary {
   display: list-item; }
+
+/*
+ * Add the correct display in IE 9-.
+ */
+menu {
+  display: block; }
 
 /* Scripting
    ========================================================================== */
