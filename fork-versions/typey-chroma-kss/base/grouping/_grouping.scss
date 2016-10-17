@@ -66,7 +66,6 @@ dl,
 menu,
 ol,
 ul {
-  // Address margins set differently in IE 6/7.
   @include margin(1 0);
 }
 
@@ -91,7 +90,6 @@ dd {
   }
 }
 
-// Address paddings set differently in IE 6/7.
 menu,
 ol,
 ul {
@@ -99,15 +97,6 @@ ul {
 
   @include rtl {
     padding: 0 $indent-amount 0 0;
-  }
-}
-
-@if support-for(ie, 7) {
-  // Correct list images handled incorrectly in IE 7.
-  nav ul,
-  nav ol {
-    list-style: none;
-    list-style-image: none;
   }
 }
 
