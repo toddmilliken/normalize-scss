@@ -3,9 +3,9 @@
   box-sizing: border-box; }
 
 html {
+  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-size: 100%;
   line-height: 1.5em;
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%; }

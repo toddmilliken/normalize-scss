@@ -46,23 +46,36 @@
 
   /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 
-  @if _normalize-include(root) {
+  @if _normalize-include(document) {
+    /* Document
+       ========================================================================== */
+
     /**
      * 1. Change the default font family in all browsers (opinionated).
-     * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+     * 2. Correct the line height in all browsers.
+     * 3. Prevent adjustments of font size after orientation changes in
+     *    IE on Windows Phone and in iOS.
      */
 
     html {
+      font-family: $base-font-family; /* 1 */
       @if $normalize-vertical-rhythm {
         // Correct old browser bug that prevented accessible resizing of text
         // when root font-size is set with px or em.
         font-size: ($base-font-size / 16px) * 100%;
-        line-height: ($base-line-height / $base-font-size) * 1em;
+        line-height: ($base-line-height / $base-font-size) * 1em; /* 2 */
       }
-      font-family: $base-font-family; /* 1 */
-      -ms-text-size-adjust: 100%; /* 2 */
-      -webkit-text-size-adjust: 100%; /* 2 */
+      @else {
+        line-height: 1.15; /* 2 */
+      }
+      -ms-text-size-adjust: 100%; /* 3 */
+      -webkit-text-size-adjust: 100%; /* 3 */
     }
+  }
+
+  @if _normalize-include(html5) {
+    /* HTML5 display definitions
+       ========================================================================== */
 
     /**
      * Remove the margin in all browsers (opinionated).
@@ -71,11 +84,6 @@
     body {
       margin: 0;
     }
-  }
-
-  @if _normalize-include(html5) {
-    /* HTML5 display definitions
-       ========================================================================== */
 
     /**
      * Add the correct display in IE <10.

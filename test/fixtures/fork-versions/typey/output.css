@@ -1,29 +1,34 @@
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+   ========================================================================== */
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 html {
-  font-size: 100%;
-  line-height: 1.5em;
   font-family: sans-serif;
   /* 1 */
-  -ms-text-size-adjust: 100%;
+  font-size: 100%;
+  line-height: 1.5em;
   /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 3 */ }
   @media print {
     html {
       font-size: 12pt; } }
 
+/* HTML5 display definitions
+   ========================================================================== */
 /**
  * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 /**
  * Add the correct display in IE <10.
  * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.

@@ -20,28 +20,35 @@
   $normalize-vertical-rhythm: true !global;
 }
 
-@if $normalize-vertical-rhythm {
-  /**
-   * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
-   * and $rhythm-unit variables. Also, correct old browser bug that prevented
-   * accessible resizing of text when root font-size is set with px or em.
-   */
+/* Document
+   ========================================================================== */
 
-  @include establish-baseline();
-}
+/**
+ * 1. Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ *    and $rhythm-unit variables.
+ * 2. Correct old browser bug that prevented accessible resizing of text when
+ *    root font-size is set with px or em.
+ * 3. Correct the line height in all browsers.
+ */
+
+@include establish-baseline();
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 
 html {
+  // Show a background image that can be used to debug your alignments.
+  // @include debug-vertical-alignment();
   font-family: $base-font-family; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  // Show a background image that can be used to debug your alignments.
-  // @include debug-vertical-alignment();
 }
+
+/* HTML5 display definitions
+   ========================================================================== */
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -50,9 +57,6 @@ html {
 body {
   margin: 0;
 }
-
-/* HTML5 display definitions
-   ========================================================================== */
 
 /**
  * Add the correct display in IE <10.

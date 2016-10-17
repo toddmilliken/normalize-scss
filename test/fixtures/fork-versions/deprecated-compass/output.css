@@ -1,7 +1,21 @@
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ *    and $rhythm-unit variables.
+ * 2. Correct old browser bug that prevented accessible resizing of text when
+ *    root font-size is set with px or em.
+ * 3. Correct the line height in all browsers.
+ */
+html {
+  font-size: 100%;
+  line-height: 1.5em; }
+
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 html {
   font-family: sans-serif;
@@ -11,14 +25,14 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
+/* HTML5 display definitions
+   ========================================================================== */
 /**
  * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 /**
  * Add the correct display in IE <10.
  * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.

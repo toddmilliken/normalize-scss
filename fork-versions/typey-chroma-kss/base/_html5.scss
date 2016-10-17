@@ -1,6 +1,16 @@
 // HTML5 display definitions
 // ==========================================================================
 
+
+body {
+  // Output a horizontal grid to help with debugging typography. The
+  // $typey-debug variable will toggle its output.
+  @include typey-debug-grid();
+  // Remove default margin and padding.
+  margin: 0;
+  padding: 0;
+}
+
 // Add the correct display in IE <10.
 // Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
 // Add the correct display in IE for `main`.

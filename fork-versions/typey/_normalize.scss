@@ -3,19 +3,28 @@
 @import 'variables';
 @import 'typey';
 
+/* Document
+   ========================================================================== */
+
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 
 html {
-  @include define-type-sizing();
-  // Show a background image that can be used to debug your alignments.
-  // @include debug-vertical-alignment();
-  font-family: $base-font-family; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  @include typeface(body); /* 1 */
+  @include define-type-sizing(); /* 2 */
+  // Output a horizontal grid to help with debugging typography. The
+  // $typey-debug variable will toggle its output.
+  @include typey-debug-grid();
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
+
+/* HTML5 display definitions
+   ========================================================================== */
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -24,9 +33,6 @@ html {
 body {
   margin: 0;
 }
-
-/* HTML5 display definitions
-   ========================================================================== */
 
 /**
  * Add the correct display in IE <10.
