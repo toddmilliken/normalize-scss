@@ -1,9 +1,6 @@
 # Exclude stuff specific to this project.
 node_modules
-/v1
-/v2
-/v3
-/v4
+/v[1-9]
 
 # Exclude IDE management files.
   # Eclipse
