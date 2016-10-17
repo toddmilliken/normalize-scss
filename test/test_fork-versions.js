@@ -7,9 +7,7 @@ describe('Fork versions', function() {
         fixtures: path.join(__dirname, 'fixtures/fork-versions'),
         includePaths: [
           // Path to Fork version.
-          path.join(__dirname, '../fork-versions/default'),
-          // Path to normalize-scss' dependencies.
-          path.dirname(require.resolve('support-for'))
+          path.join(__dirname, '../fork-versions/default')
         ]
       });
       return sassyTest.renderFixture('default');
