@@ -12,14 +12,12 @@ Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAl
 
 __This project is the Sass version of Normalize.css__, a collection of HTML element and attribute rulesets to normalize styles across all browsers. This port aims to use a light dusting of Sass to make Normalize even easier to integrate with your website. To learn about why Normalize.css is so amazing, skip to the "normalize.css" section below.
 
-This Sass port currently utilizes:
+This Sass port currently adds:
 
-* Browser support variables: Allowing you to easily add/drop support for any browser by modifying a single Sass variable.
 * Vertical rhythm mixins: Allowing you to alter the font-size, line-height and margins in Normalize’s output without hacking the library.
+* Optional Eyeglass support.
 
-In addition, Normalize.css has 2 major versions: version 4 (without “legacy browser” support) and version 1 (with support for IE 6/7, etc.) This Sass port combines the two versions into one file so that you can easily toggle between the two versions using its browser support variables.
-
-Did a client wait until the last minute to mention their CEO uses IE 6? Simply update your `$support-for` variable and recompile your Sass files. Details can be found at https://github.com/JohnAlbin/normalize-scss/wiki
+In addition, Normalize.css has 2 major versions: version 4 (without “legacy browser” support) and version 1. This Sass port combines the two versions into one file so that you can easily toggle between the two versions.
 
 # normalize.css v4
 
@@ -63,7 +61,6 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
     * [fork-versions/ruby-sass-compass](fork-versions/ruby-sass-compass) - Fork for Ruby Sass with Compass
     * [fork-versions/typey](fork-versions/typey) - Fork with Typey
     * [fork-versions/typey-chroma-kss](fork-versions/typey-chroma-kss) - Fork with Typey, Chroma and KSS
-  2. The normalize-scss code uses the `support-for` module, so add it
 
 __Approach 2:__ Install and include normalize-scss untouched and then build upon it, overriding the defaults later in your Sass when necessary. Just import normalize-scss like any normal Sass module by:
   1. Set variables to override the default normalize-scss variables.
@@ -79,16 +76,13 @@ Note: if you use [wiredep](https://github.com/taptapship/wiredep), normalize-scs
 
 ## Browser support
 
-* Chrome (last two)
-* Edge (last two)
-* Firefox (last two)
+* Chrome (last four)
+* Edge (version 25 and later)
+* Firefox (last four)
 * Firefox ESR
-* Internet Explorer 6+
-* Opera (last two)
-* Safari 6+
-
-The exact browsers supported in your project is controlled by the browser
-support variables. See https://github.com/JohnAlbin/normalize-scss/wiki
+* Internet Explorer 9+
+* Opera (last four)
+* Safari (last four)
 
 
 ## Extended details and known issues
