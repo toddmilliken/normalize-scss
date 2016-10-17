@@ -35,7 +35,6 @@ describe('Fork versions', function() {
           // Path to Fork version.
           path.join(__dirname, '../fork-versions/typey'),
           // Path to normalize-scss' dependencies.
-          path.dirname(require.resolve('support-for')),
           path.dirname(require.resolve('typey'))
         ]
       });
