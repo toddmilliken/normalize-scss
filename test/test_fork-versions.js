@@ -51,7 +51,6 @@ describe('Fork versions', function() {
           path.join(__dirname, '../fork-versions/typey-chroma-kss'),
           // Path to normalize-scss' dependencies.
           path.dirname(require.resolve('chroma-sass')),
-          path.dirname(require.resolve('support-for')),
           path.dirname(require.resolve('typey'))
         ]
       });
