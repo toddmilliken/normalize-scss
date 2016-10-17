@@ -1,7 +1,20 @@
 // Helper function for the normalize() mixin.
-$_normalize-include: ();
-$_normalize-exclude: ();
-@function _normalize-include($section) {
+@function _normalize-include($section, $exclude: null) {
+  // Initialize the global variables needed by this function.
+  @if not global_variable_exists(_normalize-include) {
+    $_normalize-include: () !global;
+    $_normalize-exclude: () !global;
+  }
+  // Since we are given 2 parameters, set the global variables.
+  @if $exclude != null {
+    $include: $section;
+    // Sass doesn't have static variables, so the work-around is to stuff these
+    // values into global variables so we can access them in future calls.
+    $_normalize-include: if(type-of($include) == 'list', $include, ($include)) !global;
+    $_normalize-exclude: if(type-of($exclude) == 'list', $exclude, ($exclude)) !global;
+    @return true;
+  }
+
   // Check if $section is in the $include list.
   @if index($_normalize-include, $section) {
     @return true;
@@ -22,11 +35,8 @@ $_normalize-exclude: ();
 }
 
 @mixin normalize($include: (all), $exclude: ()) {
-  // If we had local functions, we could access our parameters inside the
-  // function without passing them in as parameters. The hacky work-around is to
-  // stuff them into global variables so can access them from a global function.
-  $_normalize-include: if(type-of($include) == 'list', $include, ($include)) !global;
-  $_normalize-exclude: if(type-of($exclude) == 'list', $exclude, ($exclude)) !global;
+  // Initialize the helper function by passing it this mixin's parameters.
+  $init: _normalize-include($include, $exclude);
 
   // If we've customized any font variables, we'll need extra properties.
   @if $base-font-size != 16px
