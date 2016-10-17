@@ -20,9 +20,7 @@ describe('Fork versions', function() {
         fixtures: path.join(__dirname, 'fixtures'),
         includePaths: [
           // Path to Fork version.
-          path.join(__dirname, '../fork-versions/ruby-sass-compass'),
-          // Path to normalize-scss' dependencies.
-          path.dirname(require.resolve('support-for'))
+          path.join(__dirname, '../fork-versions/ruby-sass-compass')
         ]
       });
       return sassyTest.renderFixture('fork-versions/ruby-sass-compass');
