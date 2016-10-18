@@ -17,19 +17,6 @@
   // Supported values: px, em, rem.
   $rhythm-unit: 'em' !default;
 
-  // Note: This project also makes use of variables from Compass' support
-  // module. Documentation for this can be found on the wiki at:
-  // http://compass-style.org/reference/compass/support/
-  $critical-usage-threshold: 0.01 !default;
-
-  $browser-minimum-versions: (
-    'chrome':  null,
-    'firefox': null,
-    'ie':      null,
-    'safari':  null,
-    'opera':   null
-  ) !default;
-
 
 // The default font family.
 $base-font-family: sans-serif !default;
