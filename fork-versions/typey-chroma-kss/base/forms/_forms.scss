@@ -234,6 +234,19 @@ optgroup {
   font-weight: bold;
 }
 
+// Progress
+//
+// The `<progress>` HTML element.
+//
+// Style guide: forms.base.progress
+
+progress {
+  // Add the correct display in IE 9-.
+  display: inline-block;
+  // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  vertical-align: baseline;
+}
+
 // Text areas
 //
 // The `<textarea>` element represents a multi-line plain text form field.

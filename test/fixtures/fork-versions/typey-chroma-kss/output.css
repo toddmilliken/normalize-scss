@@ -19,63 +19,11 @@ body {
 
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block; }
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-progress {
-  vertical-align: baseline; }
-
-template,
-[hidden] {
-  display: none; }
-
-a {
-  color: #0072b9;
-  -webkit-text-decoration-skip: objects; }
-
-:visited {
-  color: #003353; }
-
-a:active {
-  color: #c00; }
-  a:active:not(.button) {
-    background-color: transparent; }
-
-a:active,
-a:hover {
-  outline-width: 0; }
-
-@media print {
-  :link,
-  :visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")";
-    font-weight: normal;
-    font-size: 16px;
-    text-decoration: none; }
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
-    content: ''; } }
 
 h1 {
   font-size: 2rem;
@@ -112,6 +60,35 @@ h6 {
   line-height: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
+
+a {
+  color: #0072b9;
+  -webkit-text-decoration-skip: objects; }
+
+:visited {
+  color: #003353; }
+
+a:active {
+  color: #c00; }
+  a:active:not(.button) {
+    background-color: transparent; }
+
+a:active,
+a:hover {
+  outline-width: 0; }
+
+@media print {
+  :link,
+  :visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none; }
+  a[href^='javascript:']:after,
+  a[href^='#']:after {
+    content: ''; } }
 
 abbr[title] {
   border-bottom: 0;
@@ -203,6 +180,13 @@ p,
 pre {
   margin: 1.5rem 0; }
 
+audio {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
 img {
   border-style: none; }
 
@@ -213,6 +197,9 @@ svg {
 
 svg:not(:root) {
   overflow: hidden; }
+
+video {
+  display: inline-block; }
 
 button,
 input,
@@ -344,6 +331,10 @@ legend {
 optgroup {
   font-weight: bold; }
 
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
 textarea {
   overflow: auto; }
 
@@ -356,3 +347,21 @@ table {
 td,
 th {
   padding: 0; }
+
+details {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+menu {
+  display: block; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }

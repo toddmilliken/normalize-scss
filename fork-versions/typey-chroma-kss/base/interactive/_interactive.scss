@@ -1,0 +1,26 @@
+// Interactive
+//
+// Style guide: base.interactive
+
+// Details
+//
+// Style guide: base.interactive.details
+
+details {
+  // Add the correct display in Edge, IE, and Firefox.
+  display: block;
+}
+
+summary {
+  // Add the correct display in all browsers.
+  display: list-item;
+}
+
+// Menu
+//
+// Style guide: base.interactive.menu
+
+menu {
+  // Add the correct display in IE 9-.
+  display: block;
+}

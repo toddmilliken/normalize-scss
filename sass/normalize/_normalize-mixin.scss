@@ -73,8 +73,8 @@
     }
   }
 
-  @if _normalize-include(html5) {
-    /* HTML5 display definitions
+  @if _normalize-include(sections) {
+    /* Sections
        ========================================================================== */
 
     /**
@@ -86,62 +86,63 @@
     }
 
     /**
-     * Add the correct display in IE <10.
-     * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
-     * Add the correct display in IE for `main`.
+     * Add the correct display in IE 9-.
      */
 
     article,
     aside,
-    details,
-    figcaption,
-    figure,
     footer,
     header,
-    main,
-    menu,
     nav,
-    section,
-    summary {
+    section {
       display: block;
     }
 
     /**
-     * Add the correct display in IE <10.
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
      */
 
-    audio,
-    canvas,
-    progress,
-    video {
-      display: inline-block;
+    h1 {
+      @include normalize-font-size($h1-font-size);
+      @if $normalize-vertical-rhythm {
+        @include normalize-line-height($h1-font-size);
+      }
+
+      /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+      @include normalize-margin(1 0, $h1-font-size);
     }
 
-    /**
-     * Add the correct display and remove excess height in iOS 4-7.
-     */
+    @if $normalize-vertical-rhythm {
+      h2 {
+        @include normalize-font-size($h2-font-size);
+        @include normalize-line-height($h2-font-size);
+        @include normalize-margin(1 0, $h2-font-size);
+      }
 
-    audio:not([controls]) {
-      display: none;
-      height: 0;
-    }
+      h3 {
+        @include normalize-font-size($h3-font-size);
+        @include normalize-line-height($h3-font-size);
+        @include normalize-margin(1 0, $h3-font-size);
+      }
 
-    /**
-     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-     */
+      h4 {
+        @include normalize-font-size($h4-font-size);
+        @include normalize-line-height($h4-font-size);
+        @include normalize-margin(1 0, $h4-font-size);
+      }
 
-    progress {
-      vertical-align: baseline;
-    }
+      h5 {
+        @include normalize-font-size($h5-font-size);
+        @include normalize-line-height($h5-font-size);
+        @include normalize-margin(1 0, $h5-font-size);
+      }
 
-    /**
-     * Add the correct display in IE <11, Safari <8, and Firefox <22.
-     * 1. Add the correct display in IE.
-     */
-
-    template, /* 1 */
-    [hidden] {
-      display: none;
+      h6 {
+        @include normalize-font-size($h6-font-size);
+        @include normalize-line-height($h6-font-size);
+        @include normalize-margin(1 0, $h6-font-size);
+      }
     }
   }
 
@@ -224,53 +225,6 @@
     }
 
     /**
-     * Correct the font size and margin on `h1` elements within `section` and
-     * `article` contexts in Chrome, Firefox, and Safari.
-     */
-
-    h1 {
-      @include normalize-font-size($h1-font-size);
-      @if $normalize-vertical-rhythm {
-        @include normalize-line-height($h1-font-size);
-      }
-
-      /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-      @include normalize-margin(1 0, $h1-font-size);
-    }
-
-    @if $normalize-vertical-rhythm {
-      h2 {
-        @include normalize-font-size($h2-font-size);
-        @include normalize-line-height($h2-font-size);
-        @include normalize-margin(1 0, $h2-font-size);
-      }
-
-      h3 {
-        @include normalize-font-size($h3-font-size);
-        @include normalize-line-height($h3-font-size);
-        @include normalize-margin(1 0, $h3-font-size);
-      }
-
-      h4 {
-        @include normalize-font-size($h4-font-size);
-        @include normalize-line-height($h4-font-size);
-        @include normalize-margin(1 0, $h4-font-size);
-      }
-
-      h5 {
-        @include normalize-font-size($h5-font-size);
-        @include normalize-line-height($h5-font-size);
-        @include normalize-margin(1 0, $h5-font-size);
-      }
-
-      h6 {
-        @include normalize-font-size($h6-font-size);
-        @include normalize-line-height($h6-font-size);
-        @include normalize-margin(1 0, $h6-font-size);
-      }
-    }
-
-    /**
      * Add the correct background and color in IE <10.
      */
 
@@ -312,6 +266,24 @@
   @if _normalize-include(embedded) {
     /* Embedded content
        ========================================================================== */
+
+    /**
+     * Add the correct display in IE <10.
+     */
+
+    audio,
+    video {
+      display: inline-block;
+    }
+
+    /**
+     * Add the correct display and remove excess height in iOS 4-7.
+     */
+
+    audio:not([controls]) {
+      display: none;
+      height: 0;
+    }
 
     /**
      * Remove the border on images inside links in IE <11.
@@ -602,11 +574,78 @@
     }
 
     /**
+     * 1. Add the correct display in IE 9-.
+     * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+    progress {
+      display: inline-block; /* 1 */
+      vertical-align: baseline; /* 2 */
+    }
+
+    /**
      * Remove the default vertical scrollbar in IE.
      */
 
     textarea {
       overflow: auto;
+    }
+  }
+
+  @if _normalize-include(interactive) {
+    /* Interactive
+       ========================================================================== */
+
+    /*
+     * Add the correct display in IE 9-.
+     * 1. Add the correct display in Edge, IE, and Firefox.
+     */
+
+    details, /* 1 */
+    menu {
+      display: block;
+    }
+
+    /*
+     * Add the correct display in all browsers.
+     */
+
+    summary {
+      display: list-item;
+    }
+  }
+
+  @if _normalize-include(scripting) {
+    /* Scripting
+       ========================================================================== */
+
+    /**
+     * Add the correct display in IE 9-.
+     */
+
+    canvas {
+      display: inline-block;
+    }
+
+    /**
+     * Add the correct display in IE.
+     */
+
+    template {
+      display: none;
+    }
+  }
+
+  @if _normalize-include(hidden) {
+    /* Hidden
+       ========================================================================== */
+
+    /**
+     * Add the correct display in IE 10-.
+     */
+
+    [hidden] {
+      display: none;
     }
   }
 }

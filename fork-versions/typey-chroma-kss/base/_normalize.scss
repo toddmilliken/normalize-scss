@@ -10,14 +10,16 @@
 
 // Normalize-scss is broken into modular pieces to make it easier to edit.
 @import 'document/document';
-@import 'html5';
+@import 'sections/sections';
 @import 'links/links';
-@import 'headings/headings';
 @import 'text/text';
 @import 'grouping/grouping';
 @import 'embedded/embedded';
 @import 'forms/forms';
 @import 'tables/tables';
+@import 'interactive/interactive';
+@import 'scripting/scripting';
+@import 'hidden/hidden';
 
 // Note: we allow the .button component (loaded by forms) to override :link, by
 // loading links first.

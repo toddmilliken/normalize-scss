@@ -47,7 +47,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/* HTML5 display definitions
+/* Sections
    ========================================================================== */
 
 /**
@@ -59,62 +59,67 @@ body {
 }
 
 /**
- * Add the correct display in IE <10.
- * Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
- * Add the correct display in IE for `main`.
+ * Add the correct display in IE 9-.
  */
 
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
 /**
- * Add the correct display in IE <10.
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  @if $normalize-vertical-rhythm {
+    @include adjust-font-size-to( $h1-font-size );
+  }
+  @else {
+    font-size: if($rhythm-unit == "px", $h1-font-size, unquote("#{$h1-font-size / $base-font-size}#{$rhythm-unit}"));
+  }
+
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  @include leader(1, $h1-font-size);
+  @include trailer(1, $h1-font-size);
 }
 
-/**
- * Add the correct display and remove excess height in iOS 4-7.
- */
+@if $normalize-vertical-rhythm {
+  h2 {
+    @include adjust-font-size-to( $h2-font-size );
+    @include leader(1, $h2-font-size);
+    @include trailer(1, $h2-font-size);
+  }
 
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
+  h3 {
+    @include adjust-font-size-to( $h3-font-size );
+    @include leader(1, $h3-font-size);
+    @include trailer(1, $h3-font-size);
+  }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
+  h4 {
+    @include adjust-font-size-to( $h4-font-size );
+    @include leader(1, $h4-font-size);
+    @include trailer(1, $h4-font-size);
+  }
 
-progress {
-  vertical-align: baseline;
-}
+  h5 {
+    @include adjust-font-size-to( $h5-font-size );
+    @include leader(1, $h5-font-size);
+    @include trailer(1, $h5-font-size);
+  }
 
-/**
- * Add the correct display in IE <11, Safari <8, and Firefox <22.
- * 1. Add the correct display in IE.
- */
-
-template, /* 1 */
-[hidden] {
-  display: none;
+  h6 {
+    @include adjust-font-size-to( $h6-font-size );
+    @include leader(1, $h6-font-size);
+    @include trailer(1, $h6-font-size);
+  }
 }
 
 /* Links
@@ -194,57 +199,6 @@ dfn {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  @if $normalize-vertical-rhythm {
-    @include adjust-font-size-to( $h1-font-size );
-  }
-  @else {
-    font-size: if($rhythm-unit == "px", $h1-font-size, unquote("#{$h1-font-size / $base-font-size}#{$rhythm-unit}"));
-  }
-
-  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  @include leader(1, $h1-font-size);
-  @include trailer(1, $h1-font-size);
-}
-
-@if $normalize-vertical-rhythm {
-  h2 {
-    @include adjust-font-size-to( $h2-font-size );
-    @include leader(1, $h2-font-size);
-    @include trailer(1, $h2-font-size);
-  }
-
-  h3 {
-    @include adjust-font-size-to( $h3-font-size );
-    @include leader(1, $h3-font-size);
-    @include trailer(1, $h3-font-size);
-  }
-
-  h4 {
-    @include adjust-font-size-to( $h4-font-size );
-    @include leader(1, $h4-font-size);
-    @include trailer(1, $h4-font-size);
-  }
-
-  h5 {
-    @include adjust-font-size-to( $h5-font-size );
-    @include leader(1, $h5-font-size);
-    @include trailer(1, $h5-font-size);
-  }
-
-  h6 {
-    @include adjust-font-size-to( $h6-font-size );
-    @include leader(1, $h6-font-size);
-    @include trailer(1, $h6-font-size);
-  }
-}
-
-/**
  * Add the correct background and color in IE <10.
  */
 
@@ -284,6 +238,24 @@ sup {
 
 /* Embedded content
    ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
 /**
  * Remove the border on images inside links in IE <11.
@@ -344,6 +316,15 @@ svg:not(:root) {
 }
 
 /**
+ * Add the correct display in IE 9-.
+ */
+
+figcaption,
+figure {
+  display: block;
+}
+
+/**
  * Add the correct margin in IE 8.
  */
 
@@ -360,6 +341,14 @@ hr {
   @include box-sizing(content-box); /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+main {
+  display: block;
 }
 
 @if $normalize-vertical-rhythm {
@@ -573,9 +562,70 @@ optgroup {
 }
 
 /**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
  * Remove the default vertical scrollbar in IE.
  */
 
 textarea {
   overflow: auto;
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
 }
