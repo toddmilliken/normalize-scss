@@ -58,7 +58,7 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
     as you include it in your project. To aid with this method, normalize-scss
     includes several ready-made "fork" versions:
     * [fork-versions/default](fork-versions/default) - Fork for libSass or Ruby Sass
-    * [fork-versions/ruby-sass-compass](fork-versions/ruby-sass-compass) - Fork for Ruby Sass with Compass
+    * [fork-versions/deprecated-compass](fork-versions/deprecated-compass) - Fork with Compass ([deprecated](https://github.com/Compass/compass/issues/1999))
     * [fork-versions/typey](fork-versions/typey) - Fork with Typey
     * [fork-versions/typey-chroma-kss](fork-versions/typey-chroma-kss) - Fork with Typey, Chroma and KSS
 

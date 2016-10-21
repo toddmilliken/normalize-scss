@@ -6,7 +6,7 @@ describe('Fork versions', function() {
       var sassyTest = new SassyTest({
         fixtures: path.join(__dirname, 'fixtures/fork-versions'),
         includePaths: [
-          // Path to Fork version.
+          // Path to fork version.
           path.join(__dirname, '../fork-versions/default')
         ]
       });
@@ -14,47 +14,47 @@ describe('Fork versions', function() {
     });
   });
 
-  describe('Ruby Sass with Compass fork', function() {
+  describe('Compass fork', function() {
     it('should render properly', function() {
       var sassyTest = new SassyTest({
-        fixtures: path.join(__dirname, 'fixtures'),
+        fixtures: path.join(__dirname, 'fixtures/fork-versions/deprecated-compass'),
         includePaths: [
-          // Path to Fork version.
-          path.join(__dirname, '../fork-versions/ruby-sass-compass')
+          // Path to fork version.
+          path.join(__dirname, '../fork-versions/deprecated-compass')
         ]
       });
-      return sassyTest.renderFixture('fork-versions/ruby-sass-compass');
+      return sassyTest.renderFixture('./');
     });
   });
 
   describe('Typey fork', function() {
     it('should render properly', function() {
       var sassyTest = new SassyTest({
-        fixtures: path.join(__dirname, 'fixtures'),
+        fixtures: path.join(__dirname, 'fixtures/fork-versions'),
         includePaths: [
-          // Path to Fork version.
+          // Path to fork version.
           path.join(__dirname, '../fork-versions/typey'),
-          // Path to normalize-scss' dependencies.
+          // Path to the fork's dependencies.
           path.dirname(require.resolve('typey'))
         ]
       });
-      return sassyTest.renderFixture('fork-versions/typey');
+      return sassyTest.renderFixture('typey');
     });
   });
 
   describe('Typey, Chroma and KSS fork', function() {
     it('should render properly', function() {
       var sassyTest = new SassyTest({
-        fixtures: path.join(__dirname, 'fixtures'),
+        fixtures: path.join(__dirname, 'fixtures/fork-versions'),
         includePaths: [
-          // Path to Fork version.
+          // Path to fork version.
           path.join(__dirname, '../fork-versions/typey-chroma-kss'),
-          // Path to normalize-scss' dependencies.
+          // Path to the fork's dependencies.
           path.dirname(require.resolve('chroma-sass')),
           path.dirname(require.resolve('typey'))
         ]
       });
-      return sassyTest.renderFixture('fork-versions/typey-chroma-kss');
+      return sassyTest.renderFixture('typey-chroma-kss');
     });
   });
 });
