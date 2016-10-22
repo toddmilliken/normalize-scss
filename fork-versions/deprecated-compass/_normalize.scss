@@ -316,17 +316,15 @@ svg:not(:root) {
     @include output-rhythm(margin, rhythm(1) 0);
   }
 
-  @if $normalize-vertical-rhythm {
-    /**
-     * Turn off margins on nested lists.
-     */
+  /**
+   * Turn off margins on nested lists.
+   */
 
+  ol,
+  ul {
     ol,
     ul {
-      ol,
-      ul {
-        margin: 0;
-      }
+      margin: 0;
     }
   }
 
