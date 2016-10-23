@@ -367,7 +367,7 @@
        ========================================================================== */
 
     /**
-     * Add the correct display in IE <10.
+     * Add the correct display in IE 9-.
      */
 
     audio,
@@ -376,7 +376,7 @@
     }
 
     /**
-     * Add the correct display and remove excess height in iOS 4-7.
+     * Add the correct display in iOS 4-7.
      */
 
     audio:not([controls]) {
@@ -385,7 +385,7 @@
     }
 
     /**
-     * Remove the border on images inside links in IE <11.
+     * Remove the border on images inside links in IE 10-.
      */
 
     img {
