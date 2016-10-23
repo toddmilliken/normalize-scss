@@ -68,7 +68,7 @@ a:hover {
 /* Text-level semantics
        ========================================================================== */
 /**
-     * 1. Remove the bottom border in Firefox <40.
+     * 1. Remove the bottom border in Firefox 39-.
      * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
      */
 abbr[title] {
@@ -106,13 +106,13 @@ samp {
   /* 2 */ }
 
 /**
-     * Add the correct font style in Android <4.4.
+     * Add the correct font style in Android 4.3-.
      */
 dfn {
   font-style: italic; }
 
 /**
-     * Add the correct background and color in IE <10.
+     * Add the correct background and color in IE 9-.
      */
 mark {
   background-color: #ff0;

@@ -111,8 +111,7 @@ pre {
 
 pre, code,
 kbd,
-samp,
-var {
+samp {
   font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
   font-size: 1em; }
 
