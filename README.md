@@ -64,13 +64,15 @@ __Approach 1:__ Download and use normalize-scss as a starting point for your own
 
 __Approach 2:__ Install and include normalize-scss untouched and then build upon it, overriding the defaults later in your Sass when necessary. Just import normalize-scss like any normal Sass module by:
   1. Set variables to override the default normalize-scss variables.
-  2. Import with `@import "normalize";`
-  3. Output the CSS rules with `@include normalize();`
+  2. (Optionally) add an additional `[path to]/normalize-scss/sass` import path for your Sass compiler, e.g. [node-sass' `includePaths`](https://github.com/sass/node-sass#includepaths) option or [Ruby Sass' `--load-path`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#import) option.
+  3. Import with `@import "normalize";` or with `@import "[path to]/normalize-scss/sass/normalize";` (if you skipped step 2.)
+  4. Output the CSS rules with `@include normalize();`
 
 Alternatively, you can import normalize-scss immediately into your main Sass file without needing to use the `normalize()` mixin by:
 
   1. (Optionally) set variables to override the default normalize-scss variables.
-  2. Import with `@import "normalize/import-now";`
+  2. (Optionally) add an additional `[path to]/normalize-scss/sass` import path for your Sass compiler, e.g. [node-sass' `includePaths`](https://github.com/sass/node-sass#includepaths) option or [Ruby Sass' `--load-path`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#import) option.
+  3. Import with `@import "normalize/import-now";` or with `@import "[path to]/normalize-scss/sass/normalize/import-now";` (if you skipped step 2.)
 
 Note: if you use [wiredep](https://github.com/taptapship/wiredep), normalize-scss's bower.json points at the normalize/import-now Sass partial. If you don't wish to immediately output the CSS, you will need to override the Sass partial that wiredep grabs from normalize-scss.
 
