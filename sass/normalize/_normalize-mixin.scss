@@ -426,7 +426,7 @@
      */
 
     /**
-     * 1. Change font properties to `inherit` in all browsers (opinionated).
+     * 1. Change the font styles in all browsers (opinionated).
      * 2. Remove the margin in Firefox and Safari.
      */
 
@@ -435,7 +435,14 @@
     optgroup,
     select,
     textarea {
-      font: inherit; /* 1 */
+      font-family: $base-font-family; /* 1 */
+      font-size: 100%; /* 1 */
+      @if $normalize-vertical-rhythm {
+        line-height: ($base-line-height / $base-font-size) * 1em; /* 1 */
+      }
+      @else {
+        line-height: 1.15; /* 1 */
+      }
       margin: 0; /* 2 */
     }
 
@@ -502,8 +509,8 @@
     }
 
     /**
-     * 1. Add the correct box sizing in IE <11.
-     * 2. Remove the padding in IE <11.
+     * 1. Add the correct box sizing in IE 10-.
+     * 2. Remove the padding in IE 10-.
      */
 
     [type="checkbox"],
@@ -531,22 +538,13 @@
       outline-offset: -2px; /* 2 */
 
       /**
-       * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
        */
 
       &::-webkit-search-cancel-button,
       &::-webkit-search-decoration {
         -webkit-appearance: none;
       }
-    }
-
-    /**
-     * Correct the text style of placeholders in Chrome, Edge, and Safari.
-     */
-
-    ::-webkit-input-placeholder {
-      color: inherit;
-      opacity: 0.54;
     }
 
     /**
@@ -583,14 +581,6 @@
       white-space: normal; /* 1 */
       color: inherit; /* 2 */
       padding: 0; /* 3 */
-    }
-
-    /**
-     * Restore the font weight unset by a previous rule.
-     */
-
-    optgroup {
-      font-weight: bold;
     }
 
     /**

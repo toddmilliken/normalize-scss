@@ -224,7 +224,7 @@ svg:not(:root) {
  *   on when it has padding (and textfield appearance).
  */
 /**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
 button,
@@ -232,7 +232,11 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  line-height: 1.15;
+  /* 1 */
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
   /* 1 */
   margin: 0;
   /* 2 */ }
@@ -293,8 +297,8 @@ input {
   overflow: visible; }
 
 /**
- * 1. Add the correct box sizing in IE <11.
- * 2. Remove the padding in IE <11.
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
  */
 [type="checkbox"],
 [type="radio"] {
@@ -320,17 +324,10 @@ input {
   outline-offset: -2px;
   /* 2 */
   /**
-   * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+   * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
    */ }
   [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -369,12 +366,6 @@ legend {
   /* 2 */
   padding: 0;
   /* 3 */ }
-
-/**
- * Restore the font weight unset by a previous rule.
- */
-optgroup {
-  font-weight: bold; }
 
 /**
  * 1. Add the correct display in IE 9-.

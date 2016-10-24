@@ -22,11 +22,13 @@ input,
 optgroup,
 select,
 textarea {
+  // Change the font styles in all browsers (opinionated).
+  @include typeface(body);
+  @include line-height(1);
+  font-size: 100%;
   // Keep form elements constrained in their containers.
   box-sizing: border-box;
   max-width: 100%;
-  // Change font properties to `inherit` in all browsers (opinionated).
-  font: inherit;
   // Remove the margin in Firefox and Safari.
   margin: 0;
 }
@@ -59,17 +61,11 @@ input {
   // Correct the outline style in Safari.
   outline-offset: -2px;
 
-  // Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+  // Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
-}
-
-// Correct the text style of placeholders in Chrome, Edge, and Safari.
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .54;
 }
 
 ::-webkit-file-upload-button {
@@ -163,9 +159,9 @@ input {
 
 [type='checkbox'],
 [type='radio'] {
-  // Add the correct box sizing in IE <11.
+  // Add the correct box sizing in IE 10-.
   box-sizing: border-box;
-  // Remove the padding in IE <11.
+  // Remove the padding in IE 10-.
   padding: 0;
 }
 
@@ -229,14 +225,9 @@ select {
   // Add your styles.
 }
 
-optgroup {
-  // Restore the font weight unset by a previous rule.
-  font-weight: bold;
-}
-
 // Progress
 //
-// The `<progress>` HTML element.
+// The `<progress>` element represents the completion progress of a task.
 //
 // Style guide: forms.base.progress
 
