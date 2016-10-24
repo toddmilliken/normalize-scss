@@ -4,9 +4,9 @@
 
 For use with…                | normalize-scss version
 -----------------------------|-----------------------
-Sass 3.4 or libSass          | [5.0.4](https://github.com/JohnAlbin/normalize-scss/releases/tag/5.0.4)<br> combining normalize.css v4.1.1 with v1.1.3
-Ruby Sass 3.3 + Compass 1.0  | [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3)<br> combining normalize.css v3.0.3 with v1.1.3
-Ruby Sass 3.2 + Compass 0.12 | [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3)<br> combining normalize.css v2.1.3 with v1.1.3
+Sass 3.4 or libSass | [5.0.4](https://github.com/JohnAlbin/normalize-scss/releases/tag/5.0.4)<br> combining normalize.css v4.1.1 with v1.1.3
+Ruby Sass 3.3       | [3.0.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/3.0.3)<br> combining normalize.css v3.0.3 with v1.1.3
+Ruby Sass 3.2       | [2.2.0+normalize.2.1.3](https://github.com/JohnAlbin/normalize-scss/releases/tag/2.2.0%2Bnormalize.2.1.3)<br> combining normalize.css v2.1.3 with v1.1.3
 
 ## The Sass port of normalize.css
 
@@ -16,10 +16,9 @@ This Sass port currently adds:
 
 * Vertical rhythm mixins: Allowing you to alter the font-size, line-height and margins in Normalize’s output without hacking the library.
 * Optional Eyeglass support.
+* Several ready-to-fork versions that integrate typography Sass modules like Typey, style guides built with KSS, or the legacy Compass module.
 
-In addition, Normalize.css has 2 major versions: version 4 (without “legacy browser” support) and version 1. This Sass port combines the two versions into one file so that you can easily toggle between the two versions.
-
-# normalize.css v4
+# normalize.css v5
 
 > A modern alternative to CSS resets
 
@@ -54,9 +53,7 @@ There is a fantastic introduction to the project and brief instructions how to u
 You can use the Sass port of Normalize in one of several methods, following the "About normalize.css" article's suggestions:
 
 __Approach 1:__ Download and use normalize-scss as a starting point for your own project's base Sass, customising the values to match the design's requirements. (The best approach, _IMO_.)
-  1. Copy the normalize-scss files to your sass directory so that you can alter it
-    as you include it in your project. To aid with this method, normalize-scss
-    includes several ready-made "fork" versions:
+  1. Copy the normalize-scss files to your sass directory so that you can alter it as you include it in your project. To aid with this method, normalize-scss includes several ready-made "fork" versions:
     * [fork-versions/default](fork-versions/default) - Fork for libSass or Ruby Sass
     * [fork-versions/deprecated-compass](fork-versions/deprecated-compass) - Fork with Compass ([deprecated](https://github.com/Compass/compass/issues/1999))
     * [fork-versions/typey](fork-versions/typey) - Fork with Typey
@@ -135,6 +132,11 @@ for the outer 1px of that border. Applying `-webkit-appearance: textfield`
 addresses these issues without removing the benefits of search inputs (e.g.
 showing past searches). Safari (but not Chrome) will clip the cancel button on
 when it has padding (and `textfield` appearance).
+
+#### `::placeholder`
+
+In Edge, placeholders will disappear on `relative` or `absolute` positioned
+`<input>` elements if you use `opacity` less than `1` due to a [bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/).
 
 
 ## Contributing
