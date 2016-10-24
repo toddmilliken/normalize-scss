@@ -169,7 +169,12 @@ figure {
  */
 
 figure {
-  @include normalize-margin(1 $indent-amount);
+  @if $normalize-vertical-rhythm {
+    @include normalize-margin(1 $indent-amount);
+  }
+  @else {
+    margin: 1em $indent-amount;
+  }
 }
 
 /**

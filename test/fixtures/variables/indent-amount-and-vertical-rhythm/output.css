@@ -10,7 +10,8 @@
 html {
   font-family: sans-serif;
   /* 1 */
-  line-height: 1.15;
+  font-size: 100%;
+  line-height: 1.5em;
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 3 */
@@ -42,11 +43,64 @@ section {
      */
 h1 {
   font-size: 2em;
+  line-height: 1.5em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
   margin: 0.75em 0; }
 
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 1em 0; }
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin: 1.28205em 0; }
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 1.5em 0; }
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin: 1.80723em 0; }
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23881em;
+  margin: 2.23881em 0; }
+
 /* Grouping content
        ========================================================================== */
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+blockquote {
+  margin: 1.5em 3em; }
+
+dl,
+ol,
+ul {
+  margin: 1.5em 0; }
+
+/**
+       * Turn off margins on nested lists.
+       */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 3em; }
+
+ol,
+ul {
+  padding: 0 0 0 3em; }
+
 /**
      * Add the correct display in IE 9-.
      */
@@ -58,7 +112,7 @@ figure {
      * Add the correct margin in IE 8.
      */
 figure {
-  margin: 1em 40px; }
+  margin: 1.5em 3em; }
 
 /**
      * 1. Add the correct box sizing in Firefox.
@@ -77,6 +131,13 @@ hr {
      */
 main {
   display: block; }
+
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+p,
+pre {
+  margin: 1.5em 0; }
 
 /**
      * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -246,7 +307,7 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
+  line-height: 1.5em;
   /* 1 */
   margin: 0;
   /* 2 */ }
@@ -411,7 +472,22 @@ summary {
      * Add the correct display in IE 9-.
      */
 menu {
-  display: block; }
+  display: block;
+  /*
+         * 1. Set 1 unit of vertical rhythm on the top and bottom margin.
+         * 2. Set consistent space for the list style image.
+         */
+  margin: 1.5em 0;
+  /* 1 */
+  padding: 0 0 0 3em;
+  /* 2 */
+  /**
+         * Turn off margins on nested lists.
+         */ }
+  menu menu,
+  ol menu,
+  ul menu {
+    margin: 0; }
 
 /* Scripting
        ========================================================================== */
