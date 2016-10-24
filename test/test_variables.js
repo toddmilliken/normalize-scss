@@ -28,4 +28,10 @@ describe('Configuration variables', function() {
       return sassyTest.renderFixture('variables/indent-amount');
     });
   });
+
+  describe('$indent-amount and $normalize-vertical-rhythm', function() {
+    it('should alter the indent amount of elements', function() {
+      return sassyTest.renderFixture('variables/indent-amount-and-vertical-rhythm');
+    });
+  });
 });

@@ -63,7 +63,6 @@ blockquote {
 // Style guide: base.grouping.lists.dl
 
 dl,
-menu,
 ol,
 ul {
   @include margin(1 0);
@@ -90,7 +89,6 @@ dd {
   }
 }
 
-menu,
 ol,
 ul {
   padding: 0 0 0 $indent-amount;
@@ -115,10 +113,13 @@ ul {
 figure {
   // Add the correct margin in IE 8.
   @include margin(1 $indent-amount);
+  // Add the correct display in IE 9-.
+  display: block;
 }
 
 figcaption {
-  // Add your styles.
+  // Add the correct display in IE 9-.
+  display: block;
 }
 
 // Horizontal rule
@@ -138,6 +139,17 @@ hr {
   height: 0;
   // Show the overflow in Edge and IE.
   overflow: visible;
+}
+
+// Main
+//
+// The `<main>` element represents the main content of the page.
+//
+// Style guide: base.grouping.main
+
+main {
+  // Add the correct display in IE.
+  display: block;
 }
 
 // Body copy
@@ -166,6 +178,14 @@ pre {
 // Markup: grouping-pre.twig
 //
 // Style guide: base.grouping.pre
+
+%monospace {
+  // Correct the inheritance and scaling of font size in all browsers.
+  // The font-family value ends with ", serif".
+  @include typeface(monospace);
+  // Correct the odd `em` font sizing in all browsers.
+  font-size: 1em;
+}
 
 pre {
   @extend %monospace;
