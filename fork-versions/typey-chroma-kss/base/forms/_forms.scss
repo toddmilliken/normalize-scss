@@ -186,13 +186,13 @@ legend {
   box-sizing: border-box;
   display: table;
   max-width: 100%;
-  white-space: normal;
-  // Correct the color inheritance from `fieldset` elements in IE.
-  color: inherit;
   // Align legend text with a fieldset's text while removing left padding so
   // people aren't caught out if they zero out fieldset padding.
   margin-left: -5px;
   padding: 0 5px;
+  // Correct the color inheritance from `fieldset` elements in IE.
+  color: inherit;
+  white-space: normal;
 }
 
 // Labels

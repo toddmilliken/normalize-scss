@@ -324,10 +324,10 @@ legend {
   box-sizing: border-box;
   display: table;
   max-width: 100%;
-  white-space: normal;
-  color: inherit;
   margin-left: -5px;
-  padding: 0 5px; }
+  padding: 0 5px;
+  color: inherit;
+  white-space: normal; }
 
 progress {
   display: inline-block;

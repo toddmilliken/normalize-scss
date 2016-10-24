@@ -547,9 +547,9 @@ legend {
   box-sizing: border-box; /* 1 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
-  white-space: normal; /* 1 */
-  color: inherit; /* 2 */
   padding: 0; /* 3 */
+  color: inherit; /* 2 */
+  white-space: normal; /* 1 */
 }
 
 /**
