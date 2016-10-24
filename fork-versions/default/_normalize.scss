@@ -79,8 +79,13 @@ h1 {
     @include normalize-line-height($h1-font-size);
   }
 
-  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  @include normalize-margin(1 0, $h1-font-size);
+  @if $normalize-vertical-rhythm {
+    /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+    @include normalize-margin(1 0, $h1-font-size);
+  }
+  @else {
+    margin: 0.67em 0;
+  }
 }
 
 @if $normalize-vertical-rhythm {
