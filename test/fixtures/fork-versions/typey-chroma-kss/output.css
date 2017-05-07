@@ -127,10 +127,6 @@ a:active {
   a:active:not(.button) {
     background-color: transparent; }
 
-a:active,
-a:hover {
-  outline-width: 0; }
-
 @media print {
   :link,
   :visited {
