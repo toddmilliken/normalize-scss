@@ -19,14 +19,16 @@
    ========================================================================== */
 
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
 
 html {
-  font-family: $base-font-family; /* 1 */
+  @if $base-font-family {
+    /* Change the default font family in all browsers (opinionated). */
+    font-family: $base-font-family;
+  }
   @if $base-font-size != 16px or $normalize-vertical-rhythm {
     // Correct old browser bug that prevented accessible resizing of text
     // when root font-size is set with px or em.
@@ -35,13 +37,13 @@ html {
   @if $normalize-vertical-rhythm {
     // Establish a vertical rhythm unit using $base-font-size and
     // $base-line-height variables.
-    line-height: ($base-line-height / $base-font-size) * 1em; /* 2 */
+    line-height: ($base-line-height / $base-font-size) * 1em; /* 1 */
   }
   @else {
-    line-height: 1.15; /* 2 */
+    line-height: 1.15; /* 1 */
   }
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -418,7 +420,7 @@ textarea {
   @else {
     line-height: 1.15; /* 1 */
   }
-  font-family: $base-font-family; /* 1 */
+  font-family: if($base-font-family, $base-font-family, sans-serif); /* 1 */
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
 }

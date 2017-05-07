@@ -2,21 +2,20 @@
 /* Document
        ========================================================================== */
 /**
-     * 1. Change the default font family in all browsers (opinionated).
-     * 2. Correct the line height in all browsers.
-     * 3. Prevent adjustments of font size after orientation changes in
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
 html {
+  /* Change the default font family in all browsers (opinionated). */
   font-family: Arial, sans-serif;
-  /* 1 */
   font-size: 150%;
   line-height: 1.5em;
-  /* 2 */
+  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 3 */
+  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 2 */ }
 
 /* Sections
        ========================================================================== */
