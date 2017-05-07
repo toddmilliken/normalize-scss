@@ -312,9 +312,8 @@ button[disabled],
   padding: 0; }
 
 fieldset {
-  padding: 0.525rem 0.9375rem 0.975rem;
-  border: 1px solid #cccccc;
-  margin: 0 2px; }
+  padding: 0.525rem 0.75rem 0.975rem;
+  border: 1px solid #cccccc; }
 
 legend {
   box-sizing: border-box;

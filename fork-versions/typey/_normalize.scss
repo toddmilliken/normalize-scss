@@ -475,14 +475,13 @@ input {
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 
 fieldset {
   // Apply borders and padding that keep the vertical rhythm.
-  @include padding(.35 .625 .65);
+  @include padding(.35 .5 .65);
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
 }
 
 /**

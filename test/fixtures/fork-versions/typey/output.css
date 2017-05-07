@@ -406,12 +406,11 @@ input {
   /* 2 */ }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.525rem 0.9375rem 0.975rem;
-  border: 1px solid #c0c0c0;
-  margin: 0 2px; }
+  padding: 0.525rem 0.75rem 0.975rem;
+  border: 1px solid #c0c0c0; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
