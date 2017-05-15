@@ -167,18 +167,10 @@ a {
   -webkit-text-decoration-skip: objects;
   /* 2 */ }
 
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-a:active,
-a:hover {
-  outline-width: 0; }
-
 /* Text-level semantics
    ========================================================================== */
 /**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
@@ -414,12 +406,11 @@ input {
   /* 2 */ }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.525rem 0.9375rem 0.975rem;
-  border: 1px solid #c0c0c0;
-  margin: 0 2px; }
+  padding: 0.525rem 0.75rem 0.975rem;
+  border: 1px solid #c0c0c0; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
