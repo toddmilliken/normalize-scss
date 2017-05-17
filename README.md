@@ -103,8 +103,8 @@ browsers. [Source](https://gist.github.com/413930).
 
 Adding `overflow: hidden` fixes IE9's SVG rendering. Earlier versions of IE
 don't support SVG, so we can safely use the `:not()` and `:root` selectors that
-modern browsers use in the default UA stylesheets to apply this style. [Source]
-(https://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html).
+modern browsers use in the default UA stylesheets to apply this style.
+[Source](https://lists.w3.org/Archives/Public/public-svg-wg/2008JulSep/0339.html).
 
 #### `select`
 
@@ -132,12 +132,6 @@ for the outer 1px of that border. Applying `-webkit-appearance: textfield`
 addresses these issues without removing the benefits of search inputs (e.g.
 showing past searches). Safari (but not Chrome) will clip the cancel button on
 when it has padding (and `textfield` appearance).
-
-#### `::placeholder`
-
-In Edge, placeholders will disappear on `relative` or `absolute` positioned
-`<input>` elements if you use `opacity` less than `1` due to a [bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/).
-
 
 ## Contributing
 
