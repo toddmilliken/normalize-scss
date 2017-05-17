@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
   spec.files       = `git ls-files`.split($/).select {|f| File.exist?(f) && f =~ %r{^(lib|sass)/} }
   spec.files       += %w(
     bower.json
-    CHANGELOG.md
     CONTRIBUTING.md
     LICENSE.md
     normalize-scss.gemspec
