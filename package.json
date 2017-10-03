@@ -39,7 +39,7 @@
     "chroma-sass": "^1.2.3",
     "eslint": "^3.8.0",
     "eyeglass": "^1.1.2",
-    "mocha": "^3.1.2",
+    "mocha": "^4.0.0",
     "sassy-test": "^3.0.0",
     "typey": "^1.0.0"
   }
