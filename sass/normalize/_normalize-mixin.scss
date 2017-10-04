@@ -162,7 +162,7 @@
        */
 
       blockquote {
-        @include normalize-margin(1 $indent-amount);
+        @include normalize-margin(1 normalize-rhythm($indent-amount));
       }
 
       dl,
@@ -184,12 +184,12 @@
       }
 
       dd {
-        margin: 0 0 0 $indent-amount;
+        margin: 0 0 0 normalize-rhythm($indent-amount);
       }
 
       ol,
       ul {
-        padding: 0 0 0 $indent-amount;
+        padding: 0 0 0 normalize-rhythm($indent-amount);
       }
     }
 
@@ -208,10 +208,10 @@
 
     figure {
       @if $normalize-vertical-rhythm {
-        @include normalize-margin(1 $indent-amount);
+        @include normalize-margin(1 normalize-rhythm($indent-amount));
       }
       @else {
-        margin: 1em $indent-amount;
+        margin: 1em normalize-rhythm($indent-amount);
       }
     }
 
@@ -615,7 +615,7 @@
          */
 
         @include normalize-margin(1 0); /* 1 */
-        padding: 0 0 0 $indent-amount; /* 2 */
+        padding: 0 0 0 normalize-rhythm($indent-amount); /* 2 */
 
         /**
          * Turn off margins on nested lists.
